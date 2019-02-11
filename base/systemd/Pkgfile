@@ -7,8 +7,8 @@ maintainer="tnut <tnut@nutyx.org>"
 
 name=systemd
 version=240
-release=4
-nutyx_version=10.93.1
+release=5
+yao_version=1.0
 
 source=(https://github.com/systemd/systemd/archive/v$version.tar.gz
         http://www.linuxfromscratch.org/patches/lfs/development/systemd-240-security_fixes-1.patch)
@@ -98,14 +98,14 @@ cat > $PKG/etc/os-release << "EOF"
 # Begin /etc/os-release
 
 NAME=NuTyX
-VERSION="${nutyx_version}"
+VERSION="${yao_version}"
 ID=nutyx
-VERSION_ID="${nutyx_version}"
-PRETTY_NAME="NuTyX ${nutyx_version}"
+VERSION_ID="${yao_version}"
+PRETTY_NAME="YaoLinuX ${yao_version}"
 ANSI_COLOR="0;34"
-CPE_NAME="cpe:/o:NuTyX_project:nutyx:${nutyx_version}"
-HOME_URL="http://nutyx.org/"
-BUG_REPORT_URL="https://bugs.nutyx.org"
+CPE_NAME="cpe:/o:YaoLinuX_project:yaolinux:${yao_version}"
+HOME_URL="http://www.yaolinux.org/"
+BUG_REPORT_URL="https://bugs.yaolinux.org"
 
 # End /etc/os-release
 EOF
