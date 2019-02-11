@@ -59,7 +59,7 @@ cp .config $SRC/config_64
 cd $SRC/linux-${_version}
 make INSTALL_MOD_PATH=$PKG modules_install
 
-KERNEL_VERSION="${version}-NuTyX-lts"
+KERNEL_VERSION="${version}-YaoLinuX-lts"
 
 # Virtualbox
 cd $SRC
@@ -116,11 +116,11 @@ cd $SRC/linux-${_version}
 mkdir -p $PKG/boot
 
 cp  System.map \
-$PKG/boot/System_64.map-$version-NuTyX-lts
+$PKG/boot/System_64.map-$version-YaoLinuX-lts
 cp  .config    \
-$PKG/boot/config_64-$version-NuTyX-lts
+$PKG/boot/config_64-$version-YaoLinuX-lts
 cp  arch/x86_64/boot/bzImage \
-$PKG/boot/kernel-$version-NuTyX-lts
+$PKG/boot/kernel-$version-YaoLinuX-lts
 
 # Reorgenise the sources
 cd $PKG/lib/modules/${KERNEL_VERSION}/
@@ -147,18 +147,18 @@ if [ "`dirname $LK`" != "." ]; then
   echo "This is a efi installation"
   ln -sf $LK boot/kernel-lts
   if [ -f boot/$LK ]; then' > $PKGMK_ROOT/$name.post-install
-echo "    mv boot/kernel-$version-NuTyX-lts boot/\$LK 2>/dev/null
-    ln -sf \$LK boot/kernel-$version-NuTyX-lts
+echo "    mv boot/kernel-$version-YaoLinuX-lts boot/\$LK 2>/dev/null
+    ln -sf \$LK boot/kernel-$version-YaoLinuX-lts
   else
     echo \"EFI Partition not found, mount EFI Partition and re-install the kernel\"
   fi
 else
   echo \"This is a bios installation\"
   if [ -L boot/initrd-lts ]; then
-    mkinitramfs $version-NuTyX-lts
-    ln -sf initrd-$version-NuTyX-lts boot/initrd-lts
+    mkinitramfs $version-YaoLinuX-lts
+    ln -sf initrd-$version-YaoLinuX-lts boot/initrd-lts
   fi
-  ln -sf kernel-$version-NuTyX-lts boot/kernel-lts
+  ln -sf kernel-$version-YaoLinuX-lts boot/kernel-lts
 fi" >> $PKGMK_ROOT/$name.post-install
 
 }
