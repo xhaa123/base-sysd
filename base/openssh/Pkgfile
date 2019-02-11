@@ -3,14 +3,14 @@
 description="Free version of the SSH connectivity tools"
 url="http://www.openssh.org/"
 
-contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+contributors=""
+packager="rems <rems@yaolinux.org>"
 
 name=openssh
 version=7.9p1
-nutyx_version=10.92.2
+yao_version=1.0-RC1
 
-source=(http://downloads.tuxfamily.org/nutyx/files/nutyx-${nutyx_version}.tar.xz
+source=(http://downloads.tuxfamily.org/nutyx/files/yaolinux-${yao_version}.tar.xz
 	http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz)
 
 build() {
@@ -47,6 +47,6 @@ install -v -m644 INSTALL LICENCE OVERVIEW README* \
 $PKG/usr/share/doc/$name-$version
 
 # Service
-cd $SRC/nutyx-${nutyx_version}
+cd $SRC/yaolinux-${yao_version}
 make DESTDIR=$PKG install-sshd
 }
