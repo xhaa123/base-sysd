@@ -1,5 +1,6 @@
 #!/bin/sh
 #
+#  Copyright (c) 2018 - 2019 by YaoLinuX team (http://yaolinux.org)
 #  Copyright (c) 2014 - 2018 by NuTyX team (http://nutyx.org)
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -511,7 +512,7 @@ Name=${NETWORK_CARD}
 	fi
 fi
 if [ ! -f /etc/hostname ]; then
-	echo "nutyx" > /etc/hostname
+	echo "yaolinux" > /etc/hostname
 fi
 SETUP_CONFIG_NETWORK="no"
 }
@@ -1259,7 +1260,7 @@ check_available_disk() {
 	local DISK_FULL_LIST
 	DISK_FULL_LIST=`lsblk -p -n -d -o NAME -e 1,3,7,11`
 	for i in $DISK_FULL_LIST; do
-		[ "`lsblk -p -n -d -o LABEL $i`" == "nutyxcd" ] && continue
+		[ "`lsblk -p -n -d -o LABEL $i`" == "yaolinuxcd" ] && continue
 		[ "`echo $i|grep fd[0-9]*`" == "$i" ] && continue
 		DISK_LIST="$DISK_LIST $i"
 	done
@@ -1328,16 +1329,16 @@ setup_help() {
 	--title "   $(gettext "How to do it")  " \
 	--colors --msgbox \
 "$(gettext "This is a very basic tool, do not expect too much"). \
-$(gettext "It will ask you on which partition you want to install NuTyX"). \
+$(gettext "It will ask you on which partition you want to install YaoLinuX"). \
 $(gettext "If not yet created/formatted, it will prompt you to do so").\n\
-\n\n$(gettext "NuTyX goes on") \
+\n\n$(gettext "YaoLinuX goes on") \
 \Zu\Zb\Z1$(gettext "only ONE partition")\Zn\n\n\
 $(gettext "ONE exception, GRUB can be part of it, installed on a separate partition or not installed at all"). \n\n\
-$(gettext "As NuTyX users, we recommand you to install GRUB on a separate partition"):\n\n\
+$(gettext "As YaoLinuX users, we recommand you to install GRUB on a separate partition"):\n\n\
 $(gettext "To do so"): \
-$(gettext "Install GRUB first, then NuTyX") \n\n\
+$(gettext "Install GRUB first, then YaoLinuX") \n\n\
 $(gettext "Have fun") :) \n\n\
-$(gettext "Thank you for installing NuTyX") \
+$(gettext "Thank you for installing YaoLinuX") \
 " 0 0
 }
 setup_help_efi() {
@@ -1345,15 +1346,15 @@ setup_help_efi() {
 	--title "   $(gettext "How to do it")  " \
 	--colors --msgbox \
 "$(gettext "This is a very basic tool, do not expect too much"). \
-$(gettext "It will ask you on which partition you want to install NuTyX"). \
+$(gettext "It will ask you on which partition you want to install YaoLinuX"). \
 $(gettext "If not yet created/formatted, it will prompt you to do so").\n\
-\n$(gettext "NuTyX goes on") \
+\n$(gettext "YaoLinuX goes on") \
 \Zu\Zb\Z1$(gettext "only ONE partition")\Zn\n\n\
 $(gettext "Make shure you reserve the first partition for ESP"): \n\n\
 $(gettext "To do so"): \
 $(gettext "At partitioning, declare the first partition as EFI System") \n\n\
 $(gettext "Have fun") :) \n\n\
-$(gettext "Thank you for installing NuTyX") \
+$(gettext "Thank you for installing YaoLinuX") \
 " 0 0
 
 }	
@@ -1459,7 +1460,7 @@ $(gettext "Are you sure you want to continue ?")" 7 60
 		esac
 		FORMAT=`print_file_system $PARTITION`
 }
-erase_nutyx() {
+erase_yaolinux() {
 	local DIR REAL
 	cd ${1}/boot
 	if [ -d ${2}/home ];then
@@ -1477,10 +1478,10 @@ erase_nutyx() {
 		echo "$PCT"
 		N=$((N+1))
 	done) |
-  dialog --title "$(gettext "Erase") NuTyX" --gauge "$(gettext "Please wait") ..." 6 50
-  $SETUP_LOG "setup-nutyx" "Erase NuTyX on ${PARTITION} done"
+  dialog --title "$(gettext "Erase") YaoLinuX" --gauge "$(gettext "Please wait") ..." 6 50
+  $SETUP_LOG "setup-nutyx" "Erase YaoLinuX on ${PARTITION} done"
 }
-install_nutyx() {
+install_yaolinux() {
 	local DIR REAL FILE
 	setup_swap
 
@@ -1552,8 +1553,8 @@ install_nutyx() {
 	[ -a ${2}/dev/null ] || mknod -m 664 ${2}/dev/null    c 1 3
 	chmod 1777 ${2}/tmp
 	echo "100") |
-	dialog --title "$(gettext "Install NuTyX")" --gauge "$(gettext "Please wait") ..." 6 50
-	$SETUP_LOG "setup-nutyx" "Install NuTyX on ${PARTITION} done"
+	dialog --title "$(gettext "Install YaoLinuX")" --gauge "$(gettext "Please wait") ..." 6 50
+	$SETUP_LOG "setup-nutyx" "Install YaoLinuX on ${PARTITION} done"
 	if [ -f /var/log/install.log ]; then
 		cp -a /var/log/install.log  ${2}/var/log/install.log
 	fi
@@ -1573,7 +1574,7 @@ setup_erase() {
 	echo "CHECK_SINGLE_PARTITION=$CHECK_SINGLE_PARTITION" > /dev/tty2
 	[ "$CHECK_SINGLE_PARTITION" == "no" ] && unset PARTITION
 	if [ -z $PARTITION ]; then
-		select_partition "$(gettext "Erase") NuTyX"
+		select_partition "$(gettext "Erase") YaoLinuX"
 		[ "$PARTITION" == "no" ] && return
 	fi
 	echo "PARTITION=$PARTITION" > /dev/tty2
@@ -1582,9 +1583,9 @@ setup_erase() {
 	mkdir -p $MF
 	mount $PARTITION $MF || error "$(gettext "mounting") $PARTITION"
 	if [ -d /media/cdrom/boot ]; then
-		erase_nutyx "/media/cdrom" "$MF"
+		erase_yaolinux "/media/cdrom" "$MF"
 	else
-		erase_nutyx "/" "$MF"
+		erase_yaolinux "/" "$MF"
 	fi
 	umount $PARTITION
 }
@@ -1603,7 +1604,7 @@ setup_install() {
 	echo "CHECK_SINGLE_PARTITION=$CHECK_SINGLE_PARTITION" > /dev/tty2
 	[ "$CHECK_SINGLE_PARTITION" == "no" ] && unset PARTITION
 	if [ -z $PARTITION ]; then
-		select_partition "$(gettext "Install NuTyX")"
+		select_partition "$(gettext "Install YaoLinuX")"
 		[ "$PARTITION" == "no" ] && return
 	fi
 	echo "PARTITION=$PARTITION" > /dev/tty2
@@ -1619,11 +1620,11 @@ setup_install() {
 	mount $PARTITION $MF || error "$(gettext "mounting") $PARTITION"
 	if [ -d /media/cdrom/boot ]; then
 		# Installing from ISO
-		install_nutyx "/media/cdrom/" "$MF"
+		install_yaolinux "/media/cdrom/" "$MF"
 	else
 		# Installing from Maintenance this means
 		# TODO the initrd has to be rebuild at configuration time
-		install_nutyx "/" "$MF"
+		install_yaolinux "/" "$MF"
 	fi
 	umount $PARTITION
 	SETUP_INSTALL="yes"
@@ -1667,7 +1668,7 @@ setup_efibootmgr() {
 		${2}/boot/efi/EFI/BOOT/$SPNR/kernel$ke.efi
 		ln -sf efi/EFI/BOOT/$SPNR/kernel$ke.efi ${2}/boot/kernel-$j
 		ln -sf efi/EFI/BOOT/$SPNR/kernel$ke.efi ${2}/boot/kernel$ke
-		efibootmgr -c -L "NuTyX Linux kernel$ke Quiet on $PARTITION" -d "$DISK" -l "\EFI\BOOT\\$SPNR\kernel$ke.efi" -u "root=$PARTITION $OPTIONS" || \
+		efibootmgr -c -L "YaoLinuX Linux kernel$ke Quiet on $PARTITION" -d "$DISK" -l "\EFI\BOOT\\$SPNR\kernel$ke.efi" -u "root=$PARTITION $OPTIONS" || \
 		dialog --title "   Oups !!!  " \
 		--msgbox "    $(gettext "This installation won't boot again ...")" 6 60
 	done
@@ -1680,7 +1681,7 @@ MBR_ok() {
 	dialog --title "   $(gettext "Everything OK, do you want to modify") $GRUB_CONFIG_FILE ?   " \
 	--colors \
 	--yesno " $(gettext "A new") $GRUB_CONFIG_FILE $(gettext "has been created"), \
-$(gettext "it has been adapted to launch the Maintenance system of NuTyX"), \
+$(gettext "it has been adapted to launch the Maintenance system of YaoLinuX"), \
 $(gettext "if you choose") $(gettext "Yes"), \
 $(gettext "an simplify VI editor will allow you to modify it").\n\n \
 	\Zb\Z4i\Zn  $(gettext "Enter the edit mode") \n\
@@ -1731,7 +1732,7 @@ setup_grub() {
 	mount $PARTITION $TMP/boot_partition
 	echo "$PARTITION" > $TMP/boot_part
 	if [ -d $TMP/boot_partition/boot ]; then
-		# NuTyX is installed means we install GRUB after install
+		# YaoLinuX is installed means we install GRUB after install
 		GRUB_DESTINATION_DIR="boot/"
 	fi
 	GRUB_CONFIG_DIR="$TMP/boot_partition/${GRUB_DESTINATION_DIR}grub"
@@ -1743,7 +1744,7 @@ setup_grub() {
 	else
 		cp $TMP/MBR $GRUB_CONFIG_DIR/MBR.original
 		dialog --title " $(gettext "Good to know") " \
-		--msgbox " $(gettext "A copy of the original MBR is saved in the folder /boot/grub of your NuTyX. It will then be possible to restore it if need") " 10 60
+		--msgbox " $(gettext "A copy of the original MBR is saved in the folder /boot/grub of your YaoLinuX. It will then be possible to restore it if need") " 10 60
 	fi
 	if [ ! -f $GRUB_CONFIG_DIR/$GRUB_CONFIG_FILE ]; then
 		cat > $GRUB_CONFIG_DIR/$GRUB_CONFIG_FILE << "EOF"
@@ -1784,9 +1785,9 @@ EOF
 		echo "DISK=${DISK}" >> ${GRUB_LOG_FILE}
 		echo "GRUB_DESTINATION_DIR=${GRUB_DESTINATION_DIR}" >> ${GRUB_LOG_FILE}
 		echo "GRUB_CONFIG_DIR=${GRUB_CONFIG_DIR}" >> ${GRUB_LOG_FILE}
-		echo "NuTyX_PART=${NuTyX_PART}" >> ${GRUB_LOG_FILE}
+		echo "YaoLinuX_PART=${YaoLinuX_PART}" >> ${GRUB_LOG_FILE}
 		echo "BOOT_FS=${BOOT_FS}" >> ${GRUB_LOG_FILE}
-		echo "NuTyX_FS=${NuTyX_FS}" >> ${GRUB_LOG_FILE}
+		echo "YaoLinuX_FS=${YaoLinuX_FS}" >> ${GRUB_LOG_FILE}
 		echo "PATH=$PATH" >> ${GRUB_LOG_FILE}
 		env >> ${GRUB_LOG_FILE}
 		# Restore MBR
@@ -1799,44 +1800,44 @@ EOF
 	fi
 	if [ -f $TMP/boot ]; then
 		#
-		# The $TMP/boot file contains the NuTyX partition
+		# The $TMP/boot file contains the YaoLinuX partition
 		#
-		NuTyX_PART="`cat $TMP/boot`"
+		YaoLinuX_PART="`cat $TMP/boot`"
 		BOOT_FS="`print_file_system $PARTITION`"
-		NuTyX_FS="`print_file_system $NuTyX_PART`"
-		echo "menuentry \"NuTyX LTS ${SETUP_ARCH} ${NuTyX_FS} on ${NuTyX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
-		echo " linux /${GRUB_DESTINATION_DIR}kernel-lts root=${NuTyX_PART} ro quiet verbose=no" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		YaoLinuX_FS="`print_file_system $YaoLinuX_PART`"
+		echo "menuentry \"YaoLinuX LTS ${SETUP_ARCH} ${YaoLinuX_FS} on ${YaoLinuX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		echo " linux /${GRUB_DESTINATION_DIR}kernel-lts root=${YaoLinuX_PART} ro quiet verbose=no" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "#  initrd /${GRUB_DESTINATION_DIR}initrd-lts" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "}" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo " " >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
-		echo "menuentry \"NuTyX LTS Verbose ${SETUP_ARCH} ${NuTyX_FS} on ${NuTyX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
-		echo "  linux /${GRUB_DESTINATION_DIR}kernel-lts root=${NuTyX_PART} ro " >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		echo "menuentry \"YaoLinuX LTS Verbose ${SETUP_ARCH} ${YaoLinuX_FS} on ${YaoLinuX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		echo "  linux /${GRUB_DESTINATION_DIR}kernel-lts root=${YaoLinuX_PART} ro " >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "#  initrd /${GRUB_DESTINATION_DIR}initrd-lts" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "}" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo " "  >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
-		echo "menuentry \"NuTyX ${SETUP_ARCH} ${NuTyX_FS} on ${NuTyX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
-		echo " linux /${GRUB_DESTINATION_DIR}kernel root=${NuTyX_PART} ro quiet verbose=no" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		echo "menuentry \"YaoLinuX ${SETUP_ARCH} ${YaoLinuX_FS} on ${YaoLinuX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		echo " linux /${GRUB_DESTINATION_DIR}kernel root=${YaoLinuX_PART} ro quiet verbose=no" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "#  initrd /${GRUB_DESTINATION_DIR}initrd" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "}" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo " " >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
-		echo "menuentry \"NuTyX Verbose ${SETUP_ARCH} ${NuTyX_FS} on ${NuTyX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
-		echo "  linux /${GRUB_DESTINATION_DIR}kernel root=${NuTyX_PART} ro " >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		echo "menuentry \"YaoLinuX Verbose ${SETUP_ARCH} ${YaoLinuX_FS} on ${YaoLinuX_PART}\" {" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
+		echo "  linux /${GRUB_DESTINATION_DIR}kernel root=${YaoLinuX_PART} ro " >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "#  initrd /${GRUB_DESTINATION_DIR}initrd" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 		echo "}" >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}
 
 	else
 		#
-		# NuTyX is not yet installed
+		# YaoLinuX is not yet installed
 		#
 		cat >> ${GRUB_CONFIG_DIR}/${GRUB_CONFIG_FILE}  << "EOF"
 #################################################################
 #                                                               #
 #               Example of a menuentry:                         #
 #                                                               #
-#   The NuTyX distribution to boot from is located:             #
+#   The YaoLinuX distribution to boot from is located:          #
 #      on the SECOND harddisk ( HDD 2 ) AND                     #
 #      the second harddisk has THREE partitions.                #
-#      NuTyX IS installed on the third partition.               #
+#      YaoLinuX IS installed on the third partition.            #
 #                                                               #
 # NOTE:                                                         #
 # -----                                                         #
@@ -1898,38 +1899,38 @@ setup_reboot() {
 		umount -f $i > /dev/null 2>&1
 	done
 	umount /media/cdrom 2>/dev/null
-	eject /dev/nutyx-cd 2>/dev/null
+	eject /dev/yaolinux-cd 2>/dev/null
 	dialog --title "    $(gettext "Reboot the PC")    " \
 	--msgbox "  $(gettext "Press OK to reboot the computer")  " 0 0 
 	/sbin/reboot -f
 }
 setup_advanced_initrd() {
 	if [ -d "$EFIVARS" ]; then
-		dialog --title "   $(gettext "Welcome to the NuTyX installer")   " \
+		dialog --title "   $(gettext "Welcome to the YaoLinuX installer")   " \
 		--colors --menu "    $(gettext "Advanced Menu")   "  0 0 0 \
 		"$(gettext "Help")" "$(gettext "How to do it") ? " \
 		"$(gettext "Keyboard")" "$(gettext "Configure the keyboard") ($(gettext "optional"))" \
 		"$(gettext "Partitioning")" "$(gettext "Create all your partitions") ($(gettext "optional"))" \
 		"$(gettext "Format")" "$(gettext "Format a partition") ($(gettext "optional"))" \
-		"$(gettext "Install")" "$(gettext "Install NuTyX")" \
+		"$(gettext "Install")" "$(gettext "Install YaoLinuX")" \
 		"$(gettext "Clock")" "$(gettext "Date and time settings") ($(gettext "optional"))" \
 		"$(gettext "Console")" "$(gettext "Open a console")" \
-		"$(gettext "Erase")" "$(gettext "Erase") NuTyX" \
+		"$(gettext "Erase")" "$(gettext "Erase") YaoLinuX" \
 		"$(gettext "Restart")" "$(gettext "Reboot the PC")" \
 		"$(gettext "Main")" "$(gettext "Main Menu")" \
 		2>$TMP/choix
 	else
-		dialog --title "   $(gettext "Welcome to the NuTyX installer")   " \
+		dialog --title "   $(gettext "Welcome to the YaoLinuX installer")   " \
 		--colors --menu "    $(gettext "Main Menu")   "  0 0 0 \
 		"$(gettext "Help")" "$(gettext "How to do it") ? " \
 		"$(gettext "Keyboard")" "$(gettext "Configure the keyboard") ($(gettext "optional"))" \
 		"$(gettext "Partitioning")" "$(gettext "Create all your partitions") ($(gettext "optional"))" \
 		"$(gettext "Format")" "$(gettext "Format a partition") ($(gettext "optional"))" \
 		"$(gettext "Boot")" "$(gettext "Configure the boot of the PC") ($(gettext "optional")) ($(gettext "skilled"))" \
-		"$(gettext "Install")" "$(gettext "Install NuTyX")" \
+		"$(gettext "Install")" "$(gettext "Install YaoLinuX")" \
 		"$(gettext "Clock")" "$(gettext "Date and time settings") ($(gettext "optional"))" \
 		"$(gettext "Console")" "$(gettext "Open a console")" \
-		"$(gettext "Erase")" "$(gettext "Erase") NuTyX" \
+		"$(gettext "Erase")" "$(gettext "Erase") YaoLinuX" \
 		"$(gettext "Restart")" "$(gettext "Reboot the PC")" \
 		"$(gettext "Main")" "$(gettext "Main Menu")" \
 		2>$TMP/choix
@@ -2003,9 +2004,9 @@ setup_advanced_initrd() {
 
 }
 setup_initrd() {
-	dialog --title "   $(gettext "Welcome to the NuTyX installer")   " \
+	dialog --title "   $(gettext "Welcome to the YaoLinuX installer")   " \
 	--colors --menu "    $(gettext "Main Menu")   "  0 0 0 \
-	"$(gettext "Install")" "$(gettext "Install NuTyX")" \
+	"$(gettext "Install")" "$(gettext "Install YaoLinuX")" \
 	"$(gettext "Advanced")" "$(gettext "Advanced Menu")" \
 	2>$TMP/choix
 	retval=$?
@@ -2307,7 +2308,7 @@ top_loop() {
 	if [ "$SETUP_INITRD" = "yes" ]; then
 		[ "$SETUP_CONFIG_LANGUAGE" = "yes" ] && LANG=de_CH.utf-8 setup_language
 		if [ ! -d /media/cdrom/boot ]; then
-			dialog --title "   $(gettext "Welcome to the NuTyX installer")   " \
+			dialog --title "   $(gettext "Welcome to the YaoLinuX installer")   " \
 				--msgbox "    $(gettext "You can remove the ISO media now.")" 6 60
 		fi
 		if [ -d "$EFIVARS" ]; then
@@ -2390,7 +2391,7 @@ if [ ! -z "$IWCONFIG" ];then
 	WIFI_NETWORK_CARD="`$IWCONFIG 2>&1|grep IEEE|cut -d " " -f1|tail -1`"
 fi
 
-SETUP_LOG="setup-nutyx-log"
+SETUP_LOG="setup-yaolinux-log"
 CARDS="/etc/cards.conf"
 XORGKB="/etc/X11/xorg.conf.d/20-keyboard.conf"
 CONSOLE="/etc/vconsole.conf"

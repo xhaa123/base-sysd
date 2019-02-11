@@ -74,7 +74,7 @@ print_error_msg() {
         boot_mesg -n " of ${i} "
         boot_mesg_flush
         boot_mesg -n " Thanks to inform us"
-        boot_mesg -n " via the website http://www.nutyx.org."
+        boot_mesg -n " via the website http://www.yaolinux.org."
         boot_mesg " Thanks again for your collaboration.\n"
         boot_mesg_flush
         boot_mesg -n "Press Enter to continue..." ${INFO}
@@ -110,7 +110,7 @@ umount ${FOLDER}/sys
 #******************************************************************************
 # Function - setup_chroot
 #
-# Purpose:	Enter the NuTyX Distribution
+# Purpose:	Enter the Yaolinux Distribution
 #
 # Inputs:	$1 the full path of the Distro
 #
@@ -628,7 +628,7 @@ cat > ${FOLDER}/etc/$FILE << "EOF"
 # Begin /etc/hosts
 
 127.0.0.1 localhost.localdomain localhost
-127.0.0.1 nutyx
+127.0.0.1 yaolinux
 
 # End /etc/hosts
 EOF
@@ -1182,17 +1182,17 @@ base ${DEPOT}/base
 # base ${DEPOT}/gui-extra
 # base ${DEPOT}/..." > ${FOLDER}/etc/cards.conf
 }
-generate_nutyx_version() {
+generate_yaolinux_version() {
 local FILE
-FILE="nutyx-version"
+FILE="yao_version"
 [ -f ${FOLDER}/var/lib/pkg/$FILE ] && return
 [ ! -d ${FOLDER}/var/lib/pkg ] && mkdir -pv ${FOLDER}/var/lib/pkg
 echo "name ${CODE_NAME}
 version $VERSION" > ${FOLDER}/var/lib/pkg/$FILE
 }
 generate_lsb() {
-echo "DISTRIB_ID=\"NuTyX\"
-DISTRIB_DESCRIPTION=\"NuTyX GNU/Linux\"
+echo "DISTRIB_ID=\"YaoLinuX\"
+DISTRIB_DESCRIPTION=\"YaoLinuX GNU/Linux\"
 DISTRIB_CODENAME=\"${CODE_NAME}\"
 DISTRIB_RELEASE=\"$VERSION\"
 LSB_VERSION=\"1.4-1\"" > ${FOLDER}/etc/lsb-release
@@ -1203,15 +1203,14 @@ install_resolv_conf() {
 successfull_installation () {
 echo "
 ****************************************************
-      Installation of NuTyX $VERSION installed
+      Installation of YaoLinuX $VERSION installed
       in $LFS sucessfully
 ****************************************************
 
 ****************************************************
-* Thanks for installing NuTyX                      *
+* Thanks for installing YaoLinuX                   *
 *                                                  *
-* Check http://www.nutyx.org/en/documentation.html *
-* or http://www.nutyx.org/fr/documentation.html    *
+* Check http://www.yaolinux.org/		   *
 *                                                  *
 * Make sure to review /etc/cards.conf              *
 * to meet your requirements in packages selection  *
@@ -1229,7 +1228,7 @@ expat gcc readline ncurses lzo glibc gmp xz zlib \
 libarchive mpc mpfr openssl cards"
    [ "$ARCH" = "i686" -a "$HOST_ARCH" = "x86_64" ] && CHROOT_LIST="$CHROOT_LIST util-linux"
 fi
-[ -z "$URL" ] && URL="http://downloads.nutyx.org"
+[ -z "$URL" ] && URL="http://downloads.yaolinux.org"
 [ -z "$VERSION" ] && VERSION="#VERSION#"
 if [ "$VERSION" == "development" ]; then
 	CODE_NAME="`date +%Y%m%d`"
@@ -1257,10 +1256,10 @@ fi
 
 [ -z $LFS ] && LFS=$FOLDER
 
-HOMEPAGE="${URL}"                      ## http://downloads.nutyx.org
+HOMEPAGE="${URL}"                      ## http://downloads.yaolinux.org
 INSTALL_BASE="$ARCH/$VERSION"          ## x86_64/8.2
-DEPOT_ROOT="$HOMEPAGE/${INSTALL_BASE}" ## http://downloads.nutyx.org/x86_64/8.2
-DEPOT_BASE="$DEPOT_ROOT/$BASE"         ## http://downloads.nutyx.org/x86_64/8.2/base
+DEPOT_ROOT="$HOMEPAGE/${INSTALL_BASE}" ## http://downloads.yaolinux.org/x86_64/8.2
+DEPOT_BASE="$DEPOT_ROOT/$BASE"         ## http://downloads.yaolinux.org/x86_64/8.2/base
 
 LOCAL_DEPOT_PACKAGES="$DEPOT/$BASE"
 DEPOT_CD="/media/cdrom"
@@ -1458,7 +1457,7 @@ install_configuration_files() {
 	generate_rc_site
 	generate_etc_bashrc
 	generate_lsb
-	generate_nutyx_version
+	generate_yaolinux_version
 }
 print_help() {
 	echo "
