@@ -2,16 +2,16 @@ PKGMK_GROUPS=(man)
 PKGMK_IGNORE_RUNTIMEDEPS=yes
 
 description="Base system of NuTyX, contains all folders and startup scripts."
-url="https://git.tuxfamily.org/nutyx"
-packager="tnut <tnut@nutyx.org>"
-maintainer="tnut <tnut@nutyx.org>"
+url="https://github.com/yaolinux"
+packager="Graknu <graknu@yaolinux.org>"
+maintainer="Graknu <graknu@yaolinux.org>"
 
-name=nutyx
-version=10.94
-release=2
+name=yaolinux
+version=1.0-RC1
+release=1
 patchname="$name-$version-consolidate-$release.patch"
 
-source=(http://downloads.tuxfamily.org/nutyx/files/$name-$version.tar.xz)
+source=(http://downloads.yaolinux.org/yaolinux/files/$name-$version.tar.xz)
 [ -z "$patchname" ] || source+=" $patchname"
 
 build () {
