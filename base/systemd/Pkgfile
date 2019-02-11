@@ -2,13 +2,13 @@
 
 description="Init system to control boot, execution and halt of a linux system"
 url="http://www.freedesktop.org/wiki/Software/systemd/"
-packager="tnut <tnut@nutyx.org>"
-maintainer="tnut <tnut@nutyx.org>"
+packager="rems <rems@yaolinux.org>"
+maintainer=""
 
 name=systemd
 version=240
-release=5
-yao_version=1.0
+release=6
+yao_version="1.0"
 
 source=(https://github.com/systemd/systemd/archive/v$version.tar.gz
         http://www.linuxfromscratch.org/patches/lfs/development/systemd-240-security_fixes-1.patch)
@@ -94,16 +94,16 @@ password required pam_deny.so
 # End /etc/pam.d/systemd-user
 EOF
 
-cat > $PKG/etc/os-release << "EOF"
+cat > $PKG/usr/lib/os-release <<EOF
 # Begin /etc/os-release
 
-NAME=NuTyX
-VERSION="${yao_version}"
-ID=nutyx
-VERSION_ID="${yao_version}"
-PRETTY_NAME="YaoLinuX ${yao_version}"
+NAME=YaoLinuX
+VERSION=$yao_version
+ID=yaolinux
+VERSION_ID=$yao_version
+PRETTY_NAME="YaoLinuX $yao_version"
 ANSI_COLOR="0;34"
-CPE_NAME="cpe:/o:YaoLinuX_project:yaolinux:${yao_version}"
+CPE_NAME="cpe:/o:YaoLinuX_project:yaolinux:$yao_version"
 HOME_URL="http://www.yaolinux.org/"
 BUG_REPORT_URL="https://bugs.yaolinux.org"
 
