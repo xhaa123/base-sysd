@@ -1421,7 +1421,7 @@ gettext procps-ng psmisc \
 sed sudo tzdata inetutils \
 iproute2 iana-etc \
 kmod less groff man-db \
-cards.fr cards.man nutyx.man \
+cards.fr cards.man yaolinux.man \
 lvm2 dialog cpio squashfs \
 ca-certificates lsb-release \
 $KERNEL \
