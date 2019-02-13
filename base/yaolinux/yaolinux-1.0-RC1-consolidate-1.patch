@@ -18,15 +18,15 @@ index e78dfa8..fbc4c62 100644
  	cd ${ISODIR} || error "cd ${ISODIR}"
  	for FILE in splash.png libutil.c32 libcom32.c32 ldlinux.c32 vesamenu.c32 isolinux.bin
 @@ -75,11 +75,10 @@ done
- 	done
+ 	done:wq
  
  	ISO=NuTyX_${ARCH}-${VERSION_NUTYX}
 -	sed "s|#VERSION_KERNEL#|${VERSION_KERNEL}|" $SCRIPTDIR/../iso/isolinux/menu.cfg > iso/isolinux/menu.cfg
 -	sed "s|#VERSION_KERNEL#|${VERSION_KERNEL}|" $SCRIPTDIR/../iso/isolinux/live.cfg > iso/isolinux/live.cfg
 -	sed "s|#VERSION_KERNEL#|${VERSION_KERNEL}|" $SCRIPTDIR/../iso/isolinux/install.cfg > iso/isolinux/install.cfg
--	sed -i "s|#VERSION_NUTYX#|${VERSION_NUTYX}|" isolinux/menu.cfg
+-	sed -i "s|#VERSION_YAOLINUX#|${VERSION_YAOLINUX}|" isolinux/menu.cfg
 -	sed -i "s|#ARCH#|${ARCH}|" isolinux/menu.cfg
-+	sed "s|#VERSION_NUTYX#|${VERSION_NUTYX}|" $SCRIPTDIR/../iso/isolinux/menu.cfg > isolinux/menu.cfg
++	sed "s|#VERSION_YAOLINUX#|${VERSION_YAOLINUX}|" $SCRIPTDIR/../iso/isolinux/menu.cfg > isolinux/menu.cfg
 +	sed "s|#VERSION_KERNEL#|${VERSION_KERNEL}|" $SCRIPTDIR/../iso/isolinux/live.cfg > isolinux/live.cfg
 +	sed "s|#VERSION_KERNEL#|${VERSION_KERNEL}|" $SCRIPTDIR/../iso/isolinux/install.cfg > isolinux/install.cfg
 +	sed -i "s|#VERSION_KERNEL#|${VERSION_KERNEL}|" isolinux/menu.cfg
