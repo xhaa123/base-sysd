@@ -1,4 +1,4 @@
-# Depends on: nutyx
+# Depends on: yaolinux
 
 url="http://www.kernel.org"
 description="The latest stable kernel version with virtualbox modules"
@@ -11,10 +11,10 @@ PKGMK_GROUPS=(devel doc)
 name=kernel
 alias=(linux)
 
-version=4.20.7
+version=4.20.8
 _version=${version:0:4}
 
-run=(nutyx)
+run=(yaolinux)
 
 # Virtualbox
 vb_version=6.0.4
