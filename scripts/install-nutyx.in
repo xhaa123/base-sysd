@@ -1184,7 +1184,7 @@ base ${DEPOT}/base
 }
 generate_yaolinux_version() {
 local FILE
-FILE="yao_version"
+FILE="nutyx-version"
 [ -f ${FOLDER}/var/lib/pkg/$FILE ] && return
 [ ! -d ${FOLDER}/var/lib/pkg ] && mkdir -pv ${FOLDER}/var/lib/pkg
 echo "name ${CODE_NAME}
