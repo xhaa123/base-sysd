@@ -207,7 +207,7 @@ do_mount_in_ram()
 }
 find_media() {
 	local PI FSIZE MSIZE
-	EXPECT_LABEL="nutyxcd"
+	EXPECT_LABEL="yaolinuxcd"
 	if [ -n "$fromiso" ]; then
 		mkdir -p /media/fromdev
 		mount -o ro ${fromdev} /media/fromdev
@@ -222,10 +222,10 @@ find_media() {
 		DEV=/dev/${SYS##*/}
 		eval `/sbin/blkid $DEV|cut -d ":" -f2`
 		if [ ${LABEL} == ${EXPECT_LABEL} ]  2>/dev/null ; then
-			ln -sf $DEV /dev/nutyx-cd
+			ln -sf $DEV /dev/yaolinux-cd
 			mkdir  -p /media/cdrom 2>/dev/null
-			[ "$verbose" == "no" ] || printf "mount -n /dev/nutyx-cd /media/cdrom\n"
-			mount -n /dev/nutyx-cd /media/cdrom
+			[ "$verbose" == "no" ] || printf "mount -n /dev/yaolinux-cd /media/cdrom\n"
+			mount -n /dev/yaolinux-cd /media/cdrom
 			break
 		fi
 	done
@@ -352,7 +352,7 @@ if [ "$live" == "yes" ] || [ "$root" == "" ]; then
 	LoadModules
 	if [ ! -f /sbin/setup-nutyx ]; then
 		find_media
-		if [ ! -L /dev/nutyx-cd ]; then
+		if [ ! -L /dev/yaolinux-cd ]; then
 			[ "$verbose" == "no" ] || printf "Media not found yet, trying again in 5 sec\n"
 			sleep 5
 			find_media
