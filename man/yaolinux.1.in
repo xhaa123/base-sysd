@@ -180,7 +180,7 @@ Le fichier \fI/etc/sysconfig/clock\fR défini la methode d'affichage de l'horlog
   \fBNom de la machine\fR:
 Le fichier \fI/etc/sysconfig/network\fR défini le nom de la machine. Il défini également quelle service sera utilisé pour configurer le réseau: soit le script de défaut, wicd ou networkmanager. Exemple de fichier de configuration:
 .P
- HOSTNAME='nutyx'        # Le nom de votre machine
+ HOSTNAME='yaolinux'        # Le nom de votre machine
  MANAGER='cli'           # Le gestionnaire de réseau (wicd/networkmanager/cli)
  NETWORKWAIT='no'        # Attendre ou non le réseau
  LINKDELAY='15'          # Délai d'initialisation de Networkmanager                         
@@ -359,11 +359,8 @@ redémarrage du serviceX, cette option n'est pas toujours valable.
 .SH AIDE EN LIGNE
 
 .TP
-  \fBIRC\fR
-rejoindre le canal \fI#nutyx\fR sur le réseau irc.freenode.net (utf\-8)
-.TP
   \fBSite des utilisateurs\fR
-http://www.nutyx.org
+http://www.yaolinux.org
 
 .SH FICHIERS
 \fI/etc/cards.conf,
