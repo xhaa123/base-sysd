@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: NuTyX Configuration tool\n"
+"Project-Id-Version: YaoLinuX Configuration tool\n"
 "PO-Revision-Date: 2014-08-07+2000\n"
 "Last-Translator: https://translate.google.de/#fr/de/\n"
 "Language-Team: Deutch\n"
@@ -123,8 +123,8 @@ msgstr "Benutzer zum System hinzufügen"
 msgid "Configure the system"
 msgstr "System konfigurieren"
 
-msgid "Install NuTyX"
-msgstr "NuTyX installieren"
+msgid "Install YaoLinuX"
+msgstr "YaoLinuX installieren"
 
 msgid "Use the arrows keys to change the values"
 msgstr "Verwenden Sie die Pfeiltasten, um die Werte zu ändern"
@@ -156,14 +156,14 @@ msgstr "Wählen Sie das Laufwerk, auf dem Sie den MBR ändern möchten"
 msgid "Select the partition on which you want to place the GRUB files"
 msgstr "Wählen Sie die Partition, auf der sich die GRUB-Dateien befinden sollen"
 
-msgid "Note that the destination partition can contain NuTyX or any other distribution"
-msgstr "Beachten Sie, dass die Zielpartition NuTyX oder eine andere Distribution enthalten kann"
+msgid "Note that the destination partition can contain YaoLinuX or any other distribution"
+msgstr "Beachten Sie, dass die Zielpartition YaoLinuX oder eine andere Distribution enthalten kann"
 
 msgid "No boot process configured"
 msgstr "Kein Bootvorgang konfiguriert"
 
-msgid "You have installed NuTyX without configuring the boot process"
-msgstr "Sie haben NuTyX ohne die Konfiguration des Bootprozesses installiert"
+msgid "You have installed YaoLinuX without configuring the boot process"
+msgstr "Sie haben YaoLinuX ohne die Konfiguration des Bootprozesses installiert"
 
 msgid "Are you sure, you want to cancel the process ?"
 msgstr "Sind Sie sicher, dass Sie den Vorgang abbrechen wollen?"
@@ -171,8 +171,8 @@ msgstr "Sind Sie sicher, dass Sie den Vorgang abbrechen wollen?"
 msgid "You already have a copy of the original MBR, I will not make a backup of it"
 msgstr "Sie haben bereits eine Kopie des Original-MBR, es wird kein Backup davon erstellt"
 
-msgid "A copy of the original MBR is saved in the folder /boot/grub of your NuTyX. It will then be possible to restore it if need"
-msgstr "Eine Kopie des Original-MBR ist im Verzeichnis /boot/grub Ihres NuTyX gespeichert. Es möglich  diese wiederherzustellen"
+msgid "A copy of the original MBR is saved in the folder /boot/grub of your YaoLinuX. It will then be possible to restore it if need"
+msgstr "Eine Kopie des Original-MBR ist im Verzeichnis /boot/grub Ihres YaoLinuX gespeichert. Es möglich  diese wiederherzustellen"
 
 msgid "Everything OK, do you want to modify"
 msgstr "Alles ok, möchten sie ändern"
@@ -186,8 +186,8 @@ msgstr "Eine neue"
 msgid "has been created"
 msgstr "wurde erstellt"
 
-msgid "it has been adapted to launch the Maintenance system of NuTyX"
-msgstr "es wurde angepasst, um die Wartungssystem NuTyX starten"
+msgid "it has been adapted to launch the Maintenance system of YaoLinuX"
+msgstr "es wurde angepasst, um die Wartungssystem YaoLinuX starten"
 
 msgid "if you choose"
 msgstr "wenn Sie sich entscheiden"
@@ -213,8 +213,8 @@ msgstr "Gut zu wissen"
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-msgid "Welcome to the NuTyX installer"
-msgstr "Willkommen zu der NuTyX Installations"
+msgid "Welcome to the YaoLinuX installer"
+msgstr "Willkommen zu der YaoLinuX Installations"
 
 msgid "Create all your partitions"
 msgstr "Erstellen Sie alle Ihre Partition"
@@ -339,8 +339,8 @@ msgstr "Bitte warten"
 msgid "This is a very basic tool, do not expect too much"
 msgstr "Dies ist ein sehr einfaches Werkzeug, nicht zu viel erwarten"
 
-msgid "It will ask you on which partition you want to install NuTyX"
-msgstr "Sie werden gefragt auf welche Partition sie NuTyX installieren wollen"
+msgid "It will ask you on which partition you want to install YaoLinuX"
+msgstr "Sie werden gefragt auf welche Partition sie YaoLinuX installieren wollen"
 
 msgid "If not yet created/formatted, it will prompt you to do so"
 msgstr "Falls noch nicht erstellt / formatiert , werden Sie aufgefordert, dies zu tun"
@@ -348,8 +348,8 @@ msgstr "Falls noch nicht erstellt / formatiert , werden Sie aufgefordert, dies z
 msgid "No future plan to make this installer more sophisticated"
 msgstr "Keine Zukunftsplan dieses Installationsprogram besser zu machen"
 
-msgid "NuTyX goes on"
-msgstr "NuTyX geht weiter"
+msgid "YaoLinuX goes on"
+msgstr "YaoLinuX geht weiter"
 
 msgid "only ONE partition"
 msgstr "nur EINE Partition"
@@ -357,20 +357,20 @@ msgstr "nur EINE Partition"
 msgid "ONE exception, GRUB can be part of it, installed on a separate partition or not installed at all"
 msgstr "Eine Ausnahme, GRUB könnte darin vorkommen entweder, auf einer separaten Partition installiert oder überhaupt nicht installiert"
 
-msgid "As NuTyX users, we recommand you to install GRUB on a separate partition"
-msgstr "Als NuTyX Nutzer, empfehlen wir Ihnen, GRUB auf einer separaten Partition zu installieren"
+msgid "As YaoLinuX users, we recommand you to install GRUB on a separate partition"
+msgstr "Als YaoLinuX Nutzer, empfehlen wir Ihnen, GRUB auf einer separaten Partition zu installieren"
 
 msgid "To do so"
 msgstr "Um dies zu tun"
 
-msgid "Install GRUB first, then NuTyX"
-msgstr "Installieren Sie GRUB zuerst, dann NuTyX"
+msgid "Install GRUB first, then YaoLinuX"
+msgstr "Installieren Sie GRUB zuerst, dann YaoLinuX"
 
 msgid "Have fun"
 msgstr "Viel Spaß"
 
-msgid "Thank you for installing NuTyX"
-msgstr "Danke, dass Sie NuTyX installieren"
+msgid "Thank you for installing YaoLinuX"
+msgstr "Danke, dass Sie YaoLinuX installieren"
 
 msgid "Help"
 msgstr "Hilfe"

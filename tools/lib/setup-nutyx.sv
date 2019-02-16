@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: NuTyX Configuration tool\n"
+"Project-Id-Version: YaoLinuX Configuration tool\n"
 "PO-Revision-Date: 2014-08-07+2000\n"
 "Last-Translator: https://translate.google.se/#fr/sv/\n"
 "Language-Team: Swedish\n"
@@ -123,8 +123,8 @@ msgstr "Lägg till en användare i systemet"
 msgid "Configure the system"
 msgstr "Konfigurera systemet"
 
-msgid "Install NuTyX"
-msgstr "Installera NuTyX"
+msgid "Install YaoLinuX"
+msgstr "Installera YaoLinuX"
 
 msgid "Use the arrows keys to change the values"
 msgstr "Använd piltangenterna för att ändra värdena"
@@ -156,14 +156,14 @@ msgstr "Välj den disk som du vill ändra MBR på"
 msgid "Select the partition on which you want to place the GRUB files"
 msgstr "Välj den partition som vill placera GRUB-filerna på"
 
-msgid "Note that the destination partition can contain NuTyX or any other distribution"
-msgstr "Observera att destinationen partition kan innehålla NuTyX eller någon annan distribution"
+msgid "Note that the destination partition can contain YaoLinuX or any other distribution"
+msgstr "Observera att destinationen partition kan innehålla YaoLinuX eller någon annan distribution"
 
 msgid "No boot process configured"
 msgstr "Ingen boot process konfigurerad"
 
-msgid "You have installed NuTyX without configuring the boot process"
-msgstr "Du har installerat NuTyX utan konfiguration av boot process"
+msgid "You have installed YaoLinuX without configuring the boot process"
+msgstr "Du har installerat YaoLinuX utan konfiguration av boot process"
 
 msgid "Are you sure, you want to cancel the process ?"
 msgstr "Är du säker på att du vill avbryta processen ?"
@@ -183,8 +183,8 @@ msgstr "En ny"
 msgid "has been created"
 msgstr "har skapats"
 
-msgid "it has been adapted to launch the Maintenance system of NuTyX"
-msgstr "Den är anpassad för att starta underhålls systemet i NuTyX"
+msgid "it has been adapted to launch the Maintenance system of YaoLinuX"
+msgstr "Den är anpassad för att starta underhålls systemet i YaoLinuX"
 
 msgid "if you choose"
 msgstr "Om du väljer"
@@ -210,8 +210,8 @@ msgstr "Bra att veta"
 msgid "Main Menu"
 msgstr "Huvudmeny"
 
-msgid "Welcome to the NuTyX installer"
-msgstr "Välkommen till NuTyX installationen"
+msgid "Welcome to the YaoLinuX installer"
+msgstr "Välkommen till YaoLinuX installationen"
 
 msgid "Create all your partitions"
 msgstr "Skapa alla dina partitioner"
@@ -336,8 +336,8 @@ msgstr "Var god vänta"
 msgid "This is a very basic tool, do not expect too much"
 msgstr "Detta är ett mycket grundläggande verktyg, förvänta dig inte för mycket"
 
-msgid "It will ask you on which partition you want to install NuTyX"
-msgstr "Den kommer att fråga dig om vilken partition du vill installera NuTyX på"
+msgid "It will ask you on which partition you want to install YaoLinuX"
+msgstr "Den kommer att fråga dig om vilken partition du vill installera YaoLinuX på"
 
 msgid "If not yet created/formatted, it will prompt you to do so"
 msgstr "Om den ännu inte är skapad / formaterad, kommer den att fråga dig att göra det"
@@ -345,8 +345,8 @@ msgstr "Om den ännu inte är skapad / formaterad, kommer den att fråga dig att
 msgid "No future plan to make this installer more sophisticated"
 msgstr "Ingen framtida plan för att göra den här installeraren mer sofistikerade"
 
-msgid "NuTyX goes on"
-msgstr "NuTyX läggs på"
+msgid "YaoLinuX goes on"
+msgstr "YaoLinuX läggs på"
 
 msgid "only ONE partition"
 msgstr "endast en partition"
@@ -354,20 +354,20 @@ msgstr "endast en partition"
 msgid "ONE exception, GRUB can be part of it, installed on a separate partition or not installed at all"
 msgstr "Ett undantag, GRUB kan vara en del av den, installeras på en separerad partition, eller inte installerad alls"
 
-msgid "As NuTyX users, we recommand you to install GRUB on a separate partition"
-msgstr "Som NuTyX användare, rekommenderar vi dig att installera GRUB på en separat partition"
+msgid "As YaoLinuX users, we recommand you to install GRUB on a separate partition"
+msgstr "Som YaoLinuX användare, rekommenderar vi dig att installera GRUB på en separat partition"
 
 msgid "To do so"
 msgstr "För att göra så"
 
-msgid "Install GRUB first, then NuTyX"
-msgstr "Installerar GRUB först, sedan NuTyX"
+msgid "Install GRUB first, then YaoLinuX"
+msgstr "Installerar GRUB först, sedan YaoLinuX"
 
 msgid "Have fun"
 msgstr "Ha det så kul"
 
-msgid "Thank you for installing NuTyX"
-msgstr "Tack för att du installerar NuTyX"
+msgid "Thank you for installing YaoLinuX"
+msgstr "Tack för att du installerar YaoLinuX"
 
 msgid "Help"
 msgstr "Hjälp"
@@ -375,8 +375,8 @@ msgstr "Hjälp"
 msgid "How to do it"
 msgstr "Anvisningar"
 
-msgid "A copy of the original MBR is saved in the folder /boot/grub of your NuTyX. It will then be possible to restore it if need"
-msgstr "En kopia av original MBR sparas i mappen /boot/grub i din NuTyX. Den kan då återställas om det behövs"
+msgid "A copy of the original MBR is saved in the folder /boot/grub of your YaoLinuX. It will then be possible to restore it if need"
+msgstr "En kopia av original MBR sparas i mappen /boot/grub i din YaoLinuX. Den kan då återställas om det behövs"
 
 msgid "The name you enter is invalid"
 msgstr "Namnet du angav är inte giltigt"
