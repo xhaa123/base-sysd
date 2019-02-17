@@ -1027,6 +1027,7 @@ alias duh='du -h --max-depth=1'
 alias dfh='df -h'
 alias pkgfind='cards list | grep -i'
 alias xz='xz -T0'
+alias unxz='unxz -T0'
 
 # End ~/.bashrc
 EOF
