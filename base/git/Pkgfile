@@ -1,14 +1,14 @@
 # Depends on: openssh
 
-maintainer="Junio C Hamano, Linus Torvalds"
-packager="tnut <tnut@nutyx.org>"
-contributors="Pierre B"
+maintainer="rems <rems@yaolinux.org>"
+packager="Yaolinux Team"
+contributors=""
 
 description="Distributed version control system designed to handle small to very large projects."
 url="http://git-scm.com/"
 
 name=git
-version=2.20.1
+version=2.21.0
 
 source=( https://www.kernel.org/pub/software/scm/$name/$name{,-manpages,-htmldocs}-$version.tar.xz)
 run=(openssh)
