@@ -320,7 +320,7 @@ echo -n "]"
 tput rc
 }
 
-PROMPT_COMMAND=prompt_command
+#PROMPT_COMMAND=prompt_command
 
 case $TERM in
         xterm|rxvt*)
@@ -331,11 +331,13 @@ case $TERM in
                 ;;
 esac
 
-if [[ $EUID == 0 ]] ; then
-  PS1="$TITLEBAR$RED\u [ $NORMAL\w$RED ]# $NORMAL"
-else
-  PS1="$TITLEBAR$GREEN\u [ $NORMAL\w$GREEN ]\$ $NORMAL"
-fi
+export PS1="\u@\h:\w\\$ "
+
+#if [[ $EUID == 0 ]] ; then
+#  PS1="$TITLEBAR$RED\u [ $NORMAL\w$RED ]# $NORMAL"
+#else
+#  PS1="$TITLEBAR$GREEN\u [ $NORMAL\w$GREEN ]\$ $NORMAL"
+#fi
 # End /etc/bashrc
 EOF
 }
