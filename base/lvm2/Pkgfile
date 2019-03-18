@@ -6,7 +6,7 @@ contributors="Pierre B"
 packager="tnut <tnut@nutyx.org>"
 
 name=lvm2
-version=2.03.01
+version=2.03.02
 
 source=(ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz)
 build() {
@@ -15,11 +15,12 @@ cd LVM2.$version
 --prefix=/usr \
 --exec-prefix= \
 --with-confdir=/etc \
---mandir=/usr/share/man \
 --enable-applib \
 --enable-cmdlib \
 --enable-pkgconfig \
 --enable-udev_sync
+
 make
 make DESTDIR=$PKG install
+
 }
