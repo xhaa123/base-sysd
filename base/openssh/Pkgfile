@@ -7,7 +7,7 @@ contributors=""
 packager="rems <rems@yaolinux.org>"
 
 name=openssh
-version=7.9p1
+version=8.0p1
 yao_version=1.0-RC1
 
 source=(http://downloads.tuxfamily.org/nutyx/files/yaolinux-${yao_version}.tar.xz
