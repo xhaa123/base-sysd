@@ -2,12 +2,12 @@
 
 description="Cross-platform IDE focused on Python application development"
 url="http://martine.github.io/ninja/"
-contributors="Pierre, Greg"
-packager="tnut <tnut@nutyx.org>"
+maintainer="rems"
+packager="Yaolinux Team"
 
 
 name=ninja
-version=1.8.2
+version=1.9.0
 
 source=(https://github.com/ninja-build/$name/archive/v$version/$name-$version.tar.gz)
 	

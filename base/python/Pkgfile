@@ -9,7 +9,7 @@ contributors="Alienus"
 packager="tnut <tnut@nutyx.org>"
 
 name=python
-version=3.7.2
+version=3.7.4
 alias=(python3 Python)
 source=(http://www.python.org/ftp/python/$version/Python-$version.tar.xz
         https://docs.python.org/ftp/python/doc/$version/python-$version-docs-html.tar.bz2
@@ -23,12 +23,14 @@ tar -xvf Python-$version.tar.xz
                 --enable-shared \
                 --with-system-expat \
                 --with-system-ffi \
-         		--with-ensurepip=yes
+       		--with-ensurepip=yes
+
 	make
 	make DESTDIR=$PKG install
 
 	chmod -v 755 $PKG/usr/lib/libpython3.7m.so
 	chmod -v 755 $PKG//usr/lib/libpython3.so
+        ln -svf pip3.7 $PKG/usr/bin/pip3
 
 # Install all HTML Docs files with desktop menu integration
 

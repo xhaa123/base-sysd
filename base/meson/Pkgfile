@@ -6,7 +6,7 @@ maintainer="Rems"
 packager="Yaolinux Team"
 
 name=meson
-version=0.50.1
+version=0.51.0
 
 source=(https://github.com/mesonbuild/$name/releases/download/$version/$name-$version.tar.gz)
 

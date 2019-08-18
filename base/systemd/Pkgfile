@@ -6,16 +6,15 @@ packager="rems <rems@yaolinux.org>"
 maintainer=""
 
 name=systemd
-version=240
-release=6
+version=241
+release=1
 yao_version="1.0"
 
-source=(https://github.com/systemd/systemd/archive/v$version.tar.gz
-        http://www.linuxfromscratch.org/patches/lfs/development/systemd-240-security_fixes-1.patch)
+source=(https://github.com/systemd/systemd/archive/v$version.tar.gz)
 
 build () {
 cd $name-$version
-patch -Np1 -i ../systemd-240-security_fixes-1.patch
+
 [ -d /tools ] && ln -sf /tools/bin/true /usr/bin/xsltproc
 # sed '165,$ d' -i src/resolve/meson.build
 sed -i 's/GROUP="render", //' rules/50-udev-default.rules.in
@@ -54,7 +53,7 @@ meson --prefix=/usr                \
 LANG=en_US.UTF-8 ninja
 DESTDIR=$PKG LANG="en_US.UTF-8" ninja install
 rm -rfv $PKG/usr/lib/rpm
-rm -f /usr/bin/xsltproc
+rm -fv /usr/bin/xsltproc
 
 # Disable service systemd-networkd
 unlink $PKG/etc/systemd/system/dbus-org.freedesktop.network1.service
@@ -66,10 +65,7 @@ unlink $PKG/etc/systemd/system/network-online.target.wants/systemd-networkd-wait
 unlink $PKG/etc/systemd/system/dbus-org.freedesktop.resolve1.service
 unlink $PKG/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
 
-cat > $PKG/lib/systemd/systemd-user-sessions << "EOF"
-#!/bin/bash
-rm -f /run/nologin
-EOF
+rm -f $PKG/usr/lib/tmpfiles.d/systemd-nologin.conf
 
 chmod 755 $PKG/lib/systemd/systemd-user-sessions
 
