@@ -1229,7 +1229,8 @@ check_variables() {
 if [ -z "$CHROOT_LIST" ]; then
 	CHROOT_LIST="yaolinux acl attr bash bzip2 coreutils curl \
 expat gcc readline ncurses lzo glibc gmp xz zlib \
-libarchive mpc mpfr openssl cards"
+libarchive mpc mpfr openssl cards \
+libtasn1 nettle gnutls p11-kit libffi"
    [ "$ARCH" = "i686" -a "$HOST_ARCH" = "x86_64" ] && CHROOT_LIST="$CHROOT_LIST util-linux"
 fi
 [ -z "$URL" ] && URL="http://downloads.yaolinux.org"
@@ -1261,9 +1262,9 @@ fi
 [ -z $LFS ] && LFS=$FOLDER
 
 HOMEPAGE="${URL}"                      ## http://downloads.yaolinux.org
-INSTALL_BASE="$ARCH/$VERSION"          ## x86_64/8.2
-DEPOT_ROOT="$HOMEPAGE/${INSTALL_BASE}" ## http://downloads.yaolinux.org/x86_64/8.2
-DEPOT_BASE="$DEPOT_ROOT/$BASE"         ## http://downloads.yaolinux.org/x86_64/8.2/base
+INSTALL_BASE="$ARCH/$VERSION"          ## x86_64/1.0-RC2
+DEPOT_ROOT="$HOMEPAGE/${INSTALL_BASE}" ## http://downloads.yaolinux.org/x86_64/1.0-RC2
+DEPOT_BASE="$DEPOT_ROOT/$BASE"         ## http://downloads.yaolinux.org/x86_64/1.0-RC2/base
 
 LOCAL_DEPOT_PACKAGES="$DEPOT/$BASE"
 DEPOT_CD="/media/cdrom"
@@ -1423,10 +1424,10 @@ libpipeline util-linux \
 findutils flex libcap \
 gettext procps-ng psmisc \
 sed sudo tzdata inetutils \
-iproute2 iana-etc \
+iproute2 libelf iana-etc \
 kmod less groff man-db \
 cards.fr cards.man yaolinux.man \
-lvm2 dialog cpio squashfs \
+lvm2 libaio dialog cpio squashfs \
 ca-certificates lsb-release \
 $KERNEL \
 $DEVEL
