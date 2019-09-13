@@ -1,12 +1,13 @@
 # Depends on: perl
 
 description="ExtUtils::MakeMaker - Create a module Makefile"
-url="https://metacpan.org/pod/ExtUtils::MakeMaker"
+url="http://search.cpan.org/~bingos/ExtUtils-MakeMaker/"
 packager="tnut <tnut@nutyx.org>"
 
 run=( perl )
 name=perl-extutils-makemaker
 version=7.34
+release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-$version.tar.gz)
 
@@ -20,7 +21,8 @@ build() {
     # Remove duplicated man pages
     rm -r $PKG/usr/share/man
 
-    # Remove .packlist if present in the package
-    find $PKG -name .packlist -delete
+    # Remove perllocal.pod and .packlist if present in the package
+    find $PKG -name .packlist or -name "perllocal.pod" -delete
+    
     rm $PKG/usr/bin/instmodsh
 }
