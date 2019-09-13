@@ -15,14 +15,12 @@ cd $name-$version
 
 FORCE_UNSAFE_CONFIGURE=1 \
 ./configure --prefix=/usr \
-            --bindir=/bin \
-            --libexecdir=/sbin
+            --bindir=/bin
 
 make
+
 make DESTDIR=$PKG install
 
 mkdir $PKG/usr/share/doc
 make -C doc install-html docdir=$PKG/usr/share/doc/tar-$version
-
-mkdir -p $PKG/usr/share/man/man1
 }
