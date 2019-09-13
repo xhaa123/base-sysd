@@ -1,11 +1,12 @@
-# Depends on: perl openssl perl-crypt-openssl-guess
-
 description="Interface to OpenSSL PRNG methods"
 url="https://metacpan.org/pod/Crypt::OpenSSL::Random"
+
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
-run=( perl perl-crypt-openssl-guess )
+makedepends=(perl openssl perl-crypt-openssl-guess)
+run=(perl-crypt-openssl-guess)
+
 name=perl-crypt-openssl-random
 version=0.15
 
@@ -18,4 +19,5 @@ make
 make pure_install doc_install DESTDIR=$PKG
 
 find $PKG -name '.packlist' -delete
+find $PKG -name '*.pod' -delete
 }
