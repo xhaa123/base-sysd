@@ -1,13 +1,14 @@
 description="The principal firewall tool for Linux."
 url="http://www.iptables.org/"
-packager="Yaolinux Teams"
+
+packager="Yaolinux Team"
 contributors="Dania"
-                                                                                                                      
+
 name=iptables
 version=1.8.2
 yaolinux_version=1.0-RC1
 
-source=(http://download.yaolinux.org/yaolinux/files/yaolinux-${yaolinux_version}.tar.xz
+source=(http://downloads.yaolinux.org/yaolinux/files/yaolinux-${yaolinux_version}.tar.xz
 	http://www.netfilter.org/projects/iptables/files/$name-$version.tar.bz2)
 
 build() {
@@ -15,12 +16,12 @@ build() {
 cd $name-$version
 
 ./configure --prefix=/usr \
---sbindir=/sbin \
---with-xtlibdir=/lib/xtables \
---with-pkgconfigdir=/usr/lib/pkgconfig \
---enable-libipq \
---disable-nftables \
---enable-devel
+            --sbindir=/sbin \
+            --with-xtlibdir=/lib/xtables \
+            --with-pkgconfigdir=/usr/lib/pkgconfig \
+            --enable-libipq \
+            --disable-nftables \
+            --enable-devel
 
 make
 make DESTDIR=$PKG install
@@ -31,12 +32,7 @@ do
    mv -v $PKG/usr/lib/lib${file}.so.* $PKG/lib
    ln -sfv ../../lib/$(readlink $PKG/usr/lib/lib${file}.so) $PKG/usr/lib/lib${file}.so
 done
-
 # service
 cd ../yaolinux-${yaolinux_version}
 make DESTDIR=$PKG install-$name
-
-# remove obsolete libraries .la
-rm -rf $PKG/usr/lib/*.la
-
 }
