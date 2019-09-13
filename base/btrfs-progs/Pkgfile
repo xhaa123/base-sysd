@@ -1,31 +1,32 @@
-# Depends on: lzo
+# Depends on: lzo python
 
 description="Btrfs filesystem utilities"
 url="http://btrfs.wiki.kernel.org/"
 
-contributors="Alienus"
+contributors="alienus at nutyx dot org, tnut at nutyx dot org"
 packager="tnut <tnut@tnut@nutyx.org>"
 
 name=btrfs-progs
-version=4.17
+version=5.2.2
 
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/$name/$name-v$version.tar.xz)
 
 build(){
 cd $name-v$version
-sed -i '1,100 s/\.gz//g' Documentation/Makefile.in
-./configure \
---prefix=/usr \
---libdir=/lib \
---bindir=/sbin \
- --disable-zstd \
---disable-documentation \
---disable-python
+
+./configure --prefix=/usr \
+            --libdir=/lib \
+            --bindir=/bin \
+            --disable-zstd \
+            --disable-documentation 
+
 make
 make DESTDIR=$PKG install
 
 # Binaries should be available in case of mounting /usr
 mkdir -p $PKG/{sbin,usr/lib}
 ln -sfv ../../lib/$(readlink $PKG/lib/libbtrfs.so) $PKG/usr/lib/libbtrfs.so
-rm -v $PKG/lib/libbtrfs.{a,so}
+ln -sfv ../../lib/$(readlink $PKG/lib/libbtrfsutil.so) $PKG/usr/lib/libbtrfsutil.so &&
+rm -v $PKG/lib/libbtrfs.{a,so} $PKG/lib/libbtrfsutil.{a,so}
+mv -v $PKG/bin/{mkfs,fsck}.btrfs $PKG/sbin
 }
