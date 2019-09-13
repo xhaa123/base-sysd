@@ -1,5 +1,3 @@
-# Depends on: python
-
 description="The GRUB package contains the GRand Unified Bootloader."
 url="http://www.gnu.org/software/grub/"
 packager="tnut <tnut@nutyx.org>"
@@ -16,17 +14,14 @@ PKGMK_GROUPS=(man locale)
 build() {
 	cd grub-$version
 	./configure --prefix=/usr \
-	  	--sysconfdir=/etc       \
+		--sysconfdir=/etc       \
 		--sbindir=/sbin        \
 		--disable-grub-emu-usb  \
 		--disable-efiemu \
 		--infodir=/usr/share/info \
 		--disable-werror
-
 	make
-
 	make DESTDIR=$PKG install
-
         install -d $PKG/boot/grub
 	install -Dm644 ../grub.cfg \
 	$PKG/boot/grub/grub.cfg.exemple
