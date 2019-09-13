@@ -11,16 +11,13 @@ source=(https://github.com/thom311/libnl/releases/download/libnl$(echo $version|
 build() {
 cd $name-$version
 ./configure --prefix=/usr \
---sysconfdir=/etc \
---disable-static
+            --sysconfdir=/etc \
+            --disable-static
 make
 make DESTDIR=$PKG install
 # Doc
 mkdir -p $PKG/usr/share/doc/$name-$version
-wget https://github.com/thom311/libnl/releases/download/libnl$(echo $version|sed 's/\./_/g')/libnl-doc-$version.tar.gz
+curl -O https://github.com/thom311/libnl/releases/download/libnl$(echo $version|sed 's/\./_/g')/libnl-doc-$version.tar.gz
 tar -xf libnl-doc-$version.tar.gz --strip-components=1 --no-same-owner \
 -C $PKG/usr/share/doc/$name-$version
-
-find $PKG -name '*.la' | xargs rm -v
-
 }
