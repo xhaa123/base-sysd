@@ -1,10 +1,11 @@
-# Depends on: perl openssl
-
 description="OpenSSL's multiprecision integer arithmetic"
-url="https://metacpan.org/pod/Crypt::OpenSSL::Bignum"
+url="http://search.cpan.org/"
+
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
-run=( perl )
+
+makedepends=(perl openssl)
+run=(perl)
 
 name=perl-crypt-openssl-bignum
 version=0.09
@@ -18,4 +19,5 @@ make
 make pure_install doc_install DESTDIR=$PKG
 
 find $PKG -name '.packlist' -delete
+find $PKG -name '*.pod' -delete
 }
