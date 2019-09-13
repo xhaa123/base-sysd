@@ -1,33 +1,33 @@
-# Depends on: libtirpc rpcbind
-
 description="Userspace server and client tools necessary to use the kernel's NFS abilities."
 url="http://nfs.sourceforge.net"
 packager="tnut <tnut@nutyx.org>"
 
 name=nfs-utils
-version=2.2.1
+version=2.4.1
 yaolinux_version=1.0-RC1
 
 source=(http://downloads.yaolinux.org/yaolinux/files/yaolinux-${yaolinux_version}.tar.xz
 	http://downloads.sourceforge.net/nfs/$name-$version.tar.bz2)
 
+makedepends=(libtirpc rpcbind libcap sqlite lvm2 rpcsvc-proto)
 run=(rpcbind)
 
 build() {
 # build package
 
 cd $name-$version
-sed -i '/fcntl.h/a#include <stdint.h>' support/nsm/rpc.c
+
 ./configure --prefix=/usr     \
 --sysconfdir=/etc \
 --sbindir=/sbin   \
 --disable-nfsv4   \
---disable-gss \
---without-tcp-wrappers		
+--disable-gss 
 
 make
+
 mkdir $PKG/sbin
 make DESTDIR=$PKG install
+
 chmod u+w,go+r $PKG/sbin/mount.nfs
 chown nobody.nogroup $PKG/var/lib/nfs
 
