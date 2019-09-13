@@ -1,15 +1,13 @@
-# Depends on: perl
-
 description="Cross-platform path specification manipulation"
-url="https://metacpan.org/pod/Path::Class"
+url="http://search.cpan.org/dist/Path-Class/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
-run=( perl )
+makedepends=(perl)
+run=(perl)
 
 name=perl-path-class
 version=0.37
-release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Path-Class-$version.tar.gz)
 
@@ -25,5 +23,6 @@ perl Makefile.PL
 make
 make DESTDIR=$PKG install
 find $PKG -name '*.bs' -or \
--name .packlist -delete
+          -name .packlist -or \
+          -name perllocal.pod -delete
 }
