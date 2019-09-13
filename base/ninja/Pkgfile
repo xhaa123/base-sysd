@@ -1,10 +1,10 @@
-# Depends on: python
-
 description="Cross-platform IDE focused on Python application development"
 url="http://martine.github.io/ninja/"
+
 maintainer="rems"
 packager="Yaolinux Team"
 
+makedepends=(python)
 
 name=ninja
 version=1.9.0
