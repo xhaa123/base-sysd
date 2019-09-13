@@ -1,7 +1,7 @@
 # Depends on: perl perl-http-date 
 
 description="parse directory listing"
-url="https://metacpan.org/pod/File::Listing"
+url="http://search.cpan.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -20,5 +20,6 @@ make
 make DESTDIR=$PKG install
 find $PKG \
 	-name '*.bs' -or \
-	-name .packlist -delete
+	-name .packlist -or \
+	-name perllocal.pod | xargs rm
 }
