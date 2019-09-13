@@ -7,12 +7,3 @@ name=autoconf
 version=2.69
 
 source=(http://ftp.gnu.org/gnu/autoconf/autoconf-$version.tar.xz)
-
-build () {
-cd $name-$version
-sed '361 s/{/\\{/' -i bin/autoscan.in
-./configure --prefix=/usr
-make
-make check || true
-make DESTDIR=$PKG install
-}
