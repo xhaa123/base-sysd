@@ -1,10 +1,9 @@
-# Depends on: perl
-
 description="Minimal try/catch with proper localization of $@"
-url="https://metacpan.org/pod/Try::Tiny"
+url="http://search.cpan.org/dist/Try-Tiny/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
+makedepends=(perl)
 run=( perl )
 name=perl-try-tiny
 version=0.30
@@ -16,7 +15,8 @@ cd Try-Tiny-$version
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install
-
-find $PKG -name '*.bs' -or \
--name .packlist -delete
+find $PKG \
+        -name '*.bs' -or \
+        -name .packlist -or \
+        -name perllocal.pod | xargs rm
 }
