@@ -1,11 +1,11 @@
-# Depends on: perl perl-crypt-openssl-random perl-crypt-openssl-bignum 
-
 description="Interface to OpenSSL RSA methods"
-url="https://metacpan.org/pod/Crypt::OpenSSL::RSA"
+url="http://search.cpan.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
-run=( perl perl-crypt-openssl-random perl-crypt-openssl-bignum )
+makedepends=(perl-crypt-openssl-random perl-crypt-openssl-bignum)
+run=(perl)
+
 name=perl-crypt-openssl-rsa
 version=0.30
 
@@ -19,4 +19,5 @@ make
 make pure_install doc_install  DESTDIR=$PKG
 
 find "$PKG" -name '.packlist' -delete
+find "$PKG" -name '*.pod' -delete
 }
