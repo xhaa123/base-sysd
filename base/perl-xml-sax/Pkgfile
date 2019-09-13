@@ -1,25 +1,24 @@
-# Depends on: perl-xml-namespacesupport perl-xml-sax-base
-
 description="Simple API for XML"
-url=""
+url="http://search.cpan.org/dist/XML-SAX/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Alienus"
 
-run=( perl )
+makedepends=(perl-xml-namespacesupport perl-xml-sax-base)
+run=(perl)
 
 name=perl-xml-sax
-version=1.00
+version=1.02
 
-source=(
-http://www.cpan.org/authors/id/G/GR/GRANTM/XML-SAX-$version.tar.gz)
+source=(http://www.cpan.org/authors/id/G/GR/GRANTM/XML-SAX-$version.tar.gz)
 
 build() {
     cd XML-SAX-$version
-    PERL_MM_USE_DEFAULT=1 perl Makefile.PL
-    make
+    yes | PERL_MM_USE_DEFAULT=1 perl Makefile.PL
     make test
     PERLLIB=blib/lib make install INSTALLDIRS=vendor DESTDIR=$PKG
 
-    # Remove .packlist if present in the package
-    find $PKG -name .packlist -delete
+    # Remove perllocal.pod and .packlist if present in the package
+    for i in perllocal.pod .packlist; do
+        find $PKG -name "$i" -exec rm -rf {} \;
+    done
 }
