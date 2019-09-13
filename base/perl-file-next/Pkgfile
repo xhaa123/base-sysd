@@ -1,7 +1,7 @@
 # Depends on: perl
 
 description="Lightweight,taint-safe file finding module"
-url="https://metacpan.org/pod/File::Next"
+url="http://search.cpan.org/dist/File-Next/"
 packager="tnut <tnut@nutyx.org>"
 contributor="Greg"
 
@@ -9,6 +9,7 @@ run=( perl )
 
 name=perl-file-next
 version=1.16
+release=2
 
 source=(http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/File-Next-$version.tar.gz)
 
@@ -19,5 +20,4 @@ build() {
     make DESTDIR=$PKG install
     # Remove .packlist if present in the package
     find $PKG -name '.packlist' -delete
-
 }
