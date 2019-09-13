@@ -1,7 +1,7 @@
 # Depends on: perl
 
 description="Perl module to manage IP addresses and subnets"
-url="https://metacpan.org/pod/NetAddr::IP"
+url="http://search.cpan.org/dist/NetAddr-IP/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -18,6 +18,8 @@ cd NetAddr-IP-$version
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install
-find $PKG -name '*.bs' -or \
--name .packlist -delete
+find $PKG \
+        -name '*.bs' -or \
+        -name .packlist -or \
+        -name perllocal.pod | xargs rm
 }
