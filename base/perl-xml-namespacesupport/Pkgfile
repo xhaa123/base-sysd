@@ -1,7 +1,7 @@
 # Depends on: perl
 
 description="Generic namespace helpers (ported from SAX2)"
-url="https://metacpan.org/pod/XML::NamespaceSupport"
+url="http://search.cpan.org/dist/XML-NamespaceSupport"
 packager="tnut <tnut@nutyx.org>"
 
 run=( perl )
@@ -18,6 +18,12 @@ build() {
     make OPTIMIZE="$CFLAGS" || exit 1
     make install INSTALLDIRS=vendor DESTDIR=$PKG || exit 1
 
-    # Remove .packlist if present in the package
-    find $PKG -name .packlist -delete
+    # Remove perllocal.pod and .packlist if present in the package
+    for i in perllocal.pod .packlist; do
+        find $PKG -name "$i" -exec rm -rf {} \;
+    done
 }
+
+
+
+# NuTyX Pkgfile (http://nutyx.org)
