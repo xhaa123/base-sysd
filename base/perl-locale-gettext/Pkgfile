@@ -1,7 +1,7 @@
 # Depends on: gettext perl
 
 description="Permits access from Perl to the gettext() family of functions"
-url="https://metacpan.org/pod/Locale::gettext"
+url="http://search.cpan.org/dist/gettext/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Alienus"
 
@@ -19,6 +19,12 @@ build() {
     make OPTIMIZE="$CFLAGS" 
     make install INSTALLDIRS=vendor DESTDIR=$PKG
 
-    # Remove .packlist if present in the package
-    find $PKG -name .packlist -delete
+    # Remove perllocal.pod and .packlist if present in the package
+    for i in perllocal.pod .packlist; do
+        find $PKG -name "$i" -exec rm -rf {} \;
+    done
 }
+
+
+
+# NuTyX Pkgfile (http://nutyx.org)
