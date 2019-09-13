@@ -1,9 +1,10 @@
 description="Easy API to maintain XML"
-url="https://metacpan.org/pod/XML::Simple"
+url="http://search.cpan.org/dist/XML-Simple/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
-run=( perl )
+makedepends=(perl)
+run=(perl)
 
 name=perl-xml-simple
 version=2.25
@@ -17,5 +18,6 @@ make
 make DESTDIR=$PKG install
 find $PKG \
         -name '*.bs' -or \
-        -name .packlist | xargs rm
+        -name .packlist -or \
+        -name perllocal.pod -delete
 }
