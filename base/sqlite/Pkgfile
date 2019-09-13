@@ -8,16 +8,17 @@ _amalgamationver=3290000
 name=sqlite
 version=3.29.0
 
-source=(http://www.sqlite.org/2019/sqlite-autoconf-${_amalgamationver}.tar.gz)
+source=(http://www.sqlite.org/2018/sqlite-autoconf-${_amalgamationver}.tar.gz)
 
 build() {
   cd $name-autoconf-${_amalgamationver}
 
   ./configure --prefix=/usr \
-           --disable-static \
-           --enable-fts5    \
-  CFLAGS="-g -O2 -DSQLITE_ENABLE_FTS4=1 \
-  -DSQLITE_ENABLE_FTS3=1                \
+              --disable-static \
+              --enable-fts5    \
+  CFLAGS="-g -O2 \
+  -DSQLITE_ENABLE_FTS3=1            \
+  -DSQLITE_ENABLE_FTS4=1 \
   -DSQLITE_ENABLE_COLUMN_METADATA=1     \
   -DSQLITE_ENABLE_UNLOCK_NOTIFY=1       \
   -DSQLITE_SECURE_DELETE=1              \
@@ -29,4 +30,6 @@ build() {
   make DESTDIR=$PKG install
 
   rm $PKG/usr/lib/libsqlite3.la
+
+  install -v -m755 -d $PKG/usr/share/doc/$name-$version
 }
