@@ -4,7 +4,7 @@ maintainer="Jim Meyering meyering at redhat dot com"
 packager="tnut <tnut@nutyx.org>"
 
 name=coreutils
-version=8.30
+version=8.31
 
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
 	http://www.linuxfromscratch.org/patches/downloads/$name/$name-$version-i18n-1.patch
@@ -43,5 +43,7 @@ mkdir -p $PKG/usr/share/man/man8
 mv -v $PKG/usr/share/man/man1/chroot.1 $PKG/usr/share/man/man8/chroot.8
 sed -i s/\"1\"/\"8\"/1 $PKG/usr/share/man/man8/chroot.8
 
-mv -v $PKG/usr/bin/{head,sleep,nice,touch,[} $PKG/bin
+mv -v $PKG/usr/bin/{head,sleep,nice,test,[} $PKG/bin
+
+rm -rf $PKG/usr/share/info/dir
 }	
