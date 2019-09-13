@@ -4,7 +4,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=openssl
 version=1.1.1c
-release=2
 
 source=(ftp://ftp.openssl.org/source/$name-$version.tar.gz)
 
@@ -15,16 +14,19 @@ unset MAKEFLAGS
 
 cd $name-$version
 
+sed -i '/\} data/s/ =.*$/;\n    memset(\&data, 0, sizeof(data));/' \
+  crypto/rand/rand_lib.c
+
 ./config --prefix=/usr \
-	--openssldir=/etc/ssl \
-	shared zlib-dynamic
+	 --openssldir=/etc/ssl \
+	 shared \
+	 zlib-dynamic
 
 make
 
 # sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
 
-make DESTDIR=$PKG MANDIR=/usr/share/man \
-MANSUFFIX=ssl install
+make DESTDIR=$PKG MANSUFFIX=ssl install
 
 mv -v $PKG/usr/share/doc/openssl{,-$version}
 cp -vfr doc/*     $PKG/usr/share/doc/openssl-$version
