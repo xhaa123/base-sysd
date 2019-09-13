@@ -1,16 +1,23 @@
+# Depends on: 
+
 description="The Linux-native asynchronous I/O facility (aio) library"
 url="http://lse.sourceforge.net/io/aio.html"
-contributors="Greg, tnut"
-packager="rems <rems@nutyx.org>"
+packager="greg<greg@nutyx.org>"
+contributors=""
 
 name=libaio
 version=0.3.112
+CARCH=x86_64
 
-source=(http://ftp.de.debian.org/debian/pool/main/liba/libaio/libaio_"${version}".orig.tar.xz)
+source=(http://ftp.de.debian.org/debian/pool/main/liba/$name/${name}_${version}.orig.tar.xz)
 
 build() {
 cd $name-$version
-sed '/install.*libaio.a/s/^/#/' src/Makefile
+CFLAGS="-march=${CARCH/_/-} -mtune=generic -O2 -pipe"
 make
+}
+
+package() {
+cd $name-$version
 make prefix=$PKG/usr install
 }
