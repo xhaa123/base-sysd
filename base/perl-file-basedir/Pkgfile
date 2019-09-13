@@ -1,10 +1,9 @@
-# Depends on: perl-ipc-system-simple perl-module-build
-
 description="Use the Freedesktop.org base directory specification"
-url="https://metacpan.org/pod/File::BaseDir"
+url="http://search.cpan.org/dist/File-BaseDir/"
 packager="tnut <tnut@nutyx.org>"
 
-run=( perl  perl-ipc-system-simple)
+makedepends=(perl-ipc-system-simple perl-module-build)
+run=(perl  perl-ipc-system-simple)
 
 name=perl-file-basedir
 version=0.08
@@ -18,5 +17,7 @@ build() {
     make DESTDIR=$PKG install
 
     # Remove perllocal.pod and .packlist if present in the package
-    find $PKG -name .packlist -delete
+    for i in perllocal.pod .packlist; do
+        find $PKG -name "$i" -exec rm -rf {} \;
+    done
 }
