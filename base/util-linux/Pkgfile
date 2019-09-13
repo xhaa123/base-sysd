@@ -5,17 +5,17 @@ packager="tnut <tnut@nutyx.org>"
 contributors="Tnut, Greg"
 
 name=util-linux
-version=2.33
+version=2.34
 
 source=(http://www.kernel.org/pub/linux/utils/util-linux/v${version:0:4}/util-linux-$version.tar.xz)
 
 PKGMK_GROUPS=(devel doc man)
 
-build()
-{
+build() {
 cd util-linux-$version
 
 mkdir -pv $PKG/var/lib/hwclock
+
 ./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \
 	--docdir=/usr/share/doc/$name-$version \
 	--disable-chfn-chsh  \
@@ -26,14 +26,17 @@ mkdir -pv $PKG/var/lib/hwclock
 	--disable-runuser    \
 	--disable-pylibmount \
 	--disable-static     \
-	--without-python     \
+	--without-python
 
 make
+
 make DESTDIR=$PKG  install
-for file in /usr/lib/lib{blkid,mount,uuid}*
-do
-rm $file
-done
+
+mv $PKG/usr/bin/* $PKG/bin/
+rm -r $PKG/usr/bin
+
+mv $PKG/usr/sbin/* $PKG/sbin/
+rm -r $PKG/usr/sbin
 }
 devel()
 {
