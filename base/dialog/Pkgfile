@@ -11,11 +11,15 @@ source=(ftp://ftp.us.debian.org/debian/pool/main/d/dialog/dialog-${version}.tgz)
 
 build() {
 cd $name-$version
+
 ./configure --prefix=/usr \
---enable-nls --bindir=/bin \
---with-ncursesw \
---mandir=/usr/share/man
+            --enable-nls \
+            --bindir=/bin \
+            --with-ncursesw \
+            --mandir=/usr/share/man
+
 make
+
 make DESTDIR=$PKG install
 }
 devel() {
