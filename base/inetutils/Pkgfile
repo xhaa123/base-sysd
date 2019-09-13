@@ -6,13 +6,15 @@ contributors="Pierre B"
 
 name=inetutils
 version=1.9.4
-release=2
 
-source=(http://ftp.gnu.org/gnu/inetutils/inetutils-$version.tar.xz)
+source=(http://ftp.gnu.org/gnu/inetutils/inetutils-$version.tar.xz
+        https://dev.getsol.us/file/data/we3b2h3ndotzhem4ibmx/PHID-FILE-yji6dznnmv4yujpvuw7q/0001-ifconfig-Force-use-of-proc-net-dev.patch)
 
 build()
 {
 cd  inetutils-$version
+
+patch -Np1 -i ../0001-ifconfig-Force-use-of-proc-net-dev.patch
 
 ./configure --prefix=/usr \
 --localstatedir=/var \
@@ -22,7 +24,8 @@ cd  inetutils-$version
 --disable-rexec \
 --disable-rlogin \
 --disable-rsh \
---disable-servers
+--disable-servers \
+--with-pam
 
 make
 make check || true
