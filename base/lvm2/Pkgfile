@@ -1,27 +1,28 @@
-# Depends on: systemd libaio
-
 description="Allows spanning of file systems across multiple physical disks and partitions."
 url="http://sourceware.org/lvm2/"
 contributors="Pierre B"
 packager="tnut <tnut@nutyx.org>"
 
+makedepends=(systemd libaio)
+
 name=lvm2
-version=2.03.04
+version=2.03.05
 release=2
 
 source=(ftp://sources.redhat.com/pub/lvm2/LVM2.$version.tgz)
+
 build() {
 cd LVM2.$version
-./configure \
---prefix=/usr \
---exec-prefix= \
---with-confdir=/etc \
---enable-applib \
---enable-cmdlib \
---enable-pkgconfig \
---enable-udev_sync
+
+./configure --prefix=/usr \
+            --exec-prefix= \
+            --enable-cmdlib \
+            --enable-pkgconfig \
+            --enable-udev_sync
 
 make
-make DESTDIR=$PKG install
 
+make -C tools DESTDIR=$PKG install_tools_dynamic
+make -C udev DESTDIR=$PKG install
+make -C libdm DESTDIR=$PKG install
 }
