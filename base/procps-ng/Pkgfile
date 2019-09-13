@@ -13,15 +13,17 @@ build()
 cd $name-$version
 
 ./configure --prefix=/usr \
---exec-prefix= \
---libdir=/usr/lib \
---docdir=/usr/share/doc/procps-ng-$version \
---disable-static \
---disable-kill \
---with-systemd
+            --exec-prefix= \
+            --libdir=/usr/lib \
+            --docdir=/usr/share/doc/procps-ng-$version \
+            --disable-static \
+            --disable-kill \
+            --with-systemd
 
 make
+
 make DESTDIR=$PKG install
+
 mkdir $PKG/lib
 mv -v $PKG/usr/lib/libprocps.so.* $PKG/lib
 ln -sf ../../lib/$(readlink $PKG/usr/lib/libprocps.so) $PKG/usr/lib/libprocps.so
