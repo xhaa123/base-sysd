@@ -13,9 +13,6 @@ source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 build()
 {
 cd gmp-$version
-cp -v configfsf.guess config.guess
-cp -v configfsf.sub   config.sub
-
 case `uname -m` in
  i?86)
 	ABI=32 ./configure \
