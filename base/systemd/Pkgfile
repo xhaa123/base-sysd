@@ -1,33 +1,39 @@
-# Depends on: meson ninja
-
 description="Init system to control boot, execution and halt of a linux system"
 url="http://www.freedesktop.org/wiki/Software/systemd/"
-packager="rems <rems@yaolinux.org>"
-maintainer=""
+packager="tnut <tnut@nutyx.org>"
+maintainer="tnut <tnut@nutyx.org>"
 
 name=systemd
 version=241
-release=1
-yao_version="1.0"
 
-source=(https://github.com/systemd/systemd/archive/v$version.tar.gz)
+PKGMK_KEEP_SOURCES="no"
+
+source=(https://github.com/systemd/systemd/archive/v$version.tar.gz
+        http://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$version.tar.xz
+        http://www.linuxfromscratch.org/patches/blfs/svn/systemd-$version-networkd_and_rdrand_fixes-1.patch)
 
 build () {
 cd $name-$version
 
-[ -d /tools ] && ln -sf /tools/bin/true /usr/bin/xsltproc
-# sed '165,$ d' -i src/resolve/meson.build
+patch -Np1 -i ../systemd-$version-networkd_and_rdrand_fixes-1.patch
+
+sed '177,$ d' -i src/resolve/meson.build
+
+sed -i '1506,1508 s/</>/' src/shared/seccomp-util.c
+
 sed -i 's/GROUP="render", //' rules/50-udev-default.rules.in
 
-for file in /tools/lib/lib{blkid,mount,uuid}*; do
-    ln -sf $file /usr/lib/
+[ -d /tools ] && \
+for file in /tools/lib/lib{blkid,mount,uuid}.so*; do
+    ln -svf $file /usr/lib/
 done
 
-mkdir -p build
+mkdir -pv build
 cd       build
 
 PKG_CONFIG_PATH="/usr/lib/pkgconfig:/tools/lib/pkgconfig" \
-LANG="en_US.UTF-8"                  \
+LANG=en_US.UTF-8                   \
+CFLAGS+=" -Wno-format-overflow"     \
 meson --prefix=/usr                \
       --sysconfdir=/etc            \
       --localstatedir=/var         \
@@ -36,23 +42,25 @@ meson --prefix=/usr                \
       -Ddefault-dnssec=no          \
       -Dfirstboot=false            \
       -Dinstall-tests=false        \
-      -Dkill-path=/bin/kill        \
-      -Dkmod-path=/bin/kmod        \
       -Dldconfig=false             \
       -Dmount-path=/bin/mount      \
+      -Dsulogin-path=/sbin/sulogin \
+      -Dumount-path=/bin/umount    \
+      -Dkmod-path=/bin/kmod        \
       -Drootprefix=                \
       -Drootlibdir=/lib            \
       -Dsplit-usr=true             \
-      -Dsulogin-path=/sbin/sulogin \
       -Dsysusers=false             \
-      -Dumount-path=/bin/umount    \
       -Db_lto=false                \
+      -Dgnutls=false               \
       -Dman=false                  \
+      -Dhtml=false                 \
+      -Drpmmacrosdir=no            \
       ..
 
-LANG=en_US.UTF-8 ninja
-DESTDIR=$PKG LANG="en_US.UTF-8" ninja install
-rm -rfv $PKG/usr/lib/rpm
+LC_ALL="en_US.utf8" LANG="en_US.utf8" ninja
+DESTDIR=$PKG LC_ALL="en_US.utf8" LANG="en_US.utf8" ninja install
+
 rm -fv /usr/bin/xsltproc
 
 # Disable service systemd-networkd
@@ -105,4 +113,5 @@ BUG_REPORT_URL="https://bugs.yaolinux.org"
 
 # End /etc/os-release
 EOF
+[ -d /tools ] && rm -fv /usr/lib/lib{blkid,uuid,mount}.so*
 }
