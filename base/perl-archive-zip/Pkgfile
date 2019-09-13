@@ -17,4 +17,5 @@ build() {
         perl Makefile.PL
 	make OPTIMIZE="${CFLAGS}"
 	make DESTDIR=${PKG} install
+        find ${PKG} -name perllocal.pod -delete
 }
