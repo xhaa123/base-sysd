@@ -1,5 +1,3 @@
-# Depends on:
-
 description="Pretty printing of data structures"
 url="https://metacpan.org/release/Data-Dump"
 packager="minzord"
