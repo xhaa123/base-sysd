@@ -11,12 +11,12 @@ build()
 {
 cd bash-$version
 ./configure --prefix=/usr \
---htmldir=/usr/share/doc/bash-$version \
---docdir=/usr/share/doc/bash-$version \
---without-bash-malloc \
---with-installed-readline
+            --docdir=/usr/share/doc/bash-$version \
+            --without-bash-malloc \
+            --with-installed-readline
 
 make
+
 make DESTDIR=$PKG install
 
 mkdir -p $PKG/bin
