@@ -1,9 +1,9 @@
 # Depends on: perl
 
 description="A Post-Processor for SGMLS and NSGMLS"
-url="https://metacpan.org/"
+url="http://search.cpan.org/dist/SGMLSpm"
 packager="greg<greg@nutyx.org>"
-contributors="Tnut"
+contributors=""
 
 name=perl-sgmls
 _cpanname=SGMLSpm
@@ -38,6 +38,6 @@ make
 package() {
 prepareEnvironment
 make install
-find $PKG -name .packlist -delete
+find $PKG -name .packlist -o -name perllocal.pod -delete
 ln -sv /usr/bin/vendor_perl/sgmlspl.pl $PKG/usr/bin/sgmlspl
 }
