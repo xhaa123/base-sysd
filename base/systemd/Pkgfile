@@ -8,7 +8,7 @@ version=241
 
 PKGMK_KEEP_SOURCES="no"
 
-source=(https://github.com/systemd/systemd/archive/v$version.tar.gz
+source=(https://github.com/systemd/systemd/archive/$name-$version.tar.gz
         http://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$version.tar.xz
         http://www.linuxfromscratch.org/patches/blfs/svn/systemd-$version-networkd_and_rdrand_fixes-1.patch)
 
