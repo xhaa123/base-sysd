@@ -12,8 +12,12 @@ build()
 {
 cd grep-$version
 
-./configure --prefix=/usr --bindir=/bin
+./configure --prefix=/usr \
+            --bindir=/bin
+
 make
+
 make -k check || true
+
 make DESTDIR=$PKG install
 }
