@@ -1,7 +1,7 @@
 # Depends on: perl
 
 description="Perl Module: Easy manipulation of IPv4 and IPv6 addresses"
-url="https://metacpan.org/pod/Net::IP"
+url="http://search.cpan.org/dist/Net-IP/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -9,6 +9,7 @@ run=( perl )
 
 name=perl-net-ip
 version=1.26
+release=1
 
 source=(http://www.cpan.org/authors/id/M/MA/MANU/Net-IP-$version.tar.gz)
 
@@ -18,5 +19,6 @@ PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install
 find $PKG -iname '*.pod' -or \
--name '.packlist' | xargs rm
+-name '.packlist' -or \
+-name 'perllocal.pod' | xargs rm
 }
