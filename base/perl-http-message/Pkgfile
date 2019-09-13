@@ -1,11 +1,10 @@
-# Depends on: perl perl-encode-locale perl-html-parser perl-http-date perl-lwp-mediatypes perl-uri 
-
 description="HTTP style messages"
-url="https://metacpan.org/pod/HTTP::Message"
+url="http://search.cpan.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
-run=( perl )
+makedepends=(perl perl-encode-locale perl-html-parser perl-http-date perl-lwp-mediatypes perl-uri)
+run=(perl)
 
 name=perl-http-message
 version=6.18
@@ -23,6 +22,8 @@ cd HTTP-Message-$version
 perl Makefile.PL
 make
 make DESTDIR=$PKG install
-find $PKG -name '*.bs' -or \
--name '.packlist' -delete
+find $PKG \
+         -name '*.bs' -or \
+         -name '.packlist' -or \
+         -name 'perllocal.pod' -delete
 }
