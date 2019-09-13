@@ -9,7 +9,9 @@ version=1.5.10
 source=( http://people.redhat.com/~dhowells/$name/$name-$version.tar.bz2 )
 
 build() {
+	unset MAKEFLAGS
         cd $name-$version
+	sed -i "s/-O2/${CFLAGS}/" Makefile
         make
-        make NO_ARLIB=1 DESTDIR=$PKG install
+        make DESTDIR=$PKG install
 }
