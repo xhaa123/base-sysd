@@ -1,7 +1,7 @@
 # Depends on: perl 
 
 description="Perl interface to the SHA-1 Algorithm"
-url="https://metacpan.org/pod/Digest::SHA1"
+url="http://search.cpan.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -9,6 +9,7 @@ run=( perl )
 
 name=perl-digest-sha1
 version=2.13
+release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/Digest-SHA1-$version.tar.gz)
 
@@ -18,5 +19,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install
 find $PKG -iname '*.pod' -or \
--name '.packlist' | xargs rm
+-name '.packlist' -or \
+-name 'perllocal.pod' | xargs rm
 }
