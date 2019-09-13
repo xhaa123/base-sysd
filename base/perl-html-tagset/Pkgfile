@@ -1,7 +1,7 @@
 # Depends on: perl
 
 description="Data tables useful in parsing HTML"
-url="https://metacpan.org/pod/HTML::Tagset"
+url="http://search.cpan.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -20,5 +20,6 @@ make
 make DESTDIR=$PKG install
 find $PKG \
          -name '*.bs' -or \
-         -name '.packlist' | xargs rm
+         -name '.packlist' -or \
+         -name 'perllocal.pod' | xargs rm
 }
