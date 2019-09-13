@@ -1,7 +1,7 @@
 # Depends on: perl perl-uri 
 
 description="Database of robots.txt-derived permissions"
-url="https://metacpan.org/pod/WWW::RobotRules"
+url="http://search.cpan.org/dist/WWW-RobotRules/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -18,5 +18,7 @@ cd WWW-RobotRules-$version
 perl Makefile.PL
 make
 make DESTDIR=$PKG install
-find $PKG -name .packlist -delete
+find $PKG \
+-name perllocal.pod \
+-o -name .packlist | xargs rm
 }
