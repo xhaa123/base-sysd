@@ -1,7 +1,7 @@
 # Depends on: perl
 
 description="Date conversion routines"
-url="https://metacpan.org/pod/HTTP::Date"
+url="http://search.cpan.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -9,6 +9,7 @@ run=( perl )
 
 name=perl-http-date
 version=6.02
+release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Date-$version.tar.gz)
 
@@ -19,5 +20,6 @@ make
 make DESTDIR=$PKG install
 find $PKG \
          -name '*.bs' -or \
-         -name '.packlist' | xargs rm
+         -name '.packlist' -or \
+         -name 'perllocal.pod' | xargs rm
 }
