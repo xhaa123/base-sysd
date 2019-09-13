@@ -1,11 +1,10 @@
-# Depends on: perl
-
 description="Check for POD errors in files"
-url="https://metacpan.org/pod/Test::Pod"
+url="http://search.cpan.org/dist/Test-Pod/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Alienus"
 
-run=( perl )
+makedepends=(perl)
+run=(perl)
 
 name=perl-test-pod
 version=1.52
@@ -18,6 +17,8 @@ build() {
     make OPTIMIZE="$CFLAGS" || exit 1
     make install INSTALLDIRS=vendor DESTDIR=$PKG || exit 1
 
-    # Remove .packlist if present in the package
-    find $PKG -name .packlist -delete
+    # Remove perllocal.pod and .packlist if present in the package
+    for i in perllocal.pod .packlist; do
+        find $PKG -name "$i" -exec rm -rf {} \;
+    done
 }
