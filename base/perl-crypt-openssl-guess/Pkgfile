@@ -1,11 +1,13 @@
-# Depends on: perl openssl 
+ 
 
 description="Interface to OpenSSL PRNG methods"
 url="https://metacpan.org/pod/Crypt::OpenSSL::Guess"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
-run=( perl )
+makedepends=(perl openssl)
+run=(perl)
+
 name=perl-crypt-openssl-guess
 version=0.11
 
