@@ -1,15 +1,15 @@
-# Depends on: perl
-
 description="Uniform Resource Identifiers Perl (absolute and relative)"
-url="https://metacpan.org/pod/URI"
+url="http://search.cpan.org/dist/URI/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
-run=( perl )
-name=perl-uri
-version=1.74
+makedepends=(perl)
+run=(perl)
 
-source=(http://www.cpan.org/authors/id/E/ET/ETHER/URI-$version.tar.gz)
+name=perl-uri
+version=1.76
+
+source=(https://www.cpan.org/authors/id/O/OA/OALDERS/URI-$version.tar.gz)
 
 build() {
 cd URI-$version
@@ -18,5 +18,6 @@ cd URI-$version
 	make DESTDIR=$PKG install
 find $PKG \
          -name '*.bs' -or \
-         -name '.packlist' | xargs rm
+         -name '.packlist' -or \
+         -name 'perllocal.pod' | xargs rm
 }
