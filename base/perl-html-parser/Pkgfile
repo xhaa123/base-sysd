@@ -1,7 +1,7 @@
 # Depends on: perl perl-html-tagset 
 
 description="Perl HTML parser class"
-url="https://metacpan.org/pod/HTML::Parser"
+url="http://search.cpan.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
@@ -21,5 +21,6 @@ make DESTDIR=$PKG install
 
 find $PKG \
         -name '*.bs' -or \
-        -name .packlist | xargs rm
+        -name .packlist -or \
+        -name perllocal.pod | xargs rm
 }
