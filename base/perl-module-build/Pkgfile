@@ -1,7 +1,7 @@
 # Depends on: perl-cpan-meta perl-inc-latest
 
 description="Build, test, and install Perl modules"
-url="https://metacpan.org/pod/Module::Build"
+url="http://search.cpan.org/dist/Module-Build"
 packager="tnut <tnut@nutyx.org>"
 contributors="Alienus"
 
