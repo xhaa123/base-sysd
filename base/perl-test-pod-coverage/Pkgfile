@@ -1,7 +1,7 @@
 # Depends on: perl-pod-coverage
 
 description="CPAN Test::Pod::Coverage module"
-url="https://metacpan.org/pod/Test::Pod::Coverage"
+url="http://search.cpan.org/dist/Test-Pod-Coverage/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Alienus"
 
@@ -19,6 +19,11 @@ build() {
     make OPTIMIZE="$CFLAGS" || exit 1
     make install INSTALLDIRS=vendor DESTDIR=$PKG || exit 1
 
-    # Remove .packlist if present in the package
-    find $PKG -name .packlist -delete
+    # Remove perllocal.pod and .packlist if present in the package
+    for i in perllocal.pod .packlist; do
+        find $PKG -name "$i" -exec rm -rf {} \;
+    done
 }
+
+
+
