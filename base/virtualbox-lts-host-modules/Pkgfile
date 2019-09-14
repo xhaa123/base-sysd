@@ -31,7 +31,7 @@ KERNEL_VERSION="${kernelversion}"
 # Virtualbox
 # Modules host
 
-cd out/linux.amd64/release/bin
+cd src/vboxhost/
 
 KERN_VER=${KERNEL_VERSION} make
 
