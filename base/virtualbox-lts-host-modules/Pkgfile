@@ -37,7 +37,7 @@ cd vb
 tar xfj VirtualBox.tar.bz2
 cd src/vboxhost/
 
-KERN_VER=${KERNEL_VERSION} make -j1
+KERN_VER=${KERNEL_VERSION} make
 
 for i in *.ko
 do
