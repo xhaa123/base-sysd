@@ -3,8 +3,6 @@ description="Virtualbox host modules for kernel-lts"
 packager="Yaolinux Team"
 maintainer="rems"
 
-PKGMK_IGNORE_UNPACK="yes"
-
 name=virtualbox-lts-host-modules
 
 version=6.0.12
