@@ -31,8 +31,7 @@ KERNEL_VERSION="${kernelversion}"
 # Virtualbox
 # Modules host
 
-tar xfj VirtualBox.tar.bz2
-cd src/vboxhost/
+cd out/linux.amd64/release/bin
 
 KERN_VER=${KERNEL_VERSION} make
 
