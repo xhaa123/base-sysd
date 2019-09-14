@@ -5,6 +5,8 @@ packager="tnut <tnut@nutyx.org>"
 
 alias=(card)
 
+makedepends=(libelf)
+
 PKGMK_IGNORE_RUNTIMEDEPS="no"
 run_devel=(autoconf automake acl.devel attr.devel \
 bison binutils.devel bzip2.devel curl.devel e2fsprogs.devel \
@@ -14,7 +16,7 @@ libcap.devel libpipeline.devel m4 mpc.devel mpfr.devel \
 ncurses.devel openssl.devel pam.devel perl procps-ng.devel \
 readline.devel rsync lvm2.devel libtool texinfo \
 texinfo.devel nasm groff make patch pkg-config \
-glibc.devel gcc.devel libarchive.devel \
+glibc.devel gcc.devel libarchive.devel libelf.devel \
 util-linux.devel xz.devel lzo.devel python \
 dialog.devel tar curl zlib.devel meson ninja)
 
@@ -22,7 +24,7 @@ PKGMK_GROUPS=(devel doc man)
 
 name=cards
 version=2.4.99.1
-release=2
+release=3
 
 # patchname="$name-$version-consolidate-$release.patch"
 
