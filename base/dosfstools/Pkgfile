@@ -3,6 +3,8 @@ url="https://github.com/dosfstools/dosfstools"
 contributors="Pierre B"
 packager="tnut <tnut@nutyx.org>"
 
+makedepends=(systemd)
+
 name=dosfstools
 version=4.1
 release=1
