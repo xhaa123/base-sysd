@@ -7,6 +7,7 @@ makedepends=(gnutls)
 
 name=curl
 version=7.66.0
+release=2
 
 source=(http://curl.haxx.se/download/$name-$version.tar.xz)
 
@@ -49,5 +50,5 @@ done
 ln -sv ../../lib/libcurl.so.4.6.0 \
 $PKG/usr/lib/libcurl.so.4.6.0
 
-find $PKG/usr/lib -name "*.la" -delete
+find $PKG/usr/lib -name "*.la" -print -delete
 }
