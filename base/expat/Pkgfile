@@ -2,7 +2,7 @@ description="The Expat package contains a stream oriented C library for parsing 
 url="http://expat.sourceforge.net/"
 
 packager="Yaolinux Team"
-maintainer=rems"
+maintainer="rems"
 
 name=expat
 version=2.2.8
