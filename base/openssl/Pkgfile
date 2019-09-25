@@ -1,6 +1,8 @@
 description="The Open Source toolkit for Secure Sockets Layer and Transport Layer Security."
 url="http://www.openssl.org/"
-packager="tnut <tnut@nutyx.org>"
+
+packager="Yaolinux Team"
+maintainer="rems"
 
 name=openssl
 version=1.1.1d
