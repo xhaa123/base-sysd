@@ -3,7 +3,6 @@ makedepends=(perl-test-pod perl-test-pod-coverage)
 description="Rounded or exact English expression of durations"
 url="http://search.cpan.org/dist/Time-Duration/"
 packager="Yaolinux Team"
-contributors="Alienus"
 
 run=( perl )
 
