@@ -1,6 +1,6 @@
 description="GNU utilities to locate files"
 url="http://www.gnu.org/software/findutils/"
-maintainer="Eric B. Decker,Michael Rendell,James A. Woods"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=findutils
