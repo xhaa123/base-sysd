@@ -1,6 +1,6 @@
 description="Programs that show the differences between files or directories."
 url="http://www.gnu.org/software/diffutils/"
-maintainer="Paul Eggert,Mike Haertel,David Hayes,Len Tower and many more."
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=diffutils
