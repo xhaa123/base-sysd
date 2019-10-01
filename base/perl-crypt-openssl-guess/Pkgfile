@@ -3,7 +3,6 @@
 description="Interface to OpenSSL PRNG methods"
 url="https://metacpan.org/pod/Crypt::OpenSSL::Guess"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl openssl)
 run=(perl)
