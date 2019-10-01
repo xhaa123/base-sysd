@@ -4,7 +4,6 @@ url="http://www.kernel.org"
 description="The long term stable kernel version"
 
 packager="Yaolinux Team"
-contributors="tnut"
 maintainer="rems"
 
 PKGMK_IGNORE_UNPACK="yes"
