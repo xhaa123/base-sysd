@@ -1,6 +1,6 @@
 description="The Glibc package contains the main C library."
 url="https://www.gnu.org/software/libc/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 kernelversion=4.19.69
 gccversion=9.2.0
 
