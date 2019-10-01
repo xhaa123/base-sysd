@@ -2,7 +2,6 @@ description="OpenSSL's multiprecision integer arithmetic"
 url="http://search.cpan.org/"
 
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl openssl)
 run=(perl)
