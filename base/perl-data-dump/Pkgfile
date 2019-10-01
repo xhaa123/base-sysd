@@ -1,6 +1,6 @@
 description="Pretty printing of data structures"
 url="https://metacpan.org/release/Data-Dump"
-packager="minzord"
+packager="Yaolinux Team"
 
 name=perl-data-dump
 version=1.23
