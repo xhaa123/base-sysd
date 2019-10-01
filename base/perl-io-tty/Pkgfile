@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Provide an interface to TTYs and PTYs"
 url="URL: http://search.cpan.org/dist/IO-Tty/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 run=( perl )
 
