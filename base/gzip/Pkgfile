@@ -2,7 +2,6 @@ description="The Gzip package contains programs for compressing and decompressin
 url="http://www.gzip.org/"
 
 maintainer="Jean-loup Gailly jloup at gzip dot org,Mark Adler for the decompression code."
-contributors="Pierre B"
 packager="Yaolinux Team"
 
 name=gzip
