@@ -2,7 +2,7 @@ description="Set of libraries that offers command-line editing and history capab
 url="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 maintainer="Chet Ramey, chet dot ramey at case dot edu"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=readline
 version=8.0
