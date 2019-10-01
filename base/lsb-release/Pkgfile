@@ -1,7 +1,6 @@
 description="Provides informations about LSB status (Linux Standards Base) of the distribution."
 url="http://www.linuxbase.org/"
 maintainer="Sven-Hendrik Haase"
-contributors="geantbrun at gmail dot com"
 packager="Yaolinux Team"
 
 name=lsb-release
