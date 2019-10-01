@@ -1,7 +1,6 @@
 description="The MPFR package contains functions for multiple precision math"
 url="http://www.mpfr.org"
 maintainer="Guillaume Hanrot,Vincent Lefèvre,Patrick Pélissier,Philippe Théveny and Paul Zimmermann"
-contributors="Pierre B"
 packager="Yaolinux Team"
 
 name=mpfr
