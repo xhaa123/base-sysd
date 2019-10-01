@@ -3,7 +3,6 @@ makedepends=(perl-pod-coverage)
 description="CPAN Test::Pod::Coverage module"
 url="http://search.cpan.org/dist/Test-Pod-Coverage/"
 packager="Yaolinux Team"
-contributors="Alienus"
 
 run=( perl )
 
