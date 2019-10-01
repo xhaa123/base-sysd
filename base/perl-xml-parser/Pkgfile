@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Perl module for processing xml document"
 url="http://search.cpan.org/dist/XML-Parser/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 name=perl-xml-parser
 version=2.44
