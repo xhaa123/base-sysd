@@ -3,7 +3,7 @@ PKGMK_IGNORE_RUNTIMEDEPS=yes
 
 description="Base system of NuTyX, contains all folders and startup scripts."
 url="https://github.com/yaolinux"
-packager="Graknu <graknu@yaolinux.org>"
+packager="Yaolinux Team"
 maintainer="Graknu <graknu@yaolinux.org>"
 
 name=yaolinux
