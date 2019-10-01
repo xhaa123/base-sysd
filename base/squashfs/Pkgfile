@@ -1,10 +1,10 @@
-# Depends on: zlib lzo xz lz4
+makedepends=(zlib lzo xz lz4)
 
 description="Squashfs is a compressed read-only filesystem for Linux."
 url="http://squashfs.sourceforge.net/"
 maintainer="phillip at lougher.demon.co.uk"
 contributors="guy at nutyx dot org"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=squashfs
 version=4.3
