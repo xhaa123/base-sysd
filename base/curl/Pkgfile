@@ -1,7 +1,7 @@
 description="Utility for transferring files with URL syntax to many protocols"
 url="http://curl.haxx.se"
 maintainer="Daniel Stenberg"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 makedepends=(gnutls)
 
