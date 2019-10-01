@@ -3,7 +3,6 @@ makedepends=(lzo python)
 description="Btrfs filesystem utilities"
 url="http://btrfs.wiki.kernel.org/"
 
-contributors="alienus at nutyx dot org, tnut at nutyx dot org"
 packager="Yaolinux Team"
 
 name=btrfs-progs
