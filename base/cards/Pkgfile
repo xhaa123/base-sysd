@@ -1,6 +1,6 @@
 description="A set of utilities to manage software packages on NuTyX distribution."
 url="https://github.com/NuTyX/cards"
-maintainer="tnut at nutyx dot org"
+maintainer="rems"
 packager="Yaolinux Team"
 
 alias=(card)
