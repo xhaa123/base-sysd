@@ -3,7 +3,6 @@ makedepends=(perl perl-socket6)
 description="Object interface for AF_INET|AF_INET6 domain sockets"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
