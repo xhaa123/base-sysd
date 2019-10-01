@@ -1,6 +1,6 @@
 description="Free general-purpose data compression software with high compression ratio."
 url="http://tukaani.org/xz/"
-maintainer="Lasse Collin, lasse dot collin at tukaani dot org"
+maintainer="rems"
 packager="Yaolinux Team"
 
 PKGMK_GROUPS=(devel man doc)
