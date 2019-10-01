@@ -1,7 +1,7 @@
 description="Gperf generates a perfect hash function from a key set."
 url="http://www.gnu.org/software/gperf/gperf.html"
 maintainer="Keith Bostic,Michael Tiemann,Doug Lea,Adam de Boor and,Nels Olson,Bruno Haible"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="geantbrun at nutyx dot org"
 
 name=gperf
