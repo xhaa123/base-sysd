@@ -1,8 +1,8 @@
-# Depends on: perl 
+makedepends=(perl )
 
 description="Perl interface to the SHA-1 Algorithm"
 url="http://search.cpan.org/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
