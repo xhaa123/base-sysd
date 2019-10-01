@@ -1,6 +1,6 @@
 description="Utility for transferring files with URL syntax to many protocols"
 url="http://curl.haxx.se"
-maintainer="Daniel Stenberg"
+maintainer="rems"
 packager="Yaolinux Team"
 
 makedepends=(gnutls)
