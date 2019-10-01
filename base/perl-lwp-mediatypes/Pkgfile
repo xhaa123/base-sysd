@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Guess the media type of a file or a URL"
 url="http://search.cpan.org/dist/LWP-MediaTypes/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
