@@ -1,8 +1,8 @@
-# Depends on: perl perl-io-socket-ssl perl-mozilla-ca perl-net-http perl-libwww 
+makedepends=(perl perl-io-socket-ssl perl-mozilla-ca perl-net-http perl-libwww )
 
 description="Provide https support for LWP::UserAgent"
 url="http://search.cpan.org/dist/LWP-Protocol-https"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
