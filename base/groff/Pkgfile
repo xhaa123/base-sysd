@@ -2,7 +2,6 @@ description="The Groff package contains programs for processing and formatting t
 url="http://www.gnu.org/software/groff/"
 maintainer="Werner Lemberg  wl at gnu dot org"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 name=groff
 version=1.22.4
