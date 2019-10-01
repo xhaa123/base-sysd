@@ -1,7 +1,7 @@
 url="http://savannah.nongnu.org/projects/acl"
 description="Commands for Manipulating POSIX Access Control Lists."
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 name=acl
 version=2.2.53
 
