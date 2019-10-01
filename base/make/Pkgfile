@@ -1,6 +1,6 @@
 description="The Make package contains a program for compiling packages."
 url="http://www.gnu.org/software/make/"
-maintainer="Paul D. Smith psmith at gnu dot org,Boris Kolpackov boris at kolpackov dot net"
+maintainer="rems"
 packager="Yaolinux Team"
 
 PKGMK_GROUPS=(man locale)
