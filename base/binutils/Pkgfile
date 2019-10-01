@@ -1,7 +1,7 @@
 description="Linker, assembler, and other tools for handling object files."
 url="http://sources.redhat.com/binutils/"
 maintainer="Tristan Gingold ( gingold at adacore dot com ),Alan Modra ( amodra at bigpond dot net dot au )"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=binutils
 version=2.32
