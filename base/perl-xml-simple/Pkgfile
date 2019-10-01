@@ -1,6 +1,6 @@
 description="Easy API to maintain XML"
 url="http://search.cpan.org/dist/XML-Simple/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 makedepends=(perl)
