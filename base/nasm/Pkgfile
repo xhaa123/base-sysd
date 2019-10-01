@@ -1,7 +1,6 @@
 description="80x86 assembler designed for portability and modularity."
 url="http://nasm.sourceforge.net/"
 maintainer="H. Peter Anvin,Frank B. Kotler,Jin Kyu Song,Cyrill Gorcunov"
-contributors="Pierre B"
 packager="Yaolinux Team"
 
 name=nasm
