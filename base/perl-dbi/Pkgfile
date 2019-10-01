@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Database independent interface for Perl"
 url="https://metacpan.org/pod/DBI"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 name=perl-dbi
