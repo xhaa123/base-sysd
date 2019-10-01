@@ -2,7 +2,7 @@ makedepends=(systemd expat)
 description="Bus message system"
 url="http://dbus.freedesktop.org/releases/dbus"
 packager="Yaolinux Team"
-maintainer="tnut <tnut@nutyx.org>"
+maintainer="rems"
 
 name=dbus
 version=1.12.16
