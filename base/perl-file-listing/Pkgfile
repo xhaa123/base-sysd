@@ -3,7 +3,6 @@ makedepends=(perl perl-http-date )
 description="parse directory listing"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
