@@ -3,7 +3,6 @@ makedepends=(perl-devel-symdump)
 description="Checks if the documentation of a module is comprehensive"
 url="http://search.cpan.org/dist/Pod-Coverage"
 packager="Yaolinux Team"
-contributors="Alienus"
 
 run=( perl )
 
