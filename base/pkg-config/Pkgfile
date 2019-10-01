@@ -1,6 +1,6 @@
 description="A system for managing library compile/link flags."
 url="http://pkgconfig.freedesktop.org/"
-maintainer="Tollef Fog Heen tfheen at err dot no"
+maintainer="rems"
 packager="Yaolinux Team"
 
 PKGMK_GROUPS=(man doc)
