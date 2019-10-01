@@ -1,6 +1,6 @@
 description="The Bison package contains a parser generator"
 url="http://www.gnu.org/software/bison/"
-maintainer="Robert Corbett,Richard Stallman,Wilfred Hansen"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=bison
