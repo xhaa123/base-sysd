@@ -1,7 +1,6 @@
 description="The Perl package contains the Practical Extraction and Report Language."
 url="http://www.perl.org/"
 packager="Yaolinux Team"
-contributors="tnut"
 
 name=perl
 version=5.30.0
