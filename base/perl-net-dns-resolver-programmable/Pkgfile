@@ -1,8 +1,8 @@
-# Depends on: perl perl-net-dns
+makedepends=(perl perl-net-dns)
 
 description="A Net::DNS::Resolver descendant class for offline emulation of DNS"
 url="http://search.cpan.org/dist/Net-DNS-Resolver-Programmable/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
