@@ -1,8 +1,8 @@
-# Depends on: perl-pod-coverage
+makedepends=(perl-pod-coverage)
 
 description="CPAN Test::Pod::Coverage module"
 url="http://search.cpan.org/dist/Test-Pod-Coverage/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Alienus"
 
 run=( perl )
