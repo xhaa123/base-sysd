@@ -1,7 +1,6 @@
 description="Cross-platform path specification manipulation"
 url="http://search.cpan.org/dist/Path-Class/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl)
 run=(perl)
