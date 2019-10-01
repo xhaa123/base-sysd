@@ -1,7 +1,7 @@
 description="unit testing framework for C"
 url="http://check.sourceforge.net/"
 maintainer="Branden Archer <b dot m dot archer4 at gmail dot com>"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=check
 version=0.12.0
