@@ -1,6 +1,6 @@
 description="A GNU tool for automatically configuring source code (Legacy 2.1x version)"
 url="http://www.gnu.org/software/autoconf/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 name=autoconf2-13
