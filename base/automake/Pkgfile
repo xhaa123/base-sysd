@@ -1,6 +1,6 @@
 description="Contains programs for generating Makefiles for use with Autoconf."
 url="http://www.gnu.org/software/automake/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=automake
 version=1.16.1
