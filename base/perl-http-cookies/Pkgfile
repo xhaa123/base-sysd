@@ -1,7 +1,6 @@
 description="HTTP cookie jars"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl perl-http-date perl-http-message)
 run=(perl)
