@@ -1,7 +1,6 @@
 description="HTTP style messages"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl perl-encode-locale perl-html-parser perl-http-date perl-lwp-mediatypes perl-uri)
 run=(perl)
