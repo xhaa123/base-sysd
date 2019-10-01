@@ -2,7 +2,7 @@ description="A free library for arbitrary precision arithmetic."
 url="http://gmplib.org/"
 paintainer="Torb,Granlund and many more"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=gmp
 version=6.1.2
