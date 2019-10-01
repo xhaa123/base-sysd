@@ -2,7 +2,6 @@ description="The GNU generic library support script."
 url="http://www.gnu.org/software/libtool/"
 maintainer="Gordon Matzigkeit  gord at gnu dot org"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 name=libtool
 version=2.4.6
