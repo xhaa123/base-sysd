@@ -1,6 +1,6 @@
 description="C library for manipulating pipelines of subprocesses in a flexible way"
 url="http://libpipeline.nongnu.org/"
-maintainer="Colin Watson cjwatson at debian dot org"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=libpipeline
