@@ -3,7 +3,6 @@ makedepends=(perl perl-http-date perl-http-message perl-lwp-mediatypes )
 description="A simple http server class"
 url="http://www.cpan.org"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
