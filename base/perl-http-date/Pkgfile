@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Date conversion routines"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
