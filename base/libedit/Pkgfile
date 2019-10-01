@@ -1,7 +1,6 @@
 description="Command line editor library providing generic line editing, history, and tokenization functions."
 url="http://thrysoee.dk/editline/"
 packager="Yaolinux Team"
-contributors=""
 
 name=libedit
 version=20190324.3.1
