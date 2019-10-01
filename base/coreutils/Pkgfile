@@ -1,6 +1,6 @@
 description="Utilities for showing and setting the basic system characteristics"
 url="http://www.gnu.org/software/coreutils/"
-maintainer="Jim Meyering meyering at redhat dot com"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=coreutils
