@@ -1,7 +1,6 @@
 description="Low-level HTTP connection (client)"
 url="http://search.cpan.org/dist/Net-HTTP/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl)
 run=(perl)
