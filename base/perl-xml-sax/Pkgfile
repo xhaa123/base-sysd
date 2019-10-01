@@ -1,7 +1,6 @@
 description="Simple API for XML"
 url="http://search.cpan.org/dist/XML-SAX/"
 packager="Yaolinux Team"
-contributors="Alienus"
 
 makedepends=(perl-xml-namespacesupport perl-xml-sax-base)
 run=(perl)
