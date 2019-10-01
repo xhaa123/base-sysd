@@ -1,6 +1,6 @@
 description="The GRUB package contains the GRand Unified Bootloader, EFI version"
 url="http://www.gnu.org/software/grub/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=grub-efi
 version=2.04
