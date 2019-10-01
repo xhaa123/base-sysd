@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Perl Module: Easy manipulation of IPv4 and IPv6 addresses"
 url="http://search.cpan.org/dist/Net-IP/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
