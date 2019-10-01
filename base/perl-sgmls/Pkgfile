@@ -3,7 +3,6 @@ makedepends=(perl)
 description="A Post-Processor for SGMLS and NSGMLS"
 url="http://search.cpan.org/dist/SGMLSpm"
 packager="Yaolinux Team"
-contributors=""
 
 name=perl-sgmls
 _cpanname=SGMLSpm
