@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="perl module"
 url="http://search.cpan.org/dist/ExtUtils-Depends/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
