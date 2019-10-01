@@ -3,7 +3,6 @@ makedepends=(perl-cpan-meta perl-inc-latest)
 description="Build, test, and install Perl modules"
 url="http://search.cpan.org/dist/Module-Build"
 packager="Yaolinux Team"
-contributors="Alienus"
 
 run=( perl perl-cpan-meta perl-inc-latest )
 
