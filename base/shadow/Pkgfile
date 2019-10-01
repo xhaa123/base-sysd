@@ -2,7 +2,7 @@ description="The Shadow package contains programs for handling passwords in a se
 url="http://shadow.pld.org.pl/"
 maintainer="pkg-shadow-devel@lists.alioth.debian.org"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=shadow
 version=4.7
