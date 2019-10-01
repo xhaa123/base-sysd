@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Data tables useful in parsing HTML"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
