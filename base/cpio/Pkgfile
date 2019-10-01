@@ -1,6 +1,6 @@
 description="Copies files into or out of a cpio or tar archive."
 url="http://www.gnu.org/software/cpio/"
-maintainer="Sergey Poznyakoff"
+maintainer="rems"
 packager="Yaolinux Team"
 
 
