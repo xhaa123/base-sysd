@@ -2,7 +2,7 @@ description="Portable lossless data compression library."
 url="http://www.oberhumer.com/opensource/lzo"
 maintainer="Markus F.X.J. Oberhumer"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=lzo
 version=2.10
