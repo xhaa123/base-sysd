@@ -3,7 +3,7 @@ PKGMK_GROUPS=(devel doc man)
 description="Library that can create and read several streaming archive formats."
 url="http://people.freebsd.org/~kientzle/libarchive"
 maintainer="kientzle at acm dot org"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=libarchive
 version=3.4.0
