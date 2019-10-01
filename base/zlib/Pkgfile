@@ -2,7 +2,7 @@ description="Contains compression and decompression routines used by some progra
 url="http://www.zlib.net/"
 maintainer="Jean-loup Gailly (compression), Mark Adler (decompression)"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=zlib
 version=1.2.11
