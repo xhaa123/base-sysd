@@ -1,7 +1,6 @@
 description="Library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine"
 url="http://www.sqlite.org/"
 packager="Yaolinux Team"
-contributors="Pierre B, Tnut, Remy"
 
 _amalgamationver=3290000
 
