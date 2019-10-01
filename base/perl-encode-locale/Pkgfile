@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Determine the locale encoding"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
