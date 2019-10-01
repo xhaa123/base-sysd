@@ -1,7 +1,6 @@
 description="Perl template processing system"
 url="http://search.cpan.org/dist/Template-Toolkit/"
 packager="Yaolinux Team"
-contributors=""
 
 makedepends=(perl-appconfig)
 run=(perl-appconfig)
