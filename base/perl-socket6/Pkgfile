@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="A getaddrinfo/getnameinfo support module"
 url="http://search.cpan.org/dist/Socket6/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 run=( perl )
 
