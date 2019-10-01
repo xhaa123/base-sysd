@@ -1,7 +1,7 @@
 description="Utility for determining the type of a given file or files."
 url="ftp://ftp.fu-berlin.de/unix/tools/file/"
 maintainer="Christos Zoulas"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=file
 version=5.37
