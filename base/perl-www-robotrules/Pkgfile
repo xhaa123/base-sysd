@@ -3,7 +3,6 @@ makedepends=(perl perl-uri )
 description="Database of robots.txt-derived permissions"
 url="http://search.cpan.org/dist/WWW-RobotRules/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
