@@ -1,7 +1,6 @@
 description="Interface to OpenSSL RSA methods"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl-crypt-openssl-random perl-crypt-openssl-bignum)
 run=(perl)
