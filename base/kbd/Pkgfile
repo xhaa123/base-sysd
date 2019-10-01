@@ -4,7 +4,6 @@ description="The Kbd package contains key-table files, console fonts, and keyboa
 url="ftp://devel.altlinux.org/legion/kbd/"
 maintainer="Risto Kankkunen's"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 name=kbd
 version=2.0.4
