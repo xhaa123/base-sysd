@@ -1,6 +1,5 @@
 description="DOS filesystem utilities"
 url="https://github.com/dosfstools/dosfstools"
-contributors="Pierre B"
 packager="Yaolinux Team"
 
 makedepends=(systemd)
