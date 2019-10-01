@@ -3,7 +3,6 @@ makedepends=(perl perl-http-message )
 description="Choose a variant to serve"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
