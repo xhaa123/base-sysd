@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Generic namespace helpers (ported from SAX2)"
 url="http://search.cpan.org/dist/XML-NamespaceSupport"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 run=( perl )
 name=perl-xml-namespacesupport
