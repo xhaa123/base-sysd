@@ -1,7 +1,7 @@
 description="Libraries for terminal-independent handling of character screens."
 url="http://www.gnu.org/software/ncurses/ncurses.html"
 maintainer="Thomas E. Dickey TD,Juergen Pfeifer JPF,Eric S Raymond ESR,Alexander V Lukyanov,Philippe Blain PB,Sven Verdoolaege SV"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=ncurses
 version=6.1
