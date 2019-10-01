@@ -1,6 +1,5 @@
 description="XFS filesystem administration and debugging tools"
 url="http://oss.sgi.com/projects/xfs/"
-contributors="Pierre B"
 packager="Yaolinux Team"
 
 name=xfsprogs
