@@ -1,6 +1,6 @@
 description="Programs for compressing and decompressing files."
 url="http://www.bzip.org/"
-maintainer="Julian Seward ( jseward at bzip dot org )"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=bzip2
