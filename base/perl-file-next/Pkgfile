@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Lightweight,taint-safe file finding module"
 url="http://search.cpan.org/dist/File-Next/"
 packager="Yaolinux Team"
-contributor="Greg"
 
 run=( perl )
 
