@@ -1,7 +1,7 @@
 description="The mdadm package contains administration tools for software RAID."
 url="http://www.cse.unsw.edu.au/~neilb/source/mdadm/"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=mdadm
 version=4.1
