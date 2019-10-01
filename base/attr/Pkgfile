@@ -2,7 +2,7 @@ description="Utilities to administer the extended attributes on filesystem objec
 url="http://savannah.nongnu.org/projects/attr"
 maintainer="Andreas Gruenbacher <agruen>, Brandon Philips <philips>"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=attr
 version=2.4.48
