@@ -1,7 +1,6 @@
 description="The GRUB package contains the GRand Unified Bootloader."
 url="http://www.gnu.org/software/grub/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 name=grub
 version=2.04
