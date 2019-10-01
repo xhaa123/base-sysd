@@ -1,7 +1,7 @@
 description="Very fast lossless compression algorithm"
 url="https://github.com/Cyan4973/lz4"
 maintainer="Yann Collet"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=lz4
 version=1.9.1
