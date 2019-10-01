@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Perl version of Nilsimsa code"
 url="http://search.cpan.org/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
