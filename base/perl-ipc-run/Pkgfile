@@ -1,6 +1,6 @@
 description="IPC::Run - system() and background procs w/ piping, redirs, ptys"
 url="URL: http://search.cpan.org/dist/IPC-Run"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Alienus"
 
 makedepends=(perl-io-tty)
