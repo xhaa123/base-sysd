@@ -3,7 +3,7 @@ makedepends=(yaolinux)
 url="http://www.kernel.org"
 description="The latest stable kernel version"
 
-packager="YaoLinuX Team"
+packager="Yaolinux Team"
 contributors="tnut"
 maintainer="rems"
 
