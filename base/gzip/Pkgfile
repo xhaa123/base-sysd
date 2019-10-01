@@ -3,7 +3,7 @@ url="http://www.gzip.org/"
 
 maintainer="Jean-loup Gailly jloup at gzip dot org,Mark Adler for the decompression code."
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=gzip
 version=1.10
