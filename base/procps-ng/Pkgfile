@@ -1,6 +1,5 @@
 description="Utilities for monitoring your system and its processes."
 url="http://procps.sourceforge.net/"
-contributors="Pierre B"
 packager="Yaolinux Team"
 
 name=procps-ng
