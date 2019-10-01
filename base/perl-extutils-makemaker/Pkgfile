@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="ExtUtils::MakeMaker - Create a module Makefile"
 url="http://search.cpan.org/~bingos/ExtUtils-MakeMaker/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 run=( perl )
 name=perl-extutils-makemaker
