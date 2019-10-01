@@ -1,5 +1,4 @@
 packager="Yaolinux Team"
-contributors="Pierre B"
 url="https://www.kernel.org/pub/linux/utils/net/iproute2/"
 description="Programs for basic and advanced network routing."
 
