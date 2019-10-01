@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Perl module to manage IP addresses and subnets"
 url="http://search.cpan.org/dist/NetAddr-IP/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
