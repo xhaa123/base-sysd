@@ -1,7 +1,7 @@
 description="Meson is an open source build system meant to be both extremely fast, as user friendly as possible"
 url="http://mesonbuild.com/"
 contributors="Jayce, Greg"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 makedepends=(ninja libffi)
 
