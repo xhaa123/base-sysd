@@ -1,6 +1,6 @@
 description="The GNU generic library support script."
 url="http://www.gnu.org/software/libtool/"
-maintainer="Gordon Matzigkeit  gord at gnu dot org"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=libtool
