@@ -1,6 +1,6 @@
 description="Userspace server and client tools necessary to use the kernel's NFS abilities."
 url="http://nfs.sourceforge.net"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=nfs-utils
 version=2.4.1
