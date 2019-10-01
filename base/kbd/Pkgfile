@@ -2,7 +2,7 @@ makedepends=(check)
 
 description="The Kbd package contains key-table files, console fonts, and keyboard utilities"
 url="ftp://devel.altlinux.org/legion/kbd/"
-maintainer="Risto Kankkunen's"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=kbd
