@@ -1,7 +1,7 @@
 description="Texinfo is the official documentation format of the GNU project."
 url="http://www.gnu.org/software/texinfo"
 maintainer="Karl Berry"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=texinfo
 version=6.6
