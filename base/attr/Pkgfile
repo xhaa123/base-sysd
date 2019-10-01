@@ -1,7 +1,6 @@
 description="Utilities to administer the extended attributes on filesystem objects"
 url="http://savannah.nongnu.org/projects/attr"
 maintainer="Andreas Gruenbacher <agruen>, Brandon Philips <philips>"
-contributors="Pierre B"
 packager="Yaolinux Team"
 
 name=attr
