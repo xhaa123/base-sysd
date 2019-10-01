@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Database independent interface for Perl"
 url="https://metacpan.org/pod/DBI"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
