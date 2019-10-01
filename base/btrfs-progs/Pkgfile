@@ -1,10 +1,10 @@
-# Depends on: lzo python
+makedepends=(lzo python)
 
 description="Btrfs filesystem utilities"
 url="http://btrfs.wiki.kernel.org/"
 
 contributors="alienus at nutyx dot org, tnut at nutyx dot org"
-packager="tnut <tnut@tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=btrfs-progs
 version=5.2.2
