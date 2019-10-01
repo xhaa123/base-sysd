@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Generates and rewritten exif info in the raw files"
 URL="http://search.cpan.org/~exiftool/Image-ExifTool/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Piernov"
 
 run=( perl )
