@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Build, test, and install Perl modules"
 url="https://github.com/dagolden/inc-latest"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 run=( perl )
 
