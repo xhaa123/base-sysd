@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Perl version of Nilsimsa code"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
