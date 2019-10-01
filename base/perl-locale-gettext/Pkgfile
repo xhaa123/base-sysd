@@ -3,7 +3,6 @@ makedepends=(gettext perl)
 description="Permits access from Perl to the gettext() family of functions"
 url="http://search.cpan.org/dist/gettext/"
 packager="Yaolinux Team"
-contributors="Alienus"
 
 run=( perl )
 
