@@ -1,8 +1,8 @@
-# Depends on: perl
+makedepends=(perl)
 
 description="Mozilla's CA cert bundle in PEM format"
 url="http://search.cpan.org/dist/Mozilla-CA/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 run=( perl )
