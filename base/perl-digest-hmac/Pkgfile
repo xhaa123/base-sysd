@@ -3,7 +3,6 @@ makedepends=(perl perl-digest-sha1)
 description="Keyed-Hashing for Message Authentication"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
