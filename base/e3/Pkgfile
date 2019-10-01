@@ -2,7 +2,6 @@ description="Tiny editor without dependencies, written in assembly."
 url="http://sites.google.com/site/e3editor/"
 maintainer="Albrecht Kleine"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(nasm)
 
