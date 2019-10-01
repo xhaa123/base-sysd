@@ -1,6 +1,6 @@
 description="File path utility"
 url="https://metacpan.org/pod/Path::Tiny"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 makedepends=(perl)
