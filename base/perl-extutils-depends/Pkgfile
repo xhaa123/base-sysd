@@ -3,7 +3,6 @@ makedepends=(perl)
 description="perl module"
 url="http://search.cpan.org/dist/ExtUtils-Depends/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
