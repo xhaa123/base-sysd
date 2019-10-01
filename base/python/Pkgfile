@@ -3,7 +3,6 @@ PKGMK_IGNORE_UNPACK="yes"
 
 description="Next generation of the python high-level scripting language"
 url="http://www.python.org"
-contributors="Alienus"
 packager="Yaolinux Team"
 
 makedepends=(sqlite libffi)
