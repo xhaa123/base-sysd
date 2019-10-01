@@ -1,4 +1,4 @@
-maintainer="Will Estes,John Millaway,Aaron Stone,Vern Paxson,Van Jacobson,Jef Poskanzer,Kevin Gong,Vern Paxson"
+maintainer="rems"
 description="A tool for generating text-scanning programs"
 packager="Yaolinux Team"
 
