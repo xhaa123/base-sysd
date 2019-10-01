@@ -1,7 +1,7 @@
 description="The GNU patch tool"
 url="http://www.gnu.org/software/patch/patch.html"
 maintainer="Larry Wall,Paul Eggert,Wayne Davison,David MacKenzie,Andreas Gruenbacher"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=patch
 version=2.7.6
