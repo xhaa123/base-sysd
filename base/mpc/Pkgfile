@@ -2,7 +2,7 @@ description="Library for the arithmetic of complex numbers with arbitrarily high
 url="http://www.multiprecision.org/"
 maintainer="Andreas Enge,Philipe Théveny,Paul Zimmermann"
 contributors="Pierre B"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 name=mpc
 version=1.1.0
