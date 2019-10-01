@@ -1,7 +1,7 @@
 description="The Groff package contains programs for processing and formatting text."
 url="http://www.gnu.org/software/groff/"
 maintainer="Werner Lemberg  wl at gnu dot org"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 name=groff
