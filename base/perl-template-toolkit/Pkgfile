@@ -1,6 +1,6 @@
 description="Perl template processing system"
 url="http://search.cpan.org/dist/Template-Toolkit/"
-packager="rems <rems@nutyx.org>"
+packager="Yaolinux Team"
 contributors=""
 
 makedepends=(perl-appconfig)
