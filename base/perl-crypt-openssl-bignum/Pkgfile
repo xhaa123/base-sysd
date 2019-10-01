@@ -1,7 +1,7 @@
 description="OpenSSL's multiprecision integer arithmetic"
 url="http://search.cpan.org/"
 
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 makedepends=(perl openssl)
