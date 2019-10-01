@@ -1,6 +1,6 @@
 description="Set of some small useful utilities that use the proc filesystem."
 url="http://psmisc.sourceforge.net/"
-maintainer="Werner Almesberger werner at almesberger dot net,Craig Small csmall at small dot dropbear dot id dot au,Trent Waddington trent dot waddington at gmail dot com"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=psmisc
