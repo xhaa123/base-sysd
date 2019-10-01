@@ -1,6 +1,6 @@
 description="Keyutils is a set of utilities for managing the key retention facility in the kernel."
 url=" https://rhn.redhat.com/errata/RHEA-2006-0090.html"
-packager="tnut <tnut@nutryx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 name=keyutils
