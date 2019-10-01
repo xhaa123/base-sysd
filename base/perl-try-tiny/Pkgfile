@@ -1,7 +1,6 @@
 description="Minimal try/catch with proper localization of $@"
 url="http://search.cpan.org/dist/Try-Tiny/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl)
 run=( perl )
