@@ -3,7 +3,6 @@ makedepends=(perl perl-digest-hmac perl-net-ip perl-io-socket-inet6 perl-socket6
 description="Perl Module: Interface to the DNS resolver"
 url="http://search.cpan.org/dist/Net-DNS/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
