@@ -1,7 +1,7 @@
 description="Transport Independent RPC library (SunRPC replacement)"
 url="http://downloads.sourceforge.net/project/libtirpc"
 maintainer="Gilles Quillard gilles dot quillard at bull dot net"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 name=libtirpc
