@@ -1,7 +1,7 @@
 description="portmap replacement which supports RPC over various protocols"
 url="http://rpcbind.sourceforge.net/"
 contributors="alienus at nutyx dot org"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 
 PKGMK_GROUPS=(man)
 
