@@ -1,6 +1,6 @@
 maintainer="Will Estes,John Millaway,Aaron Stone,Vern Paxson,Van Jacobson,Jef Poskanzer,Kevin Gong,Vern Paxson"
 description="A tool for generating text-scanning programs"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 url="http://flex.sourceforge.net"
