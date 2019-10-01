@@ -1,6 +1,6 @@
 description="The Iana-Etc package provides data for network services and protocols."
 url="http://www.sethwklein.net/iana-etc"
-maintainer="Seth W. Klein sk at sethwklein dot net"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=iana-etc
