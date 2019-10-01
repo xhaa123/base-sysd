@@ -2,7 +2,6 @@ description="Utilities for internationalization and localization."
 url="http://www.gnu.org/software/gettext/"
 maintainer="Ulrich Drepper"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 name=gettext
 version=0.20.1
