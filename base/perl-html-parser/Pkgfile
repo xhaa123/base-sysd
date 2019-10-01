@@ -3,7 +3,6 @@ makedepends=(perl perl-html-tagset )
 description="Perl HTML parser class"
 url="http://search.cpan.org/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
