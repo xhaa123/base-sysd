@@ -1,7 +1,7 @@
 description="Base system of NuTyX, contains all folders and startup scripts."
 url="https://github.com/nutyx"
 packager="Yaolinux Team"
-maintainer="tnut <tnut@nutyx.org>"
+maintainer="rems"
 
 makedepends=(perl-xml-parser)
 run=(perl-xml-parser)
