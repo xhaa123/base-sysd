@@ -1,7 +1,6 @@
 description="Uniform Resource Identifiers Perl (absolute and relative)"
 url="http://search.cpan.org/dist/URI/"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl)
 run=(perl)
