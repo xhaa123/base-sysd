@@ -1,7 +1,6 @@
 description="Perl connector for pkgconfig"
 url="http://www.gtkperl.org"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 makedepends=(perl-extutils-depends)
 run=(perl)
