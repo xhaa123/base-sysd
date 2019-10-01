@@ -1,6 +1,6 @@
 description="Utilities for internationalization and localization."
 url="http://www.gnu.org/software/gettext/"
-maintainer="Ulrich Drepper"
+maintainer="rems"
 packager="Yaolinux Team"
 
 name=gettext
