@@ -3,7 +3,6 @@ makedepends=(perl)
 description="Perl/CPAN Error module - Error/exception handling in an OO-ish way"
 url="http://search.cpan.org/dist/Error"
 packager="Yaolinux Team"
-contributors="Pierre B"
 
 run=( perl )
 
