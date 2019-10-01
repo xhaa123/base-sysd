@@ -1,6 +1,6 @@
 description="Synchronizing files over a network by sending just the differences in the files."
 url="http://samba.anu.edu.au/rsync/"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 name=rsync
 version=3.1.3
 release=2
