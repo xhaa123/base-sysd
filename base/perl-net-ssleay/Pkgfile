@@ -1,6 +1,6 @@
 description="Perl extension for using OpenSSL"
 url="http://search.cpan.org/dist/Net-SSLeay"
-packager="tnut <tnut@nutyx.org>"
+packager="Yaolinux Team"
 contributors="Pierre B"
 
 makedepends=(openssl perl)
