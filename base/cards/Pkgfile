@@ -5,7 +5,7 @@ packager="Yaolinux Team"
 
 alias=(card)
 
-makedepends=(libelf)
+makedepends=(python)
 
 PKGMK_IGNORE_RUNTIMEDEPS="no"
 run_devel=(autoconf automake acl.devel attr.devel \
@@ -17,7 +17,7 @@ ncurses.devel openssl.devel pam.devel perl procps-ng.devel \
 readline.devel rsync lvm2.devel libtool texinfo \
 texinfo.devel nasm groff make patch pkg-config \
 glibc.devel gcc.devel libarchive.devel libelf.devel \
-util-linux.devel xz.devel lzo.devel python \
+util-linux.devel xz.devel lzo.devel python python.devel \
 dialog.devel tar curl zlib.devel meson ninja)
 
 PKGMK_GROUPS=(devel doc man)
