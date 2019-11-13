@@ -13,7 +13,7 @@ PKGMK_GROUPS=(devel doc)
 name=kernel-lts
 alias=(linux-lts)
 
-version=4.19.75
+version=4.19.84
 _version=${version:0:4}
 
 run=(yaolinux)
@@ -111,7 +111,6 @@ fi" >> $PKGMK_ROOT/$name.post-install
 devel() {
 
 cd $PKG
-rm -r usr/src/linux-${_version}/{tools,ipc,init,drivers,firmware,fs,mm,samples,security,sound,virt}
 for i in alpha arc arm arm26 arm64 avr32 blackfin c6x \
 cris frv h8300 hexagon ia64 m32r m68k m68knommu metag \
 mips microblaze mn10300 openrisc parisc powerpc ppc s390 \
