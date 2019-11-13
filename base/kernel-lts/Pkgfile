@@ -33,7 +33,7 @@ bsdtar -p -o -C $SRC -xf linux-${_version}.tar.xz
 cd linux-${_version}
 
 if [ -f $SRC/patch-$version.xz ]; then
-	xz -d -c  $SRC/patch-$version.xz | patch -Np1 < -
+	xz -d -c  $SRC/patch-$version.xz | patch -Np1
 fi
 
 make mrproper
@@ -49,7 +49,7 @@ cp .config $SRC/config_64
 #
 # Kernel modules
 cd $SRC/linux-${_version}
-make INSTALL_MOD_PATH=$PKG modules_install
+make INSTALL_MOD_PATH=$PKG DEPMOD=/bin/true modules_install
 
 KERNEL_VERSION="${version}-YaoLinuX-lts"
 
