@@ -14,7 +14,7 @@ name=kernel-lts
 alias=(linux-lts)
 
 version=4.19.84
-_version=${version:0:4}
+_version=${version%.*}
 
 run=(yaolinux)
 
@@ -33,7 +33,7 @@ bsdtar -p -o -C $SRC -xf linux-${_version}.tar.xz
 cd linux-${_version}
 
 if [ -f $SRC/patch-$version.xz ]; then
-	xz -d -c  $SRC/patch-$version.xz | patch -Np1
+	xz -d -c  $SRC/patch-$version.xz | patch -Np1 < -
 fi
 
 make mrproper
