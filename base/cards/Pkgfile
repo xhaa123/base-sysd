@@ -5,8 +5,6 @@ packager="Yaolinux Team"
 
 alias=(card)
 
-makedepends=(wget)
-
 PKGMK_IGNORE_RUNTIMEDEPS="no"
 
 run_devel=(autoconf automake acl.devel attr.devel \
@@ -35,7 +33,7 @@ source=(http://downloads.tuxfamily.org/nutyx/files/cards-$version.tar.gz)
 [ -z "$patchname" ] || source+=" $patchname"
 
 build () {
-cd $name-$version
+cd $name-$name-$version
 
 [ -z "$patchname" ] || patch -Np1 -i ../$patchname
 
