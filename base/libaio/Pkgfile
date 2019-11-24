@@ -6,12 +6,15 @@ packager="Yaolinux Team"
 
 name=libaio
 version=0.3.112
-CARCH=x86_64
+CARCH=$(uname -m)
 
 source=(http://ftp.de.debian.org/debian/pool/main/liba/$name/${name}_${version}.orig.tar.xz)
 
 build() {
 cd $name-$version
+
+[ $CARCH = aarch64 ] && CARCH=native
+
 CFLAGS="-march=${CARCH/_/-} -mtune=generic -O2 -pipe"
 make
 }
