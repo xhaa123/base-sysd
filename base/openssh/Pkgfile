@@ -8,7 +8,7 @@ makedepends=(libedit)
 
 name=openssh
 version=8.0p1
-yao_version=1.0-RC1
+yao_version=1.0-RC2
 
 source=(http://downloads.yaolinux.org/yaolinux/files/yaolinux-1.0-RC1.tar.xz
 	http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz)
