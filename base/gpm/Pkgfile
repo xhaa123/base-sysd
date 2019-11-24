@@ -4,7 +4,7 @@ packager="Yaolinux Team"
 name=gpm
 version=1.20.7
 
-yaolinux_version=1.0-RC1
+yaolinux_version=1.0-RC2
 
 source=(http://downloads.yaolinux.org/yaolinux/files/yaolinux-${yaolinux_version}.tar.xz
 	gpm-1.20.7-glibc-2.26-1.patch
