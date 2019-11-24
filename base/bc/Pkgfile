@@ -20,7 +20,7 @@ sed -e '$ s/$/0}/' \
     -i libmath.h
 EOF
 
-if [ -L /tools ]; then
+if [ -d /tools ]; then
    ln -sv /tools/lib/libncursesw.so.6 /usr/lib/libncursesw.so.6
    ln -sfv libncurses.so.6 /usr/lib/libncurses.so
 fi
