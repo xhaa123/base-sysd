@@ -17,13 +17,22 @@ case `uname -m` in
 	ABI=32 ./configure \
 	--prefix=/usr \
 	--enable-cxx \
-	--docdir=/usr/share/doc/$name-$version;;
- *)
+	--docdir=/usr/share/doc/$name-$version
+ ;;
+
+ x86_64)
 	./configure \
 	--prefix=/usr \
 	--build=x86_64-unknown-linux-gnu \
 	--enable-cxx \
-	--docdir=/usr/share/doc/$name-$version;;
+	--docdir=/usr/share/doc/$name-$version
+ ;;
+ aarch64)
+       ./configure \
+        --prefix=/usr \
+        --build=aarch64-unknown-linux-gnu \
+        --enable-cxx \
+        --docdir=/usr/share/doc/$name-$version
 esac
 make
 make html
