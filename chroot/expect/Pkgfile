@@ -1,9 +1,14 @@
 version=5.45.4
-source=(http://prdownloads.sourceforge.net/expect/expect$version.tar.gz)
+source=(http://prdownloads.sourceforge.net/expect/expect$version.tar.gz
+        https://intestinate.com/pilfs/patches/expect5.45-aarch64-fix.patch)
 build()
 {
-cd expect*
-
+cd expect$version
+case $(uname -m) in
+	aarch64)
+		patch -Np1 -i ../expect5.45-aarch64-fix.patch
+	;;
+esac
 cp configure{,.orig}
 sed 's:/usr/local/bin:/bin:' configure.orig > configure
 
