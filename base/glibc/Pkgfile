@@ -24,7 +24,12 @@ mkdir -p $PKG/usr/include
 cp -rv dest/include/* $PKG/usr/include
 
 cd ../glibc-$version
+# Some of the Glibc programs use the non-FHS compilant /var/db directory to store their runtime data. Apply the following patch to make such programs store their runtime data in the FHS-compliant locations
 patch -Np1 -i ../glibc-$version-fhs-1.patch
+
+# Fix a problen introduced with linux-5.2 kernel
+sed -i '/asm.socket.h/a# include <linux/sockios.h>' \
+   sysdeps/unix/sysv/linux/bits/socket.h
 
 case $(uname -m) in
    i?86)
@@ -37,6 +42,12 @@ case $(uname -m) in
      GCC_INCDIR=/usr/lib/gcc/x86_64-pc-linux-gnu/$gccversion/include
      ln -s ../lib/ld-linux-x86-64.so.2 $PKG/lib64
      ln -s ../lib/ld-linux-x86-64.so.2 $PKG/lib64/ld-lsb-x86-64.so.3
+   ;;
+   aarch64)
+     mkdir $PKG/lib64
+     GCC_INCDIR=/usr/lib/gcc/$(uname -m)-linux-gnu/$gccversion/include
+     ln -s ../lib/ld-linux-$(uname -m).so.2 $PKG/lib64
+     ln -s ../lib/ld-linux-$(uname -m).so.2 $PKG/lib64/ld-lsb-$(uname -m).so.3
    ;;
 esac
 
@@ -102,6 +113,14 @@ include /etc/ld.so.conf.d/*.conf
 EOF
 
 mkdir $PKG/etc/ld.so.conf.d
+
+# Compatibility symlink for non ld-linux-armhf awareness
+case $(uname -m) in
+     aarch64)
+          ln -sv ld-2.30.so $PKG/lib/ld-linux.so.3
+          unlink /lib/ld-linux-aarch64.so.1
+     ;;
+esac
 }
 devel() {
 cd $PKG
