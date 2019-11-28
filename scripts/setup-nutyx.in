@@ -2391,7 +2391,7 @@ if [ ! -z "$IWCONFIG" ];then
 	WIFI_NETWORK_CARD="`$IWCONFIG 2>&1|grep IEEE|cut -d " " -f1|tail -1`"
 fi
 
-SETUP_LOG="setup-yaolinux-log"
+SETUP_LOG="setup-nutyx-log"
 CARDS="/etc/cards.conf"
 XORGKB="/etc/X11/xorg.conf.d/20-keyboard.conf"
 CONSOLE="/etc/vconsole.conf"
