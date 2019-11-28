@@ -1,6 +1,7 @@
 description="A set of utilities to manage software packages on NuTyX distribution."
 url="https://github.com/NuTyX/cards"
-maintainer="rems"
+
+maintainer="Tnut"
 packager="Yaolinux Team"
 
 alias=(card)
@@ -22,13 +23,11 @@ dialog.devel tar curl wget zlib.devel meson ninja)
 PKGMK_GROUPS=(devel doc man)
 
 name=cards
-version=2.4.101
-release=2
+version=2.4.108
 
-patchname="$name-$version-consolidate-$release.patch"
+# patchname="$name-$version-consolidate-$release.patch"
 
 source=(https://github.com/NuTyX/cards/archive/$name-$version.tar.gz)
-source=(http://downloads.tuxfamily.org/nutyx/files/cards-$version.tar.gz)
 
 [ -z "$patchname" ] || source+=" $patchname"
 
