@@ -80,10 +80,10 @@ echo
 msg "$(gettext "Downloading sources...")"
 echo
 
-for i in `cat scripts/wget_nutyx_list|grep -v ^#|sed "s@  @|@"`
+for i in $(cat scripts/wget_nutyx_list|grep -v ^#|sed "s@  @|@")
 do
-	FILE=`echo $i|cut -d "|" -f2`
-	MD5SUM=`echo $i|cut -d "|" -f1`
+	FILE=$(echo $i|cut -d "|" -f2)
+	MD5SUM=$(echo $i|cut -d "|" -f1)
 	if [ ! -f $LFS/sources/$FILE ]; then
 		wget --no-check-certificate $URL/sources/$version/$FILE -P $LFS/sources
 	fi
