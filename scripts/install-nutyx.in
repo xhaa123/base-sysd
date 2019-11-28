@@ -322,6 +322,8 @@ tput rc
 
 #PROMPT_COMMAND=prompt_command
 
+export XZ_DEFAULTS="-T0"
+
 case $TERM in
         xterm|rxvt*)
                 TITLEBAR='\[\033]0;\u@\h \007\]'
@@ -1028,8 +1030,6 @@ alias l='ls -alh'
 alias duh='du -h --max-depth=1'
 alias dfh='df -h'
 alias pkgfind='cards list | grep -i'
-alias xz='xz -T0'
-alias unxz='unxz -T0'
 
 # End ~/.bashrc
 EOF
@@ -1350,8 +1350,7 @@ if [ ! -z $MOUNT ]; then
 fi
 }
 check_arch() {
-if [ "$ARCH" != "x86_64" ] && [ "$ARCH" != "i686" ]; then
-	boot_mesg "
+if [ "$ARCH" != "x86_64" ] && [ "$ARCH" != "i686" ] && [ "$ARCH" != "aarch64" ]; then
  >>> This arch ($ARCH) is not supported"
 	echo_failure
 	exit 1
