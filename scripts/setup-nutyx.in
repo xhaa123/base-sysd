@@ -65,7 +65,7 @@ _msgfmt() {
 		-o $TEXTDOMAINDIR/${L}/LC_MESSAGES/setup-nutyx.mo
 		TEXTDOMAINFILE=$TEXTDOMAINDIR/${L}/LC_MESSAGES/$TEXTDOMAIN.mo
 	fi
-	echo "export LANG=${1}.utf-8" > ${LOCALE}
+	echo "LANG=${1}.utf-8" > ${LOCALE}
 	$SETUP_LOG "setup-nutyx --config-lang" "variable LANG=${1}.utf-8 saved in ${LOCALE}"
 }
 calc(){
