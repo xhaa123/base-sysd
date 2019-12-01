@@ -4,12 +4,13 @@ packager="Yaolinux Team"
 
 name=grub-efi
 version=2.04
-release=2
+release=3
 
 makedepends=(efibootmgr efivar freetype)
 run=(efivar)
 
-source=(http://alpha.gnu.org/gnu/grub/grub-$version.tar.xz)
+source=(https://ftp.gnu.org/gnu/grub/grub-$version.tar.xz
+        http://downloads.tuxfamily.org/nutyx/files/unicode.pf2)
 
 PKGMK_GROUPS=(man locale)
 
@@ -35,4 +36,9 @@ build() {
  mv $PKG/etc/bash_completion.d/grub{,-efi}
  mv $PKG/etc/grub.d/README{,-efi}
  mv $PKG/usr/share/grub/grub{,-efi}-mkconfig_lib
+
+ cp ../unicode.pf2 $PKG/usr/share/grub/
+
+# Duplicate with grub package
+ rm -r $PKG/usr/share/{info,locale}
 }
