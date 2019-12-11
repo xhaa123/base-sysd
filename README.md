@@ -1,8 +1,8 @@
 Yaolinux
 ======
 
-## Yaolinux, c'est quoi ?
+## What is Yaolinux ?
 
 ```
-Une distribution basé sur NutyX avec SystemD
+A linux distribution based on NuTyX cards package manager and systemd instead of SySV init system
 ``̀` 
