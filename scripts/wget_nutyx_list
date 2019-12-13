@@ -8,6 +8,7 @@ bc1e5cb5c96d99b24886f1f527d3bb3d  attr-2.4.48.tar.gz
 50f97f4159805e374639a73e2636f22e  autoconf-2.69.tar.xz
 53f38e7591fa57c3d2cee682be668e5b  automake-1.16.1.tar.xz
 2b44b47b905be16f45709648f671820b  bash-5.0.tar.gz
+c1545da2ad7d78574b52c465ec077ed9  bash-5.0-upstream_fixes-1.patch
 cda93857418655ea43590736fc3ca9fc  bc-1.07.1.tar.gz
 0d174cdaf85721c5723bf52355be41e6  binutils-2.32.tar.xz
 201286a573b12da109df96282fe4ff4a  bison-3.4.1.tar.xz
