@@ -1,6 +1,8 @@
 description="A set of utilities to manage software packages on NuTyX distribution."
 url="https://github.com/NuTyX/cards"
 
+makedepends=gnutls
+
 maintainer="Tnut"
 packager="Yaolinux Team"
 
@@ -24,6 +26,7 @@ PKGMK_GROUPS=(devel doc man)
 
 name=cards
 version=2.4.108
+release=3
 
 # patchname="$name-$version-consolidate-$release.patch"
 
