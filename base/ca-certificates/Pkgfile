@@ -6,6 +6,7 @@ makedepends=(p11-kit)
 
 name=ca-certificates
 version=1.5
+release=2
 
 source=(https://github.com/djlucas/make-ca/releases/download/v$version/make-ca-$version.tar.xz
 	http://anduin.linuxfromscratch.org/BLFS/other/certdata.txt
