@@ -1,7 +1,7 @@
 makedepends=(yaolinux)
 
 url="http://www.kernel.org"
-description="The latest stable kernel version"
+description="The current stable kernel version"
 
 packager="Yaolinux Team"
 maintainer="rems"
@@ -13,7 +13,7 @@ PKGMK_GROUPS=(devel doc)
 name=kernel
 alias=(linux)
 
-version=5.2.17
+version=5.4.13
 _version=${version:0:3}
 
 # Linux patch version
