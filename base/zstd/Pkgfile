@@ -7,7 +7,7 @@ maintainer="rems"
 makedepends=(zlib xz lz4)
 
 name=zstd
-version=1.4.3
+version=1.4.4
 
 PKGMK_KEEP_SOURCES="no"
 
