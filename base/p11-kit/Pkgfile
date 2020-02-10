@@ -7,9 +7,10 @@ packager="Yaolinux Team"
 makedepends=(libtasn1 libffi systemd)
 
 name=p11-kit
-version=0.23.18.1
+version=0.23.20
 
-source=(https://github.com/p11-glue/p11-kit/releases/download/$version/$name-$version.tar.gz)
+source=(https://github.com/p11-glue/p11-kit/releases/download/$version/p11-kit-$version.tar.xz)
+
 build() {
 cd $name-$version
 sed '20,$ d' -i trust/trust-extract-compat.in
@@ -29,8 +30,4 @@ make
 make DESTDIR=$PKG install
 ln -sfv /usr/libexec/p11-kit/trust-extract-compat \
         $PKG/usr/bin/update-ca-certificates
-
-# Obsolets libs
-rm $PKG/usr/lib/libp11-kit.la
-rm $PKG/usr/lib/pkcs11/p11-kit-{client,trust}.la
 }
