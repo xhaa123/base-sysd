@@ -5,7 +5,7 @@ url="http://search.cpan.org/dist/XML-Parser/"
 packager="Yaolinux Team"
 
 name=perl-xml-parser
-version=2.44
+version=2.45
 release=1
 
 source=(http://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-$version.tar.gz)
