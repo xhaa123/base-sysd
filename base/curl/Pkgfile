@@ -6,7 +6,7 @@ packager="Yaolinux Team"
 makedepends=(gnutls)
 
 name=curl
-version=7.67.0
+version=7.68.0
 
 source=(http://curl.haxx.se/download/$name-$version.tar.xz)
 
