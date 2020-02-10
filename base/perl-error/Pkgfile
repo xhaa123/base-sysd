@@ -7,7 +7,7 @@ packager="Yaolinux Team"
 run=( perl )
 
 name=perl-error
-version=0.17026
+version=0.17029
 
 source=(http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/Error-$version.tar.gz)
 
