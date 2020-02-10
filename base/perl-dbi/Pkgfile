@@ -6,7 +6,7 @@ packager="Yaolinux Team"
 
 run=( perl )
 name=perl-dbi
-version=1.641
+version=1.643
 
 source=(http://www.cpan.org/authors/id/T/TI/TIMB/DBI-$version.tar.gz)
 
