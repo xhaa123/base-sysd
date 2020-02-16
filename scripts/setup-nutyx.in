@@ -895,19 +895,23 @@ case ${REPLY} in
  "Norge")
 	_msgfmt nb_NO
   _msgfmt nn_NO
-	echo "export LANG=nb_NO.utf8" > ${LOCALE}
+  	echo "LANG=nb_NO.utf8" > ${LOCALE}
+	echo "export LANG=nb_NO.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Oslo ${LOCALTIME};;
  "Polski")
 	_msgfmt pl_PL
-	echo "export LANG=pl_PL.utf8" > ${LOCALE}
+	echo "LANG=pl_PL.utf8" > ${LOCALE}
+	echo "export LANG=pl_PL.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Warsaw ${LOCALTIME};;
  "Россия")
   _msgfmt ru_RU
-	echo "export LANG=ru_RU.utf8" > ${LOCALE}
+  	echo "LANG=ru_RU.utf8" > ${LOCALE}
+	echo "export LANG=ru_RU.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Moscow ${LOCALTIME};;
  "Portugal")
 	_msgfmt pt_PT
-	echo "export LANG=pt_PT.utf8" > ${LOCALE}
+	echo "LANG=pt_PT.utf8" > ${LOCALE}
+	echo "export LANG=pt_PT.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Lisbon ${LOCALTIME};;
  "Brasil")
 	_msgfmt pt_BR
