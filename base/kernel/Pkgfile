@@ -13,7 +13,7 @@ PKGMK_GROUPS=(devel doc)
 name=kernel
 alias=(linux)
 
-version=5.4.16
+version=5.4.20
 _version=${version:0:3}
 
 # Linux patch version
