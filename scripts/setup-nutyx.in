@@ -65,8 +65,9 @@ _msgfmt() {
 		-o $TEXTDOMAINDIR/${L}/LC_MESSAGES/setup-nutyx.mo
 		TEXTDOMAINFILE=$TEXTDOMAINDIR/${L}/LC_MESSAGES/$TEXTDOMAIN.mo
 	fi
-	echo "LANG=${1}.utf-8" > ${LOCALE}
-	$SETUP_LOG "setup-nutyx --config-lang" "variable LANG=${1}.utf-8 saved in ${LOCALE}"
+	echo "LANG=${1}.utf8" > ${LOCALE}
+	echo "export LANG=${1}.utf8" > ${PROFILELOCALE}
+	$SETUP_LOG "setup-nutyx --config-lang" "variable LANG=${1}.utf8 saved in ${LOCALE} and ${PROFILELOCALE}"
 }
 calc(){
         echo "scale=2;$@"|bc
@@ -518,7 +519,7 @@ SETUP_CONFIG_NETWORK="no"
 }
 setup_language()
 {
-/usr/bin/localedef -i de_CH -f UTF-8 de_CH.UTF8
+/usr/bin/localedef -i de_CH -f UTF-8 de_CH.UTF-8
 /usr/bin/setfont LatGrkCyr-8x16
 while [ true ]; do
 dialog   \
@@ -894,19 +895,23 @@ case ${REPLY} in
  "Norge")
 	_msgfmt nb_NO
   _msgfmt nn_NO
-	echo "export LANG=nb_NO.utf-8" > ${LOCALE}
+  	echo "LANG=nb_NO.utf8" > ${LOCALE}
+	echo "export LANG=nb_NO.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Oslo ${LOCALTIME};;
  "Polski")
 	_msgfmt pl_PL
-	echo "export LANG=pl_PL.utf-8" > ${LOCALE}
+	echo "LANG=pl_PL.utf8" > ${LOCALE}
+	echo "export LANG=pl_PL.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Warsaw ${LOCALTIME};;
  "Россия")
   _msgfmt ru_RU
-	echo "export LANG=ru_RU.utf-8" > ${LOCALE}
+  	echo "LANG=ru_RU.utf8" > ${LOCALE}
+	echo "export LANG=ru_RU.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Moscow ${LOCALTIME};;
  "Portugal")
 	_msgfmt pt_PT
-	echo "export LANG=pt_PT.utf-8" > ${LOCALE}
+	echo "LANG=pt_PT.utf8" > ${LOCALE}
+	echo "export LANG=pt_PT.utf8" > ${PROFILELOCALE}
 	_zoneinfo ${ZONEINFO}Europe/Lisbon ${LOCALTIME};;
  "Brasil")
 	_msgfmt pt_BR
@@ -1134,7 +1139,7 @@ SETUP_CONFIG_KEYBOARD="no"
 
 setup_clock() {
 	local TABDATE
-	HWCLOCK=`LANG=C.utf-8 hwclock -r`
+	HWCLOCK=`LANG=C.utf8 hwclock -r`
 	dialog --title "   $(gettext "Coordinated Universal Time or Local Time ?")  " \
 	--yesno "$(gettext "The hardware clock is set to"):\n\n $HWCLOCK. \n\n$(gettext "Do you want to use this time as Coordinated Universal Time ?") \n\
 $(gettext "so that the summer/winter time is changed automatically" ) " 0 0
@@ -2306,7 +2311,7 @@ cleanup () {
 
 top_loop() {
 	if [ "$SETUP_INITRD" = "yes" ]; then
-		[ "$SETUP_CONFIG_LANGUAGE" = "yes" ] && LANG=de_CH.utf-8 setup_language
+		[ "$SETUP_CONFIG_LANGUAGE" = "yes" ] && LANG=de_CH.utf8 setup_language
 		if [ ! -d /media/cdrom/boot ]; then
 			dialog --title "   $(gettext "Welcome to the YaoLinuX installer")   " \
 				--msgbox "    $(gettext "You can remove the ISO media now.")" 6 60
@@ -2317,7 +2322,7 @@ top_loop() {
 			setup_help
 		fi
 		while [ "$SETUP_INSTALL" = "no" ];do
-				[ "$SETUP_CONFIG_LANGUAGE" = "yes" ] && LANG=de_CH.utf-8 setup_language
+				[ "$SETUP_CONFIG_LANGUAGE" = "yes" ] && LANG=de_CH.utf8 setup_language
 				[ "$SETUP_INSTALL" = "no" ] && setup_initrd
 		done
 	else
@@ -2327,7 +2332,7 @@ top_loop() {
 			[ "$SETUP_CONFIG_WIFI" = "yes" ] ||
 			[ "$SETUP_CONFIG_CLOCK" = "yes" ] ||
 			[ "$SETUP_CONFIG_USER" = "yes" ]; do
-				[ "$SETUP_CONFIG_LANGUAGE" = "yes" ] && LANG=de_CH.utf-8 setup_language
+				[ "$SETUP_CONFIG_LANGUAGE" = "yes" ] && LANG=de_CH.utf8 setup_language
 				[ "$SETUP_CONFIG_KEYBOARD" = "yes" ] && setup_keymap
 				[ "$SETUP_CONFIG_NETWORK" = "yes" ] && setup_net
 				[ "$SETUP_CONFIG_WIFI" = "yes" ] && setup_wireless
@@ -2396,6 +2401,7 @@ CARDS="/etc/cards.conf"
 XORGKB="/etc/X11/xorg.conf.d/20-keyboard.conf"
 CONSOLE="/etc/vconsole.conf"
 LOCALE="/etc/locale.conf"
+PROFILELOCALE="/etc/profile.d/i18n.sh"
 LOCALTIME="/etc/localtime"
 ZONEINFO="/usr/share/zoneinfo/"
 NETWORK="`ls /etc/systemd/network/* 2>/dev/null|head -1`"
