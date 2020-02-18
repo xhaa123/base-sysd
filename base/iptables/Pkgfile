@@ -5,7 +5,8 @@ packager="Yaolinux Team"
 
 name=iptables
 version=1.8.2
-yaolinux_version=1.0-RC1
+yaolinux_version=1.0-RC2
+release=2
 
 source=(http://downloads.yaolinux.org/yaolinux/files/yaolinux-${yaolinux_version}.tar.xz
 	http://www.netfilter.org/projects/iptables/files/$name-$version.tar.bz2)
