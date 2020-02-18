@@ -8,6 +8,7 @@ maintainer="rems"
 
 name=libffi
 version=3.2.1
+release=2
 
 source=(ftp://sourceware.org/pub/$name/$name-$version.tar.gz)
 
