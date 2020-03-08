@@ -5,12 +5,13 @@ maintainer="rems"
 
 name=systemd
 version=241
+release=3
 
 PKGMK_KEEP_SOURCES="no"
 
-source=(https://github.com/systemd/systemd/archive/$name-$version.tar.gz
+source=(https://github.com/systemd/systemd/archive/v$version.tar.gz
         http://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$version.tar.xz
-        http://www.linuxfromscratch.org/patches/blfs/svn/systemd-$version-networkd_and_rdrand_fixes-1.patch)
+        http://www.linuxfromscratch.org/patches/downloads/systemd/systemd-$version-networkd_and_rdrand_fixes-1.patch)
 
 build () {
 cd $name-$version
@@ -113,5 +114,5 @@ BUG_REPORT_URL="https://bugs.yaolinux.org"
 
 # End /etc/os-release
 EOF
-[ -d /tools ] && rm -fv /usr/lib/lib{blkid,uuid,mount}.so*
+if [ -d /tools ]; then rm -fv /usr/lib/lib{blkid,uuid,mount}.so*; fi
 }
