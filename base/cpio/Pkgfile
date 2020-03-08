@@ -5,24 +5,26 @@ packager="Yaolinux Team"
 
 
 name=cpio
-version=2.12
-release=2
+version=2.13
 
-source=( http://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2\
-)
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
 
 
 build() {
 	cd $name-$version
+
 	sed -i -e '/gets is a/d' gnu/stdio.in.h
-	./configure \
-		--prefix=/usr \
-		--bindir=/bin \
-		--libexecdir=/tmp \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--enable-mt --with-rmt=/usr/sbin/rmt
+
+	./configure --prefix=/usr \
+                    --bindir=/bin \
+                    --libexecdir=/tmp \
+                    --mandir=/usr/share/man \
+                    --infodir=/usr/share/info \
+                    --enable-mt \
+                    --with-rmt=/usr/sbin/rmt
+
 	make
 	make DESTDIR=$PKG install
+
 	rm -rf $PKG/tmp
 }
