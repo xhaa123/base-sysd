@@ -5,10 +5,10 @@ url="http://search.cpan.org/dist/XML-Parser/"
 packager="Yaolinux Team"
 
 name=perl-xml-parser
-version=2.45
+version=2.46
 release=1
 
-source=(http://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-$version.tar.gz)
+source=(https://search.cpan.org/CPAN/authors/id/T/TO/TODDR/XML-Parser-${version}.tar.gz)
 run=(perl)
 
 build() {
