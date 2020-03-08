@@ -6,9 +6,9 @@ makedepends=(perl)
 run=( perl )
 
 name=perl-path-tiny
-version=0.108
+version=0.112
 
-source=(https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.108.tar.gz)
+source=(https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-$version.tar.gz)
 
 build() {
 
