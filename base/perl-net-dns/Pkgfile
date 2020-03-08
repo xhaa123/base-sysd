@@ -7,9 +7,9 @@ packager="Yaolinux Team"
 run=( perl )
 
 name=perl-net-dns
-version=1.21
+version=1.22
 
-source=(http://www.cpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-$version.tar.gz)
+source=(https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-$version.tar.gz)
 
 build() {
 cd Net-DNS-$version
