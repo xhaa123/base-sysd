@@ -6,10 +6,10 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=libarchive
-version=3.4.0
+version=3.4.2
 release=4
 
-source=(http://www.libarchive.org/downloads/libarchive-$version.tar.gz)
+source=(https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.xz)
 
 build() {
 cd $name-$version
