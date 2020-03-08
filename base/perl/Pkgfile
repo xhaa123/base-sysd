@@ -3,9 +3,9 @@ url="http://www.perl.org/"
 packager="Yaolinux Team"
 
 name=perl
-version=5.30.0
+version=5.30.1
 
-source=(http://ftp.funet.fi/pub/CPAN/src/$name-$version.tar.xz)
+source=(https://www.cpan.org/src/5.0/perl-${version}.tar.xz)
 
 build() {
 cd $name-$version
