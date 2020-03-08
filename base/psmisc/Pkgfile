@@ -4,9 +4,9 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=psmisc
-version=23.2
+version=23.3
 
-source=(https://sourceforge.net/projects/$name/files/$name/$name-$version.tar.xz)
+source=(https://downloads.sourceforge.net/psmisc/${name}-${version}.tar.xz)
 
 build() {
 cd psmisc-$version
