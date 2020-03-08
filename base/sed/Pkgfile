@@ -4,9 +4,9 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=sed
-version=4.7
+version=4.8
 
-source=(http://ftp.gnu.org/gnu/sed/sed-$version.tar.xz)
+source=(https://ftp.gnu.org/pub/gnu/sed/$name-$version.tar.xz)
 
 build()
 {
