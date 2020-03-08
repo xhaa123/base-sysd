@@ -7,9 +7,11 @@ packager="Yaolinux Team"
 PKGMK_GROUPS=(devel man doc)
 
 name=e2fsprogs
-version=1.45.4
+version=1.45.5
 
-source=(http://prdownloads.sourceforge.net/$name/$name-$version.tar.gz)
+makedepends=(util-linux)
+
+source=(https://mirrors.edge.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v$version/e2fsprogs-$version.tar.xz)
 
 build(){
 cd $name-$version
@@ -28,7 +30,7 @@ PKG_CONFIG_PATH=/tools/lib/pkgconfig \
              --disable-libuuid \
              --disable-uuidd \
              --disable-fsck
-             
+
 make || make -j1
 
 make DESTDIR=$PKG install install-libs || make -j1 DESTDIR=$PKG install install-libs
@@ -43,8 +45,8 @@ makeinfo -o doc/com_err.info ../lib/et/com_err.texinfo
 install -v -m644 doc/com_err.info $PKG/usr/share/info
 install-info --dir-file=$PKG/usr/share/info/dir $PKG/usr/share/info/com_err.info
 }
-devel()
-{
+
+devel() {
 cd $PKG
 bsdtar -cf \
 $PKGMK_PACKAGE_DIR/${name}.devel${PKGMK_BUILDVER}any.$PKGMK_PACKAGE_EXT \
