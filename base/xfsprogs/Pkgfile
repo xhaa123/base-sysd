@@ -3,7 +3,7 @@ url="http://oss.sgi.com/projects/xfs/"
 packager="Yaolinux Team"
 
 name=xfsprogs
-version=5.2.1
+version=5.4.0
 
 source=(https://www.kernel.org/pub/linux/utils/fs/xfs/$name/$name-$version.tar.xz)
 
