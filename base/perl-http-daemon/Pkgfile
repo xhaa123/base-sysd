@@ -7,10 +7,10 @@ packager="Yaolinux Team"
 run=( perl )
 
 name=perl-http-daemon
-version=6.01
+version=6.06
 release=1
 
-source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Daemon-$version.tar.gz)
+source=(https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-${version}.tar.gz)
 
 build() {
 cd HTTP-Daemon-$version
