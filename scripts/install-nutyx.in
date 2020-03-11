@@ -1229,22 +1229,25 @@ check_variables() {
 if [ -z "$CHROOT_LIST" ]; then
 	CHROOT_LIST="yaolinux acl attr bash bzip2 coreutils curl \
 expat gcc readline ncurses lzo glibc gmp xz zlib \
-libarchive mpc mpfr openssl cards \
-libtasn1 nettle gnutls p11-kit libffi"
-   [ "$ARCH" = "i686" -a "$HOST_ARCH" = "x86_64" ] && CHROOT_LIST="$CHROOT_LIST util-linux"
+libarchive mpc mpfr openssl cards util-linux \
+libtasn1 nettle gnutls p11-kit libffi kmod"
 fi
+
 [ -z "$URL" ] && URL="http://downloads.yaolinux.org"
-[ -z "$VERSION" ] && VERSION="#VERSION#"
+
+[ -z "$VERSION" ] && VERSION="1.0-RC2"
+
 if [ "$VERSION" == "development" ]; then
 	CODE_NAME="`date +%Y%m%d`"
 	INIT="sysd"
 else
 	CODE_NAME="Houaphan"
 fi
+
 [ -z "$DEPOT" ] && DEPOT="/var/lib/pkg/depot"
 [ -z "$FOLDER" ] && FOLDER="/mnt/hd"
 
-[ -z $INIT ] && INIT="eudev sysklogd sysvinit"
+[ -z $INIT ] && INIT="sysd"
 [ "$INIT" = "sysv" ] && INIT="eudev sysklogd sysvinit"
 [ "$INIT" = "sysd" ] && INIT="systemd"
 
@@ -1420,12 +1423,12 @@ cards install kbd pam \
 shadow gdbm e2fsprogs \
 gzip binutils \
 diffutils file grep bc \
-libpipeline util-linux \
+libpipeline \
 findutils flex libcap \
 gettext procps-ng psmisc \
 sed sudo tzdata inetutils \
 iproute2 libelf iana-etc \
-kmod less groff man-db \
+less groff man-db \
 cards.fr cards.man yaolinux.man \
 lvm2 libaio dialog cpio squashfs \
 ca-certificates lsb-release \
