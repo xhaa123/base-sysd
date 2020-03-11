@@ -9,7 +9,7 @@ maintainer="rems"
 
 name=yaolinux
 version=1.0-RC2
-release=4
+release=5
 
 patchname=""
 
