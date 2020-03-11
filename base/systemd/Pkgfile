@@ -4,33 +4,36 @@ packager="Yaolinux Team"
 maintainer="rems"
 
 name=systemd
-version=241
+version=244
 release=3
 
+makedepends=(util-linux)
+
 PKGMK_KEEP_SOURCES="no"
+PKGMK_IGNORE_RUNTIMEDEPS="yes"
+
 
 source=(https://github.com/systemd/systemd/archive/v$version.tar.gz
-        http://anduin.linuxfromscratch.org/LFS/systemd-man-pages-$version.tar.xz
-        http://www.linuxfromscratch.org/patches/downloads/systemd/systemd-$version-networkd_and_rdrand_fixes-1.patch)
+        http://www.linuxfromscratch.org/patches/blfs/svn/systemd-244-seccomp_and_cpuaffinity_fix-1.patch)
 
 build () {
 cd $name-$version
 
-patch -Np1 -i ../systemd-$version-networkd_and_rdrand_fixes-1.patch
+patch -Np1 -i ../systemd-244-seccomp_and_cpuaffinity_fix-1.patch
 
 sed '177,$ d' -i src/resolve/meson.build
 
 sed -i '1506,1508 s/</>/' src/shared/seccomp-util.c
 
-sed -i 's/GROUP="render", //' rules/50-udev-default.rules.in
+sed -i 's/GROUP="render", //' rules.d/50-udev-default.rules.in
 
 [ -d /tools ] && \
 for file in /tools/lib/lib{blkid,mount,uuid}.so*; do
     ln -svf $file /usr/lib/
 done
 
-mkdir -pv build
-cd       build
+mkdir -pv ../build
+cd ../build
 
 PKG_CONFIG_PATH="/usr/lib/pkgconfig:/tools/lib/pkgconfig" \
 LANG=en_US.UTF-8                   \
@@ -57,22 +60,22 @@ meson --prefix=/usr                \
       -Dman=false                  \
       -Dhtml=false                 \
       -Drpmmacrosdir=no            \
-      ..
+      ../$name-$version
 
-LC_ALL="en_US.utf8" LANG="en_US.utf8" ninja
-DESTDIR=$PKG LC_ALL="en_US.utf8" LANG="en_US.utf8" ninja install
+LANG="en_US.utf8" ninja
+DESTDIR=$PKG LANG="en_US.utf8" ninja install
 
 rm -fv /usr/bin/xsltproc
 
 # Disable service systemd-networkd
-unlink $PKG/etc/systemd/system/dbus-org.freedesktop.network1.service
-unlink $PKG/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
-unlink $PKG/etc/systemd/system/sockets.target.wants/systemd-networkd.socket
-unlink $PKG/etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service
+#unlink $PKG/etc/systemd/system/dbus-org.freedesktop.network1.service
+#unlink $PKG/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
+#unlink $PKG/etc/systemd/system/sockets.target.wants/systemd-networkd.socket
+#unlink $PKG/etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service
 
 # Disable service systemd-resolved
-unlink $PKG/etc/systemd/system/dbus-org.freedesktop.resolve1.service
-unlink $PKG/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
+#unlink $PKG/etc/systemd/system/dbus-org.freedesktop.resolve1.service
+#unlink $PKG/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
 
 rm -f $PKG/usr/lib/tmpfiles.d/systemd-nologin.conf
 
