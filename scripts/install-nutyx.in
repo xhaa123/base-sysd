@@ -1255,7 +1255,7 @@ if [ -z "$KERNEL" ]; then
    if [ "$ARCH" = "i686" -a "$HOST_ARCH" = "x86_64" ]; then
       KERNEL=$INIT
    else
-      KERNEL="linux-firmware $INIT reiserfsprogs e3 \
+      KERNEL="linux-firmware $INIT dbus reiserfsprogs e3 \
 grub lz4 mdadm jfsutils xfsprogs btrfs-progs dhcpcd kernel-lts"
    fi
 fi
