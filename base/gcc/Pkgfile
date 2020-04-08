@@ -4,7 +4,7 @@ packager="Yaolinux Team"
 maintainer="rems"
 
 name=gcc
-version=9.2.0
+version=9.3.0
 
 source=(http://ftp.gnu.org/gnu/gcc/gcc-$version/gcc-$version.tar.xz)
 
@@ -31,10 +31,11 @@ cd ../gcc-build
 SED=sed \
 ../gcc-$version/configure --prefix=/usr \
     --libdir=/usr/lib \
-    --enable-languages=c,c++,objc,fortran \
+    --enable-languages=c,c++,objc,obj-c++,fortran,go \
     --disable-multilib \
     --disable-bootstrap \
-    --with-system-zlib
+    --with-system-zlib \
+    --enable-default-pie
 
 make
 
