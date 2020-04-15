@@ -16,7 +16,7 @@ set=(kernel-current)
 
 alias=(linux-current)
 
-version=5.5.8
+version=5.5.17
 _version=${version:0:3}
 
 # Linux patch version
