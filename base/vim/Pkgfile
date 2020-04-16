@@ -3,7 +3,7 @@ url="http://www.vim.org/"
 packager="Yaolinux Team"
 
 name=vim
-version=8.2.0343
+version=8.2.0486
 
 source=(https://github.com/vim/vim/archive/v$version/vim-$version.tar.gz)
 build() {
