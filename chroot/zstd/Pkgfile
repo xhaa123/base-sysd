@@ -1,6 +1,6 @@
 version=1.4.4
 
-source=(http://rems.6admin.net/sources/development/$name-${version}.tar.gz)
+source=(http://rems.6admin.net/sources/development/zstd-${version}.tar.gz)
 
 build() {
 
@@ -10,8 +10,8 @@ meson --prefix=/usr \
       -Dbin_programs=true \
       -Dbin_contrib=true \
       -Dmulti_thread=enabled \
-      ../$name-$version/build/meson
+      ../zstd-$version/build/meson
 
 ninja
-DESTDIR=$PKG ninja install
+ninja install
 }

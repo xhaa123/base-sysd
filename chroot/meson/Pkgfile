@@ -1,9 +1,9 @@
 version=0.54.0
 
-source=(https://github.com/mesonbuild/$name/releases/download/$version/$name-$version.tar.gz)
+source=(https://github.com/mesonbuild/$name/releases/download/$version/meson-$version.tar.gz)
 
 build() {
-  cd $name-$version
+  cd meson-$version
  
  DFLAGS="${LDFLAGS/,--as-needed/}"
   export LC_CTYPE=en_US.UTF-8
