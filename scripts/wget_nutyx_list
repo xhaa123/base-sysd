@@ -109,5 +109,6 @@ f6987e6dfdb2eb83a1b5076a50b80894  tzdata2019c.tar.gz
 b1b26d5b7ec294186702fb982b6d226c  vim-8.2.0486.tar.gz
 db4e6dc7977cbddcd543b240079a4899  wget-1.20.3.tar.gz
 003e4d0b1b1899fc6e3000b24feddf7c  xz-5.2.4.tar.xz
-85adef240c5f370b308da8c938951a68  zlib-1.2.11.tar.xz
 08885fd5d160bfdfc384912dcea1f056  yaolinux-1.0-RC2.tar.xz
+85adef240c5f370b308da8c938951a68  zlib-1.2.11.tar.xz
+532aa7b3a873e144bbbedd9c0ea87694  zstd-1.4.4.tar.gz

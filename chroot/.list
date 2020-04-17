@@ -33,3 +33,6 @@ xz
 zlib
 libarchive
 cards
+meson
+ninja
+zstd
