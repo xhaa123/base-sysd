@@ -4,14 +4,8 @@ source=(http://rems.6admin.net/sources/development/zstd-${version}.tar.gz)
 
 build() {
 
-mkdir -v build && cd build
+cd $name-$version
 
-meson --prefix=/usr \
-      -Dbin_programs=true \
-      -Dbin_contrib=true \
-      -Dmulti_thread=enabled \
-      ../zstd-$version/build/meson
-
-ninja
-ninja install
+make
+make prefix=/tools install
 }

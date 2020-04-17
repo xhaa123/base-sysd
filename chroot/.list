@@ -31,8 +31,6 @@ texinfo
 util-linux
 xz
 zlib
+zstd
 libarchive
 cards
-meson
-ninja
-zstd
