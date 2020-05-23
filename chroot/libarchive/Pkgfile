@@ -1,7 +1,6 @@
 name=libarchive
-version=3.4.0
-source=(http://www.libarchive.org/downloads/$name-$version.tar.gz
-	)
+version=3.4.2
+source=(http://www.libarchive.org/downloads/$name-$version.tar.xz)
 
 build() {
 cd $name-$version

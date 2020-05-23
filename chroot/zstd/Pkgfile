@@ -1,0 +1,11 @@
+version=1.4.4
+
+source=(http://rems.6admin.net/sources/development/zstd-${version}.tar.gz)
+
+build() {
+
+cd $name-$version
+
+make
+make prefix=/tools install
+}

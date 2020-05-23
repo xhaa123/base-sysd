@@ -11,7 +11,7 @@ version=4.4
 
 PKGMK_KEEP_SOURCE="no"
 
-source=(https://github.com/plougher/squashfs-tools/archive/$version.tar.gz)
+source=(https://rems.6admin.net/sources/development/$name-$version.tar.gz)
 
 build() {
 cd squashfs-tools-$version/squashfs-tools
