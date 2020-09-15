@@ -4,8 +4,7 @@ packager="Yaolinux Team"
 maintainer="rems"
 
 name=systemd
-version=245
-release=3
+version=246
 
 PKGMK_KEEP_SOURCES="no"
 PKGMK_IGNORE_RUNTIMEDEPS="yes"
@@ -15,7 +14,7 @@ source=(https://github.com/systemd/systemd/archive/v$version/$name-$version.tar.
 build () {
 cd $name-$version
 
-sed '179,$ d' -i src/resolve/meson.build
+# sed '179,$ d' -i src/resolve/meson.build
 
 sed -i 's/GROUP="render", //' rules.d/50-udev-default.rules.in
 
