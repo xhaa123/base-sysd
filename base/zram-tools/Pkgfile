@@ -1,0 +1,34 @@
+description="Zram tools and service"
+url=""
+
+packager="Yaolinux Team"
+maintainer="rems"
+
+makedepends=(gawk)
+run=(gawk)
+
+name=zram-tools
+version=0.1
+
+PKGMK_KEEP_SOURCES="no"
+
+source=(http://rems.6admin.net/sources/development/zram-tools-0.1.tar.xz)
+
+build() {
+
+cd $name-$version
+
+mkdir -pv $PKG/usr/sbin/
+
+cp zramswap.in $PKG/usr/sbin/zramswap
+
+chmod +x $PKG/usr/sbin/zramswap
+
+mkdir -pv $PKG/etc/sysconfig/
+
+cp zramswap.config $PKG/etc/sysconfig/zramswap.conf
+
+mkdir -pv $PKG/lib/systemd/system/
+
+cp zramswap.service $PKG/lib/systemd/system/
+}
