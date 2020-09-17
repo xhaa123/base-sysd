@@ -8,10 +8,9 @@ makedepends=(libedit)
 
 name=openssh
 version=8.2p1
-yao_version=1.0-RC2
+release=3
 
-source=(http://downloads.yaolinux.org/yaolinux/files/yaolinux-${yao_version}.tar.xz
-	http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz)
+source=(http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz)
 
 build() {
 unset MAKEFLAGS
@@ -45,8 +44,4 @@ $PKG/usr/share/man/man1
 install -v -m755 -d $PKG/usr/share/doc/$name-$version
 install -v -m644 INSTALL LICENCE OVERVIEW README* \
 $PKG/usr/share/doc/$name-$version
-
-# Service
-cd $SRC/yaolinux-${yao_version}
-make DESTDIR=$PKG install-sshd
 }
