@@ -7,7 +7,7 @@ packager="Yaolinux Team"
 run=( perl )
 
 name=perl-mozilla-ca
-version=20180117
+version=20200520
 
 source=(http://search.cpan.org/CPAN/authors/id/A/AB/ABH/Mozilla-CA-$version.tar.gz)
 
