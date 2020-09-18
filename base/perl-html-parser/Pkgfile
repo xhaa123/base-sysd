@@ -7,10 +7,10 @@ packager="Yaolinux Team"
 run=( perl )
 
 name=perl-html-parser
-version=3.72
+version=3.74
 release=1
 
-source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTML-Parser-$version.tar.gz)
+source=(https://www.cpan.org/authors/id/C/CA/CAPOEIRAB/HTML-Parser-$version.tar.gz)
 
 build() {
 cd HTML-Parser-$version
