@@ -4,7 +4,7 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=libtirpc
-version=1.0.3
+version=1.2.6
 release=2
 
 source=(http://downloads.sourceforge.net/libtirpc/libtirpc-$version.tar.bz2)
