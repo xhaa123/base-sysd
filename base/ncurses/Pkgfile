@@ -4,7 +4,7 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=ncurses
-version=6.1
+version=6.2
 
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
