@@ -6,7 +6,7 @@ packager="Yaolinux Team"
 PKGMK_GROUPS=(devel man doc)
 
 name=xz
-version=5.2.4
+version=5.2.5
 release=2
 
 source=(${url}$name-$version.tar.xz)
