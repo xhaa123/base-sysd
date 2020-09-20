@@ -4,7 +4,7 @@ url="http://www.iptables.org/"
 packager="Yaolinux Team"
 
 name=iptables
-version=1.8.4
+version=1.8.5
 yaolinux_version=1.0-RC2
 
 source=(http://www.netfilter.org/projects/iptables/files/$name-$version.tar.bz2
