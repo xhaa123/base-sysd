@@ -5,7 +5,7 @@ packager="Yaolinux Team"
 maintainer="rems"
 
 name=pciutils
-version=3.6.4
+version=3.7.0
 
 makedepends=(systemd)
 
