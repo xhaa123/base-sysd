@@ -9,4 +9,4 @@ Yaolinux
 ## Is an ISO available ?
 
 ```Yes ! Here```
-http://downloads.yaolinux.org/
+http://downloads.yaolinux.org
