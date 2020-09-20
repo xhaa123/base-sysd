@@ -72,6 +72,7 @@ libtasn1
 nettle
 p11-kit
 gnutls
+zstd
 curl
 cpio
 pciutils

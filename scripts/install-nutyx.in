@@ -1228,7 +1228,7 @@ check_root() {
 check_variables() {
 if [ -z "$CHROOT_LIST" ]; then
 	CHROOT_LIST="yaolinux acl attr bash bzip2 coreutils curl \
-expat gcc readline ncurses lzo glibc gmp xz zlib \
+expat gcc readline ncurses lzo glibc gmp xz zstd zlib \
 libarchive mpc mpfr openssl cards util-linux \
 libtasn1 nettle gnutls p11-kit libffi kmod"
 fi
