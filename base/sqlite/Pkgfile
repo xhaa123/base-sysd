@@ -4,10 +4,10 @@ url="http://www.sqlite.org/"
 packager="Yaolinux Team"
 maintainer="rems"
 
-_amalgamationver=3310100
+_amalgamationver=3330000
 
 name=sqlite
-version=3.31.1
+version=3.33.0
 
 source=(http://www.sqlite.org/2020/sqlite-autoconf-${_amalgamationver}.tar.gz)
 
