@@ -7,11 +7,9 @@ maintainer="rems"
 makedepends=(zlib xz lz4)
 
 name=zstd
-version=1.4.4
+version=1.4.5
 
-PKGMK_KEEP_SOURCES="no"
-
-source=(https://github.com/facebook/zstd/archive/v${version}.tar.gz)
+source=(https://github.com/facebook/zstd/releases/download/v$version/zstd-$version.tar.gz)
 
 build() {
 
@@ -25,4 +23,10 @@ meson --prefix=/usr \
 
 ninja
 DESTDIR=$PKG ninja install
+
+mkdir $PKG/lib
+
+mv -v $PKG/usr/lib/libzstd.so.* $PKG/lib
+ln -sfv ../../lib/$(readlink $PKG/usr/lib/libzstd.so) $PKG/usr/lib/libzstd.so
+
 }
