@@ -5,7 +5,7 @@ packager="Yaolinux Team"
 maintainer="rems"
 
 name=expat
-version=2.2.8
+version=2.2.9
 
 source=(http://prdownloads.sourceforge.net/$name/$name-$version.tar.xz)
 
