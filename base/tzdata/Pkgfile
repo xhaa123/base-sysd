@@ -3,7 +3,7 @@ url="http://www.gnu.org/software/libc/"
 packager="Yaolinux Team"
 
 name=tzdata
-version=2019c
+version=2020a
 
 source=(http://www.iana.org/time-zones/repository/releases/$name$version.tar.gz)
 build() {
