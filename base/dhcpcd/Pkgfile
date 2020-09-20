@@ -5,7 +5,7 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=dhcpcd
-version=8.1.6
+version=9.2.0
 yaolinux_version=1.0-RC2
 
 makedepends=(systemd)
