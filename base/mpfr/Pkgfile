@@ -6,7 +6,7 @@ packager="Yaolinux Team"
 name=mpfr
 version=4.0.2
 
-source=(http://www.mpfr.org/mpfr-current/mpfr-$version.tar.xz)
+source=(http://www.mpfr.org/mpfr-$version/mpfr-$version.tar.xz)
 
 build() {
 cd mpfr-$version
