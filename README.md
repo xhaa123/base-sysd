@@ -1,8 +1,8 @@
 Yaolinux
 ======
-## NuTyX-Systemd, please following these commands to install the base
+## Yaolinux, please following these commands to install the base
 
-## on a normal Nutyx in root
+## on a normal Yaolinux in root
 
 `cards install cards.devel git`
 
