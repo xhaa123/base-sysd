@@ -8,7 +8,7 @@ version=3.6.15
 
 makedepends=(nettle libtasn1 p11-kit)
 
-source=(ftp://ftp.gnupg.org/gcrypt/gnutls/v${version:0:3}/gnutls-$version.tar.xz)
+source=(https://www.gnupg.org/ftp/gcrypt/gnutls/v${version:0:3}/${name}-${version}.tar.xz)
 
 build()
 {
