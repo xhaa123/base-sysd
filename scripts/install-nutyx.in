@@ -886,6 +886,7 @@ vsftpd:x:47:
 rsyncd:x:48:
 sshd:x:50:
 stunnel:x:51:
+dhcpcd:x:52:
 svn:x:56:
 svntest:x:57:
 pulse:x:58:
@@ -949,6 +950,7 @@ vsftpd:x:47:47:vsftpd User:/dev/null:/bin/false
 rsyncd:x:48:48:rsyncd Daemon:/home/rsync:/bin/false
 sshd:x:50:50:sshd PrivSep:/var/lib/sshd:/bin/false
 stunnel:x:51:51:stunnel Daemon:/var/lib/stunnel:/bin/false
+dhcpcd:x:52:52:dhcpcd PrivSep:/var/lib/dhcpcd:/bin/false
 svn:x:56:56:SVN Owner:/home/svn:/bin/false
 games:x:60:60:Games High Score Owner:/var/games:/bin/false
 lightdm:x:63:63:Light Display Manager:/var/lib/lightdm:/sbin/nologin
