@@ -1,4 +1,5 @@
 version=1.4.5
+name=zstd
 
 source=(http://rems.6admin.net/sources/development/zstd-${version}.tar.gz)
 
