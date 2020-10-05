@@ -1,1 +1,2 @@
-chmod 1777 var/tmp
+chmod -v 1777 var/tmp
+chown -v dhcpcd:dhcpcd var/lib/dhcpcd

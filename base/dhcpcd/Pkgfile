@@ -27,7 +27,7 @@ make
 
 make DESTDIR=$PKG install
 
-install  -vdm700 -o dhcpcd -g dhcpcd $PKG/var/lib/dhcpcd
+install  -vdm700 $PKG/var/lib/dhcpcd
 
 # Service
 cd ../yaolinux-${yaolinux_version}
