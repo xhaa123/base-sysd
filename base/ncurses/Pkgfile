@@ -5,6 +5,7 @@ packager="Yaolinux Team"
 
 name=ncurses
 version=6.2
+release=2
 
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 
@@ -49,13 +50,13 @@ cp -R doc/* $PKG/usr/share/doc/$name-$version
 make distclean
 
 ./configure --prefix=/usr --with-shared --without-normal \
---mandir=/usr/share/man --infodir=/usr/share/info \
---bindir=/bin --sbindir=/sbin --libdir=/lib \
 --without-debug --without-cxx-binding \
---with-abi-version=5 \
---with-install-prefix=$PKG
+--with-abi-version=5
 
 make sources libs
 mkdir -p $PKG/usr/lib
 cp -av lib/lib*.so.5* $PKG/usr/lib
+
+ln -s /usr/lib/libncurses.so.5 "$PKG/usr/lib/libtinfo.so.5"
+ln -s /usr/lib/libncurses.so.5 "$PKG/usr/lib/libtic.so.5"
 }
