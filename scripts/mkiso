@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 SCRIPTDIR=`pwd -P`
 SCRIPTDIR+="/`dirname $0`"
 ISODIR=${LFS}/ISO
@@ -20,7 +22,7 @@ main() {
 		echo "
 USAGE: mkiso [YaoLinuX-version] [kernel-version]
 
-OPTIONS: 
+OPTIONS:
 
  Arguments order need to be respected:
 
@@ -195,6 +197,6 @@ ia32() {
    else
       error "--bootia32 option is not available for $ARCH architecture"
    fi
-} 
+}
 
 main "$@"
