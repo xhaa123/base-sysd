@@ -13,8 +13,10 @@ Yaolinux
 `wget https://raw.githubusercontent.com/YaoLinux/base-sysd/master/scripts/install-nutyx.in -O install-nutyx `
 
 ## You can continue
-`chmod -v 755 install-nutyx \
-mv -v install-nutyx /usr/bin/install-nutyx`
+```
+chmod -v 755 install-nutyx 
+mv -v install-nutyx /usr/bin/install-nutyx
+```
 
 ## If you've already make the installation process, you have to remove the LFS user from the nutyx base by
 `userdel lfs` \
