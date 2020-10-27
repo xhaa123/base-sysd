@@ -9,13 +9,13 @@ Yaolinux
 
 ## on a normal Yaolinux in root
 
-```
+```bash
 cards install cards.devel git
 wget https://raw.githubusercontent.com/YaoLinux/base-sysd/master/scripts/install-nutyx.in -O install-nutyx
 ```
 
 ## You can continue
-```
+```bash
 chmod -v 755 install-nutyx
 mv -v install-nutyx /usr/bin/install-nutyx
 ```
