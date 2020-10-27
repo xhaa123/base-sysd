@@ -14,7 +14,7 @@ Yaolinux
 
 ## You can continue
 ```
-chmod -v 755 install-nutyx 
+chmod -v 755 install-nutyx \
 mv -v install-nutyx /usr/bin/install-nutyx
 ```
 
