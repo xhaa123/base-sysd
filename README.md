@@ -10,7 +10,6 @@ Yaolinux
 ## on a normal Yaolinux in root
 
 `cards install cards.devel git`
-
 `wget https://raw.githubusercontent.com/YaoLinux/base-sysd/master/scripts/install-nutyx.in -O install-nutyx `
 
 ## You can continue
