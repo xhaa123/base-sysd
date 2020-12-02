@@ -3,8 +3,7 @@ url="http://www.libpng.org/pub/png/libpng.html"
 packager="Yaolinux Team"
 
 name=libpng
-version=1.6.35
-release=2
+version=1.6.37
 
 source=( http://downloads.sourceforge.net/$name/$name-$version.tar.xz \
 	 http://downloads.sourceforge.net/project/apng/libpng/libpng16/$name-$version-apng.patch.gz)
