@@ -1,5 +1,6 @@
 description="Free general-purpose data compression software with high compression ratio."
 url="http://tukaani.org/xz/"
+
 maintainer="rems"
 packager="Yaolinux Team"
 
@@ -7,7 +8,7 @@ PKGMK_GROUPS=(devel man doc)
 
 name=xz
 version=5.2.5
-release=2
+release=3
 
 source=(${url}$name-$version.tar.xz)
 build()
