@@ -6,7 +6,7 @@ source=(http://downloads.nutyx.org/files/cards-$version.tar.gz)
 [ -z "$patchname" ] || source+=" $patchname"
 
 build() {
-cd cards-$version
+cd cards-cards-$version
 [ -z "$patchname" ] || patch -Np1 -i ../$patchname
 
 PKG_CONFIG_PATH=/tools/lib/pkgconfig \
