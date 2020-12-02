@@ -5,7 +5,7 @@ packager="Yaolinux Team"
 makedepends=(pam)
 
 name=sudo
-version=1.9.2
+version=1.9.3p1
 
 source=($url/sudo/dist/$name-$version.tar.gz)
 
