@@ -6,13 +6,18 @@ packager="Yaolinux Team"
 name=jfsutils
 version=1.1.15
 
-source=(http://jfs.sourceforge.net/project/pub/$name-$version.tar.gz)
+source=(http://jfs.sourceforge.net/project/pub/$name-$version.tar.gz
+        http://www.linuxfromscratch.org/patches/blfs/10.0/$name-$version-gcc10_fix-1.patch)
 
 build() {
 
 cd $name-$version
+
+patch -Np1 -i ../$name-$version-gcc10_fix-1.patch
+
 sed -i "/unistd.h/a#include <sys/types.h>"    fscklog/extract.c
 sed -i "/ioctl.h/a#include <sys/sysmacros.h>" libfs/devices.c
+
 ./configure
 make
 make DESTDIR=$PKG install
