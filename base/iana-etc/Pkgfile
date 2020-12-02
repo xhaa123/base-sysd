@@ -4,18 +4,17 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=iana-etc
-version=2.30
-release=1
+version=20200821
 
-source=(http://sethwklein.net/iana-etc-2.30.tar.bz2)
+source=(https://github.com/Mic92/iana-etc/releases/download/$version/$name-$version.tar.gz)
 
 build()
 {
 cd iana-etc-$version
 
-make
+mkdir -pv $PKG/etc
 
-make DESTDIR=$PKG install
+cp services protocols $PKG/etc
 
 }
 
