@@ -1,4 +1,7 @@
 glibc
+bzip2
+xz
+zstd
 tzdata
 zlib
 file
@@ -10,7 +13,6 @@ gmp
 mpfr
 mpc
 gcc
-bzip2
 pkg-config
 ncurses
 attr
@@ -35,7 +37,6 @@ perl-xml-parser
 intltool
 autoconf
 automake
-xz
 kmod
 gettext
 libelf
@@ -72,7 +73,6 @@ libtasn1
 nettle
 p11-kit
 gnutls
-zstd
 curl
 cpio
 pciutils
