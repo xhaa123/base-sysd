@@ -21,7 +21,8 @@ cd $name-$version
             -mandir=/usr/share/man \
             --without-included-zlib \
             --disable-xxhash \
-            --infodir=/usr/share/info
+            --infodir=/usr/share/info \
+            --disable-lz4
 
 make
 
