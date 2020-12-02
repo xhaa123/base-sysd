@@ -3,7 +3,7 @@ url="https://www.kernel.org/pub/linux/utils/net/iproute2/"
 description="Programs for basic and advanced network routing."
 
 name=iproute2
-version=5.1.0
+version=5.8.0
 
 PKGMK_GROUPS=(devel man doc)
 
