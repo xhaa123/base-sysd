@@ -12,17 +12,16 @@ version=1.4.5
 source=(https://github.com/facebook/zstd/releases/download/v$version/zstd-$version.tar.gz)
 
 build() {
+cd $name-$version
 
-mkdir -v build && cd build
+make
+make -C contrib/pzstd
 
-meson --prefix=/usr \
-      -Dbin_programs=true \
-      -Dbin_contrib=true \
-      -Dmulti_thread=enabled \
-      ../$name-$version/build/meson
+make PREFIX=/usr DESTDIR="$PKG/" install
 
-ninja
-DESTDIR=$PKG ninja install
+ln -sf /usr/bin/zstd "$PKG/usr/bin/zstdmt"
+
+install -Dm755 contrib/pzstd/pzstd "$PKG/usr/bin/pzstd"
 
 mkdir $PKG/lib
 
