@@ -13,6 +13,8 @@ source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
 build() {
 	cd $name-$version
 
+	sed -i '/The name/,+2 d' src/global.c
+
 	sed -i -e '/gets is a/d' gnu/stdio.in.h
 
 	./configure --prefix=/usr \
