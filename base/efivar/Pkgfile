@@ -5,16 +5,10 @@ url="https://github.com/rhinstaller/efivar"
 packager="Yaolinux Team"
 
 name=efivar
-version=37
-release=3
+version=37.1
 
-source=(https://github.com/rhinstaller/efivar/releases/download/$version/efivar-$version.tar.bz2
-        https://github.com/rhboot/efivar/commit/b98ba8921010d03f46704a476c69861515deb1ca.patch
-        https://github.com/rhboot/efivar/commit/c3c553db85ff10890209d0fe48fb4856ad68e4e0.patch
-        https://github.com/rhboot/efivar/commit/4e04afc2df9bbc26e5ab524b53a6f4f1e61d7c9e.patch
-        https://github.com/rhboot/efivar/commit/fdb803402fb32fa6d020bac57a40c7efe4aabb7d.patch
-        https://github.com/rhboot/efivar/commit/0dad6d78a7fb5f6c5fb4a1d646040539db6cf865.patch)
-
+source=(http://rems.6admin.net/sources/development/efivar-$version.tar.xz
+        http://rems.6admin.net/sources/development/efivar-$version.patch) 
 
 build() {
 
@@ -22,34 +16,34 @@ unset MAKEFLAGS
 
 cd $name-$version
 
-patch -Np1 -i ../b98ba8921010d03f46704a476c69861515deb1ca.patch
-patch -Np1 -i ../c3c553db85ff10890209d0fe48fb4856ad68e4e0.patch
-patch -Np1 -i ../0dad6d78a7fb5f6c5fb4a1d646040539db6cf865.patch
-patch -Np1 -i ../fdb803402fb32fa6d020bac57a40c7efe4aabb7d.patch
-patch -Np1 -i ../4e04afc2df9bbc26e5ab524b53a6f4f1e61d7c9e.patch
+patch -Np1 -i ../efivar-$version.patch
 
-cp -p Make.defaults Make.defaults.dist
+# -Werror, not even once
+#  sed -e 's/-Werror//g' -i gcc.specs
 
-sed 's|-O2|-Os|g' -i Make.defaults
+# remove insecure rpath in efivar-tester
+  sed 's|-rpath,$(TOPDIR)/src|-rpath,$(libdir)|g' -i src/test/Makefile
 
-cp -p src/test/Makefile src/test/Makefile.dist
+make libdir=/usr/lib/ \
+     bindir=/usr/bin/ \
+     mandir=/usr/share/man/     \
+     includedir=/usr/include/ \
+     V=1 -j1
 
-sed 's|-rpath=$(TOPDIR)/src/|-rpath=$(libdir)|g' \
--i src/test/Makefile
+make -j1 V=1 \
+     DESTDIR=${PKG}/ \
+     libdir=/usr/lib/ \
+     bindir=/usr/bin/ \
+     mandir=/usr/share/man   \
+     includedir=/usr/include/ \
+     install
 
-CFLAGS+=" -flto"
+make -j1 V=1 \
+     -C src/test \
+     libdir=/usr/lib/ \
+     bindir=/usr/bin/ \
+     mandir=/usr/share/man   \
+     includedir=/usr/include/
 
-make libdir=/usr/lib/ bindir=/usr/bin/ \
-mandir=/usr/share/man/     \
-includedir=/usr/include/ V=1 -j1
-
-make -j1 V=1 DESTDIR=${PKG}/ libdir=/usr/lib/ \
-bindir=/usr/bin/ mandir=/usr/share/man   \
-includedir=/usr/include/ DESTDIR=${PKG}/ install
-
-cd src/test
-make -j1 V=1 DESTDIR=${PKG}/ libdir=/usr/lib/ \
-bindir=/usr/bin/ mandir=/usr/share/man   \
-includedir=/usr/include/
-install -v -D -m0755 tester ${PKG}/usr/bin/efivar-tester
+install -v -D -m0755 src/test/tester ${PKG}/usr/bin/efivar-tester
 }
