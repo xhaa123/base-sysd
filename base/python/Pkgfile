@@ -8,7 +8,7 @@ packager="Yaolinux Team"
 makedepends=(sqlite libffi)
 
 name=python
-version=3.7.9
+version=3.8.5
 
 alias=(python3 Python)
 source=(http://www.python.org/ftp/python/$version/Python-$version.tar.xz
@@ -31,7 +31,7 @@ build() {
         make
         make DESTDIR=$PKG install
 
-	chmod -v 755 $PKG/usr/lib/libpython3.7m.so
+	chmod -v 755 $PKG/usr/lib/libpython3.8.so
 	chmod -v 755 $PKG//usr/lib/libpython3.so
 
 # Install all HTML Docs files with desktop menu integration
