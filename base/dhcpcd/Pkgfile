@@ -6,8 +6,6 @@ packager="Yaolinux Team"
 
 name=dhcpcd
 version=9.2.0
-release=2
-
 yaolinux_version=1.0-RC2
 
 makedepends=(systemd)
@@ -20,14 +18,11 @@ cd $name-$version
 
 ./configure --prefix= \
             --libexecdir=/lib/dhcpcd \
-            --dbdir=/var/lib/dhcpcd \
-            --privsepuser=dhcpcd
+            --dbdir=/var/lib/dhcpcd
 
 make
 
 make DESTDIR=$PKG install
-
-install  -vdm700 $PKG/var/lib/dhcpcd
 
 # Service
 cd ../yaolinux-${yaolinux_version}
