@@ -4,7 +4,7 @@ maintainer="rems"
 packager="Yaolinux Team"
 
 name=mpfr
-version=4.0.2
+version=4.1.0
 
 source=(http://www.mpfr.org/mpfr-$version/mpfr-$version.tar.xz)
 
