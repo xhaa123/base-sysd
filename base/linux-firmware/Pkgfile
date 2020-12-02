@@ -4,7 +4,7 @@ packager="Yaolinux Team"
 makedepends=(git)
 
 name=linux-firmware
-version=20200817
+version=20200918
 
 build() {
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git \
