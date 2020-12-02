@@ -7,8 +7,7 @@ maintainer="rems"
 [ "$PKGMK_ARCH" == "i686" ] && PKGMK_GROUPS=(man)
 
 name=libffi
-version=3.2.1
-release=2
+version=3.3
 
 source=(https://sourceware.org/pub/libffi/libffi-$version.tar.gz)
 
