@@ -11,6 +11,8 @@ source=(https://github.com/thkukuk/rpcsvc-proto/archive/v$version.tar.gz)
 build() {
 cd $name-$version
 
+which xz
+
 autoreconf -fiv
 
 ./configure --sysconfdir=/etc
