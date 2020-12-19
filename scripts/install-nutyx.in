@@ -1116,13 +1116,6 @@ url ${URL}
 #
 dir ${DEPOT}/nos
 #
-## For LXQt
-# Comment following 2 lines
-# if you don't want to install LXQt
-#
-dir ${DEPOT}/lxqt-extra
-dir ${DEPOT}/lxqt
-#
 ## For lxde
 # Comment following 2 lines
 # if you don't want to install lxde
@@ -1134,8 +1127,8 @@ dir ${DEPOT}/lxde
 # Comment following 2 lines
 # if you don't want to install gnome
 #
-dir ${DEPOT}/gnome-extra
-dir ${DEPOT}/gnome
+dir ${DEPOT}/gnome-desktops-extra
+dir ${DEPOT}/gnome-desktops
 #
 ## For mate
 # Comment following 2 lines
@@ -1148,8 +1141,8 @@ dir ${DEPOT}/mate
 # Comment following 2 lines
 # if you don't want to install kde5
 #
-dir ${DEPOT}/kde5-extra
-dir ${DEPOT}/kde5
+dir ${DEPOT}/kde5-desktops-extra
+dir ${DEPOT}/kde5-desktops
 #
 ## For xfce4
 # Comment following 2 lines
@@ -1239,7 +1232,7 @@ fi
 
 [ -z "$URL" ] && URL="http://downloads.yaolinux.org"
 
-[ -z "$VERSION" ] && VERSION="1.0-RC2"
+[ -z "$VERSION" ] && VERSION="1.0-RC3"
 
 if [ "$VERSION" == "development" ]; then
 	CODE_NAME="`date +%Y%m%d`"
@@ -1253,13 +1246,13 @@ fi
 
 [ -z $INIT ] && INIT="sysd"
 [ "$INIT" = "sysv" ] && INIT="eudev sysklogd sysvinit"
-[ "$INIT" = "sysd" ] && INIT="systemd"
+[ "$INIT" = "sysd" ] && INIT="systemd dbus"
 
 if [ -z "$KERNEL" ]; then
    if [ "$ARCH" = "i686" -a "$HOST_ARCH" = "x86_64" ]; then
       KERNEL=$INIT
    else
-      KERNEL="linux-firmware $INIT dbus reiserfsprogs e3 \
+      KERNEL="linux-firmware $INIT reiserfsprogs e3 \
 grub lz4 mdadm jfsutils xfsprogs btrfs-progs dhcpcd kernel-lts"
    fi
 fi
