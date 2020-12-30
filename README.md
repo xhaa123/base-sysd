@@ -53,8 +53,8 @@ export LFS=/mnt/lfs
 ## Now, create the directories
 ```
 mkdir -vp $LFS/{sources,tools}
-ln -svf $LFS/tools
-ln -svf $LFS/sources
+ln -svf $LFS/tools /tools
+ln -svf $LFS/sources /sources
 ```
 
 ## Create the LFS user
@@ -93,6 +93,8 @@ LC_ALL=POSIX
 LFS_TARGET=$(uname -m)-lfs-linux-gnu
 PATH=/home/lfs/bin:/tools/bin:/bin:/usr/bin
 export LFS LC_ALL LFS_TARGET PATH" > /home/lfs/.bashrc
+
+. /home/lfs/.bashrc
 ```
 
 ## You are in the LFS user, now continue the installation with
